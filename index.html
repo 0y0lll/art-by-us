@@ -29,6 +29,22 @@
         padding-right: 5px;
         padding-left: 5px;
     }
+    .dropdown-toggle::after {
+        content: none;
+    }
+    .rounded-xl {
+        border-radius: .6rem!important;
+    }
+    .carousel-indicators li {
+        border-top: 0;
+        border-bottom: 0;
+        background: #222;
+        width: 10px;
+        height: 10px;
+        border-radius: 50rem;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 </style>
 
 <body>
@@ -40,12 +56,12 @@
         });
     </script>
 
-    <div class="py-2 bg-dark text-center text-white">
+    <div class="py-2 text-center text-white" style="background: #222">
         <span class="font-weight-light">코로나19에 대한 아트 바이 어스의 대책 및 환불 정책에 대한 최신 정보를 확인하세요.</span>
         <a href="#x" class="text-white">자세히 알아보기</a>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,47 +69,53 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav m-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#x">Practice <span class="sr-only">(current)</span></a>
+                <ul class="navbar-nav m-auto font-weight-light" style="font-size: 1.1rem;">
+                    <li class="nav-item mx-3 active">
+                        <a class="nav-link text-dark font-weight-bold" href="#x" style="border-bottom: 4px solid">Practice</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#x">Lesson</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#x">Lesson</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#x">Performance</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#x">Performance</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#x">Audition</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#x">Audition</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#x">Shop</a>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#x">Shop</a>
                     </li>
                 </ul>
 
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#x"><i class="far fa-calendar-alt"></i></a>
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item mr-2" style="font-size: 1.5rem;">
+                        <a class="nav-link text-dark" href="#x"><i class="far fa-calendar-alt"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#x"><i class="fas fa-shopping-cart"></i></a>
+                    <li class="nav-item mr-3" style="font-size: 1.5rem;">
+                        <a class="nav-link text-dark" href="#x"><i class="fas fa-shopping-cart"></i></a>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
                             <!-- <img src="" alt=""> -->
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user"></i><span>김민범</span>
+                            <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="d-flex">
+                                    <div class="position-relative mr-2" style="width: 26px; height: 26px;">
+                                        <span class="position-absolute rounded-pill" style="width: 10px;height: 10px;right: -2px; background: #ea2964;"></span>
+                                        <img src="img/profile-photo@3x.jpg" class="rounded-circle" alt="김민범님" style="width: inherit;">
+                                    </div>
+                                    <span>김민범</span>
+                                </div>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-menu dropdown-menu-lg-right rounded-xl" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#x">예약 리스트</a>
                                 <a class="dropdown-item" href="#x">찜 리스트</a>
                                 <a class="dropdown-item" href="#x">나의 이용 후기</a>
                                 <a class="dropdown-item" href="#x">채팅</a>
-                                <a class="dropdown-item" href="#x">1:1 문의</a>
+                                <a class="dropdown-item" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1" style="width: 5px;height: 5px;background: #ea2964;top: 0;"></span></a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#x">회원 정보 관리</a>
                                 <a class="dropdown-item" href="#x">호스트 전환</a>
-                                <a class="dropdown-item" href="#x">로그아웃</a>
+                                <a class="dropdown-item" href="#x" style="color: #ea2964;">로그아웃</a>
                             </div>
                         </div>
                     </li>
@@ -141,31 +163,31 @@
                     </form>
 
                     <div class="row justify-content-center mt-4">
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">파티룸</a>
                         </div>
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">무용수업</a>
                         </div>
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">실용음악</a>
                         </div>
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">공예수업</a>
                         </div>
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">클래식음악</a>
                         </div>
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">보컬</a>
                         </div>
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">연습실</a>
                         </div>
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">스페인어</a>
                         </div>
-                        <div class="col-6half">
+                        <div class="col-6half mb-2">
                             <a href="#x" class="btn btn-light rounded-pill w-100" style="font-size: 0.85rem;">비트메이킹</a>
                         </div>
                     </div>
@@ -386,15 +408,15 @@
                         <img src="img/main_carousel_lg1.jpg" srcset="img/main_carousel_lg1@2x.jpg 2x, img/main_carousel_lg1@3x.jpg 3x" class="d-block w-100" alt="...">
                     </div>
                 </div>
-            </div>
 
-            <div class="container">
-                <ol class="carousel-indicators position-relative">
+                <ol class="carousel-indicators position-relative my-4">
                     <li data-target="#carouselAdConsert" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselAdConsert" data-slide-to="1"></li>
                     <li data-target="#carouselAdConsert" data-slide-to="2"></li>
                 </ol>
+            </div>
 
+            <div class="container" style="width: 50%">
                 <h4 class="mb-3">제목의 한 줄만 가능하게 작성하세요</h4>
                 <p class="mb-0 font-weight-light">열매를 봄날의 같이 아니다. 낙원을 싹이 용기가 되려니와, 우는 것이다. 커다란 청춘의 그들의 끝까지 거친 얼마나 과실이 무엇을 충분히 때문이다. 넣는 할지니, 같이 보배를 이상의 운다.</p>
             </div>
@@ -489,7 +511,7 @@
 
     <footer class="bg-light">
         <div class="container py-5">
-            <div class="d-lg-flex align-items-center justify-content-between">
+            <div class="d-lg-flex align-items-center justify-content-between mb-4">
                 <a href="index.html"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></a>
                 <ul class="d-flex list-unstyled mb-0">
                     <li class="px-2"><a href="#x" class="text-dark text-decoration-none">이용약관</a></li>
@@ -501,18 +523,20 @@
                 </ul>
             </div>
 
-            <div class="border-top">
-                <p>상호명 : 아트 바이 어스<span>|</span>대표 : 김사람<span>|</span>사업자등록번호 : 123-45-67890<span>|</span>통신판매업신고번호 : 2018-서울관악-12345<span>|</span>
-                    <a href="#x" class="text-dark text-decoration-none">사업자등록정보 ></a></p>
+            <div class="border-top text-muted font-weight-light pt-4">
+                <p class="mb-0">상호명 : 아트 바이 어스<span>|</span>대표 : 김사람<span>|</span>사업자등록번호 : 123-45-67890<span>|</span>통신판매업신고번호 : 2018-서울관악-12345<span>|</span>
+                    <a href="#x" class="text-dark text-decoration-none font-weight-normal">사업자등록정보 &gt;</a></p>
                 <p>영업소재지 : 서울특별시 강남구 테헤란로 123<span>|</span>이메일 : info@artbyus.com<span>|</span>대표전화 : 02-123-4567 (평일 오전 9시 ~ 오후 6시, 공휴일 제외)</p>
 
-                <div class="d-lg-flex">
-                    <a href="#x" class="text-dark text-decoration-none">온라인 1:1문의 바로가기</a>
+                <div class="d-lg-flex mb-3">
+                    <a href="#x" class="text-dark text-decoration-none font-weight-normal mr-2">온라인 1:1문의 바로가기</a>
                     <span>(평일 2시 ~ 오후 6시) * 공간에 대한 문의사항은 해당 공간 호스트에게 직접 문의해 주세요.</span>
                 </div>
 
                 <p>아트 바이 어스는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 아트 바이 어스는 공간 거래정보 및 거래에 대해 책임지지 않습니다.</p>
-                <p class="text-right font-weight-light">Copyright ART BY US crop. All Right Reserved.</p>
+                <p class="text-right font-weight-light" style="
+    color: #a7a7a7;
+">Copyright ART BY US crop. All Right Reserved.</p>
             </div>
         </div>
     </footer>
