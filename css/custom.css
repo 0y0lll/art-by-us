@@ -140,8 +140,8 @@ button:focus {
 .top-nav .navbar-nav {
     font-size: 1.1rem;
 }
-.top-nav .nav-item:hover,
-.top-nav .nav-item.active {
+.top-nav .nav-link:hover,
+.top-nav .nav-item.active .nav-link {
     font-weight: 700;
     border-bottom: 4px solid;
 }
@@ -185,10 +185,6 @@ footer .text-divider {
     margin: 0 0.4rem;
 }
 
-@media (min-width: 1200px) {
-
-}
-
 @media (min-width: 992px) {
     .mb-xl-14 {
         margin-bottom: 8rem !important;
@@ -199,7 +195,23 @@ footer .text-divider {
     }
 }
 
+@media (max-width: 992px) {
+    .slide-container {
+        padding: 0 40px;
+    }
+}
+
 @media (min-width: 768px) {
+    /* .col-md-6half {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+
+        position: relative;
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    } */
 }
 
 /* index */
@@ -224,13 +236,13 @@ footer .text-divider {
 }
 .carousel-multiple-slide .carousel-control-prev,
 .carousel-multiple-slide .carousel-control-next {
-    width: 5%;
+    width: 7%;
 }
 .carousel-multiple-slide .carousel-control-prev {
-    left: -5%;
+    left: -7%;
 }
 .carousel-multiple-slide .carousel-control-next {
-    right: -5%;
+    right: -7%;
 }
 .carousel-multiple-slide .carousel-control-prev-icon {
     background-image: url('../img/left-btn-x-2.svg');
@@ -238,18 +250,36 @@ footer .text-divider {
 .carousel-multiple-slide .carousel-control-next-icon {
     background-image: url('../img/right-btn-x-2.svg');
 }
+.carousel-multiple-slide .carousel-inner .carousel-item-right.active,
+.carousel-multiple-slide .carousel-inner .carousel-item-next {
+    transform: translateX(33%);
+}
+.carousel-multiple-slide .carousel-inner .carousel-item-left.active,
+.carousel-multiple-slide .carousel-inner .carousel-item-prev {
+    transform: translateX(-33%);
+}
+.carousel-multiple-slide .carousel-inner .carousel-item.active,
+.carousel-multiple-slide .carousel-inner .carousel-item-next,
+.carousel-multiple-slide .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+.carousel-multiple-slide .carousel-inner .carousel-item-right,
+.carousel-multiple-slide .carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}
 
 /* medium - display 2  */
 @media (min-width: 768px) {
-    .carousel-multiple-slide .carousel-inner .carousel-item-right.active,
+    /* .carousel-multiple-slide .carousel-inner .carousel-item-right.active,
     .carousel-multiple-slide .carousel-inner .carousel-item-next {
-        transform: translateX(50%);
+        transform: translateX(33%);
     }
 
     .carousel-multiple-slide .carousel-inner .carousel-item-left.active,
     .carousel-multiple-slide .carousel-inner .carousel-item-prev {
-        transform: translateX(-50%);
-    }
+        transform: translateX(-33%);
+    } */
 }
 
   /* large - display 3 */
@@ -277,13 +307,13 @@ footer .text-divider {
   }
 
   @media (max-width: 768px) {
-    .carousel-multiple-slide .carousel-inner .carousel-item > div {
+    /* .carousel-multiple-slide .carousel-inner .carousel-item > div {
         display: none;
     }
 
     .carousel-multiple-slide .carousel-inner .carousel-item > div:first-child {
         display: block;
-    }
+    } */
 
     .h1, h1 {
         font-size: 2rem;
@@ -291,22 +321,33 @@ footer .text-divider {
     .h2, h2 {
         font-size: 1.5rem;
     }
-
-    .font-size-xs {
-        font-size: 0.75rem;
-    }
-    .font-size-s {
+    .h5, h5 {
         font-size: 1rem;
     }
-  }
 
-  .carousel-multiple-slide .carousel-inner .carousel-item.active,
-  .carousel-multiple-slide .carousel-inner .carousel-item-next,
-  .carousel-multiple-slide .carousel-inner .carousel-item-prev {
-    display: flex;
-  }
+    .font-size-x {
+        font-size: 0.7rem;
+    }
+    .font-size-xs,
+    .font-size-s {
+        font-size: 0.75rem;
+    }
+    .font-size-sm {
+        font-size: 1rem;
+    }
+    .font-size-m {
+        font-size: 1.2rem;
+    }
+    .font-size-md {
+        font-size: 1.25rem;
+    }
+    .font-size-l {
+        font-size: 1.2rem;
+    }
 
-  .carousel-multiple-slide .carousel-inner .carousel-item-right,
-  .carousel-multiple-slide .carousel-inner .carousel-item-left {
-    transform: translateX(0);
+    .list-tag {
+        width: 38px;
+        height: 38px;
+        line-height: 0.75rem;
+    }
   }
