@@ -122,6 +122,10 @@ button:focus {
     z-index: 2;
 }
 
+.search-category .category-title {
+    font-size: 0.75rem;
+}
+
 /* list tag */
 
 .list-tag {
@@ -132,6 +136,9 @@ button:focus {
     border-radius: 50rem;
     text-align: center;
     float: left;
+}
+.list-tag .list-tag-title {
+    font-size: 0.9rem;
 }
 .list-tag.list-tag-yellow {
     background-color: #ffde3b;
@@ -200,7 +207,9 @@ footer .text-divider {
         width: 60%;
     }
 
-
+    .search-category .category-title {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -340,21 +349,21 @@ footer .text-divider {
     } */
 
     .h1, h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .h2, h2 {
         font-size: 1.5rem;
     }
     .h5, h5 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .font-size-x {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     .font-size-xs,
     .font-size-s {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
     .font-size-sm {
         font-size: 1rem;
@@ -370,9 +379,21 @@ footer .text-divider {
     }
 
     .list-tag {
-        width: 38px;
-        height: 38px;
-        line-height: 0.75rem;
+        width: 30px;
+        height: 30px;
+        line-height: 0.6rem;
+    }
+    .list-tag .list-tag-title {
+        font-size: 0.4rem;
+    }
+
+    .slide-container .col-4 {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .top-notice {
+        font-size: 0.8rem;
     }
 
     .navbar-brand img,
@@ -380,8 +401,11 @@ footer .text-divider {
         max-width: 120px;
     }
 
-    .slide-container .col-4 {
-        padding-right: 5px;
-        padding-left: 5px;
+    footer .text-divider {
+        display: block;
+        width: 0px;
+        height: 0px;
+        background: none;
+        margin: 0;
     }
   }
