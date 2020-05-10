@@ -379,12 +379,12 @@ footer .text-divider {
     }
 
     .list-tag {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
         line-height: 0.6rem;
     }
     .list-tag .list-tag-title {
-        font-size: 0.4rem;
+        font-size: 0.5rem;
     }
 
     .slide-container .col-4 {
