@@ -126,6 +126,7 @@ button:focus {
     font-size: 0.6rem;
 }
 
+.custom-modal .modal-content,
 .custom-inputs .form-control,
 .custom-inputs .btn {
     border-radius: 0 !important;
@@ -229,7 +230,7 @@ footer .text-divider {
         font-size: 1rem;
     }
 
-    .custom-modal-dialog {
+    .custom-modal {
         max-width: 800px;
     }
     .custom-inputs .form-control {
