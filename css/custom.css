@@ -126,6 +126,17 @@ button:focus {
     font-size: 0.6rem;
 }
 
+.custom-inputs .form-control,
+.custom-inputs .btn {
+    border-radius: 0 !important;
+}
+.custom-inputs .form-control {
+    height: 40px;
+}
+.custom-inputs .btn {
+    height: 50px;
+}
+
 /* list tag */
 
 .list-tag {
@@ -203,12 +214,29 @@ footer .text-divider {
         margin-bottom: 8rem !important;
     }
 
+    .px-lg-10 {
+        padding-left: 10rem!important;
+    }
+    .px-lg-10 {
+        padding-right: 10rem!important;
+    }
+
     .content-width {
         width: 60%;
     }
 
     .search-category .category-title {
         font-size: 1rem;
+    }
+
+    .custom-modal-dialog {
+        max-width: 800px;
+    }
+    .custom-inputs .form-control {
+        height: 50px;
+    }
+    .custom-inputs .btn {
+        height: 60px;
     }
 }
 
