@@ -13,6 +13,7 @@
 
     <!-- Custom -->
     <link rel="stylesheet" href="css/custom.css">
+    <script src="js/custom.js"></script>
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
@@ -87,12 +88,13 @@
                 <ul class="navbar-nav border-top pt-3 m-lg-auto mt-2 font-size-xs d-block d-lg-none">
                     <!-- Login -->
                     <li class="nav-item mx-lg-3 mx-2 mb-2">
-                        <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
+                        <button class="btn btn-block border text-dark dropdown-toggle p-2 rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
                     </li>
 
                     <!-- Login - user -->
+                    <!--
                     <li class="nav-item mx-lg-3 mx-2 mb-2">
                         <div class="d-flex">
                             <div class="position-relative mr-2 nav-user-profile">
@@ -102,6 +104,7 @@
                             <span class="align-self-center">김민범</span>
                         </div>
                     </li>
+                    -->
 
                     <li class="nav-item mx-lg-3 mx-2">
                         <a class="nav-link" href="#x">예약 리스트</a>
@@ -150,6 +153,7 @@
                         </button>
 
                         <!-- Login - user -->
+                        <!--
                         <div class="dropdown">
                             <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="d-flex">
@@ -172,6 +176,7 @@
                                 <a class="dropdown-item text-hot-pink" href="#x">로그아웃</a>
                             </div>
                         </div>
+                        -->
                     </li>
                 </ul>
             </div>
@@ -261,7 +266,7 @@
                             </a>
                         </div>
                         <div class="col-6half mb-2">
-                            <a href="#x" class="w-100 text-dark">
+                            <a href="sub/performance.html" class="w-100 text-dark">
                                 <i class="far fa-lightbulb font-size-xl"></i>
                                 <p class="mt-3 mb-0 category-title">Performance</p>
                             </a>
@@ -284,12 +289,12 @@
         </div>
 
         <div class="container mb-xl-14 mb-5 slide-container">
-            <h2 class="mb-3 mb-md-5 px-1">이 주변, 가장 핫한 장소</h2>
+            <h2 class="mb-3 mb-md-5 px-2">이 주변, 가장 핫한 장소</h2>
 
             <div id="carouselList1" class="carousel slide carousel-multiple-slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
@@ -309,7 +314,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-flex list-tag list-tag-sky">
@@ -329,7 +334,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -349,7 +354,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -390,12 +395,12 @@
         </div>
 
         <div class="container mb-xl-14 mb-5 slide-container">
-            <h2 class="mb-3 mb-md-5 px-1">지금 핫한 클래스</h2>
+            <h2 class="mb-3 mb-md-5 px-2">지금 핫한 클래스</h2>
 
             <div id="carouselList2" class="carousel slide carousel-multiple-slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -415,7 +420,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -435,7 +440,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -455,7 +460,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -519,12 +524,12 @@
         </div>
 
         <div class="container mb-xl-14 mb-5 slide-container">
-            <h2 class="mb-3 mb-md-5 px-1">자신의 끼를 발휘할 수 있는 추천 오디션</h2>
+            <h2 class="mb-3 mb-md-5 px-2">자신의 끼를 발휘할 수 있는 추천 오디션</h2>
 
             <div id="carouselList3" class="carousel slide carousel-multiple-slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -544,7 +549,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -564,7 +569,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -584,7 +589,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="col-lg-3 col-4">
+                        <div class="col-lg-3 col-6">
                             <div class="card border-0">
                                 <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
                                     <div class="p-lg-2 p-1 d-none list-tag list-tag-sky">
@@ -667,16 +672,6 @@
             next.children(':first-child').clone().appendTo($(this));
         }
     });
-
-    // wishlist btn
-    function addWishList(obj) {
-        let icon = $(obj).find('i');
-        if (icon.hasClass('far fa-heart')) {
-            $(icon).attr('class', 'fas fa-heart text-red');
-        } else {
-            $(icon).attr('class', 'far fa-heart');
-        }
-    }
 </script>
 
 </html>
