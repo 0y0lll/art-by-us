@@ -61,6 +61,9 @@ body {
 .bg-hot-pink {
     background-color: #ea2964 !important;
 }
+.bg-light-more {
+    background-color: #fbfbfb !important;
+}
 .text-red {
     color: #ff3c49 !important;
 }
@@ -159,6 +162,9 @@ select::-ms-expand {
     display: none;
 }
 
+.search-result {
+    line-height: 3.5rem;
+}
 .search-result .search-keyword:after {
     content: '';
     display: block;
