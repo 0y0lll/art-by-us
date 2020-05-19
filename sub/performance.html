@@ -12,14 +12,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- Datepicker -->
-    <!-- <link rel="stylesheet" href="../css/bootstrap-datepicker.min.css">
-    <script src="../js/bootstrap-datepicker.min.js"></script> -->
-    <!-- <script src="../js/bootstrap-datepicker.ko.min.js"></script> -->
+    <link href="../css/datepicker.css" rel="stylesheet">
+    <script src="../js/datepicker.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
@@ -397,28 +392,11 @@
 <script>
     // datepicker
     $(function () {
-        // $('#datePicker').datepicker({
-        //     format: "yy-mm-dd",
-		//     startDate: '1d',
-		//     autoclose : true,
-		//     calendarWeeks : false,
-		//     templates : {
-		//         leftArrow: '<i class="fas fa-angle-left"></i>',
-		//         rightArrow: '<i class="fas fa-angle-right"></i>'
-		//     },
-		//     title: "테스트",
-		//     todayHighlight : true,
-		//     language : "ko",
-        //     multidate : true
-        // })
-        $('#datePicker').daterangepicker({
-            timePicker: true,
-            startDate: moment().startOf('hour'),
-            endDate: moment().startOf('hour').add(32, 'hour'),
-            locale: {
-                format: 'M/DD hh:mm A'
-            }
-        });
+        $('#datePicker').datepicker({
+            language: 'ko',
+            multipleDatesSeparator: ' ~ ',
+            range: true
+        })
     });
 </script>
 
