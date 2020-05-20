@@ -12,14 +12,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- Datepicker -->
-    <!-- <link rel="stylesheet" href="../css/bootstrap-datepicker.min.css">
-    <script src="../js/bootstrap-datepicker.min.js"></script> -->
-    <!-- <script src="../js/bootstrap-datepicker.ko.min.js"></script> -->
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <!-- with time -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+
+    <link href="../css/datepicker.css" rel="stylesheet">
+    <script src="../js/datepicker.js"></script>
 
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
@@ -35,7 +36,7 @@
         <div class="modal-dialog custom-modal" role="document">
             <div class="modal-content px-lg-10 px-5 py-lg-5 py-5">
                 <div class="modal-header p-0 mb-4 border-0 justify-content-center">
-                    <h5 class="modal-title text-center" id="loginModalLabel"><img src="../img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
+                    <h5 class="modal-title text-center" id="loginModalLabel"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></h5>
                     <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button> -->
@@ -71,7 +72,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-1">
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></a>
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
             <div class="ml-auto align-items-center d-lg-none d-flex">
                 <a class="text-dark mr-3 font-size-sm" href="#x"><i class="far fa-calendar-alt"></i></a>
                 <a class="text-dark mr-3 font-size-sm" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
@@ -573,9 +574,9 @@
     <footer class="bg-light">
         <div class="container py-lg-5 py-4">
             <div class="d-lg-flex align-items-center justify-content-between mb-lg-4 mb-3">
-                <a href="index.html"><img src="../img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></a>
+                <a href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
                 <ul class="d-flex list-unstyled mb-0 font-weight-light footer-menu font-size-x mt-lg-0 mt-3">
-                    <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">이용약관</a> </li>
+                    <li class="px-md-2 px-1 position-relative"><a href="../sub/terms.html" class="text-muted text-decoration-none">이용약관</a></li>
                     <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">서비스정보</a></li>
                     <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">공지사항</a></li>
                     <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">도움말</a></li>
@@ -604,28 +605,26 @@
 <script>
     // datepicker
     $(function () {
-        // $('#datePicker').datepicker({
-        //     format: "yy-mm-dd",
-		//     startDate: '1d',
-		//     autoclose : true,
-		//     calendarWeeks : false,
-		//     templates : {
-		//         leftArrow: '<i class="fas fa-angle-left"></i>',
-		//         rightArrow: '<i class="fas fa-angle-right"></i>'
-		//     },
-		//     title: "테스트",
-		//     todayHighlight : true,
-		//     language : "ko",
-        //     multidate : true
-        // })
-        $('#datePicker').daterangepicker({
-            timePicker: true,
-            startDate: moment().startOf('hour'),
-            endDate: moment().startOf('hour').add(32, 'hour'),
-            locale: {
-                format: 'M/DD hh:mm A'
-            }
-        });
+        // $('#datePicker').daterangepicker({
+        //     timePicker: true,
+        //     startDate: moment().startOf('hour'),
+        //     endDate: moment().startOf('hour').add(32, 'hour'),
+        //     locale: {
+        //         format: 'M/DD hh:mm A'
+        //     }
+        // });
+
+        $('#datePicker').datepicker({
+            language: 'ko',
+            multipleDatesSeparator: ' ~ ',
+            range: true,
+            navTitles: {
+                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
+            },
+            prevHtml: '<i class="fas fa-chevron-left"></i>',
+            nextHtml: '<i class="fas fa-chevron-right"></i>',
+            timepicker: true
+        })
     });
 </script>
 

@@ -6,7 +6,7 @@
         containerBuilt = false,
         baseTemplate = '' +
             '<div class="datepicker">' +
-            '<i class="datepicker--pointer"></i>' +
+            // '<i class="datepicker--pointer"></i>' +
             '<nav class="datepicker--nav"></nav>' +
             '<div class="datepicker--content"></div>' +
             '</div>',
@@ -56,7 +56,7 @@
             prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',
             nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',
             navTitles: {
-                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>',
+                days: 'MM, <i>yyyy</i>',
                 months: 'yyyy',
                 years: 'yyyy1 - yyyy2'
             },
@@ -804,7 +804,7 @@
             this.$datepicker
                 .css({
                     left: left,
-                    top: top
+                    top: top - 12
                 })
         },
 

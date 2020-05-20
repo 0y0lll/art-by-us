@@ -199,6 +199,10 @@ select::-ms-expand {
     background-color: #434343;
 }
 
+.border-bottom-bold {
+    border-bottom: 2px solid #434343;
+}
+
 /* list tag */
 
 .list-tag {
@@ -374,8 +378,31 @@ select::-ms-expand {
 
 /* datepicker - dropdown */
 
-.datepicker-inline .datepicker {
-    width: auto;
+.datepicker.-from-bottom- {
+    width: 350px;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    top: 0;
+    /* 임시 */
+    /* top: 0;
+    left: 0;
+    opacity: 1;*/
+    border-top: 0;
+    box-shadow: none;
+    box-sizing: inherit;
+}
+.datepicker.-from-bottom- .datepicker--pointer{
+    display: none;
+}
+.datepicker.-from-bottom- .datepicker--nav {
+    border-top: 0;
+    margin: 0 1.5rem;
+}
+.datepicker.-from-bottom- .datepicker--content {
+    padding: 0 1.5rem 1rem;
+}
+.datepicker.-from-bottom- {
+
 }
 
 /* datepicker - inline */
