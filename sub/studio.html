@@ -12,15 +12,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- Datepicker -->
-
     <!-- with time -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <script type="text/javascript" src="../js/moment.min.js"></script>
+    <script type="text/javascript" src="../js/daterangepicker.js"></script>
+    <link rel="stylesheet" href="../css/daterangepicker.css">
 
-    <link href="../css/datepicker.css" rel="stylesheet">
-    <script src="../js/datepicker.js"></script>
+    <!-- <link href="../css/datepicker.css" rel="stylesheet">
+    <script src="../js/datepicker.js"></script> -->
 
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
@@ -605,26 +603,32 @@
 <script>
     // datepicker
     $(function () {
-        // $('#datePicker').daterangepicker({
-        //     timePicker: true,
-        //     startDate: moment().startOf('hour'),
-        //     endDate: moment().startOf('hour').add(32, 'hour'),
-        //     locale: {
-        //         format: 'M/DD hh:mm A'
-        //     }
-        // });
-
-        $('#datePicker').datepicker({
-            language: 'ko',
-            multipleDatesSeparator: ' ~ ',
-            range: true,
-            navTitles: {
-                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
+        $('#datePicker').daterangepicker({
+            timePicker: true,
+            startDate: moment().startOf('hour'),
+            endDate: moment().startOf('hour').add(32, 'hour'),
+            locale: {
+                format: 'YY-MM-DD hh:00',
+                daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
+                monthNames: ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'],
+                applyLabel: '검색',
+                separator: ' ~ '
             },
-            prevHtml: '<i class="fas fa-chevron-left"></i>',
-            nextHtml: '<i class="fas fa-chevron-right"></i>',
-            timepicker: true
-        })
+            timePicker24Hour: true,
+            opens: 'left'
+        });
+
+        // $('#datePicker').datepicker({
+        //     language: 'ko',
+        //     multipleDatesSeparator: ' ~ ',
+        //     range: true,
+        //     navTitles: {
+        //         days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
+        //     },
+        //     prevHtml: '<i class="fas fa-chevron-left"></i>',
+        //     nextHtml: '<i class="fas fa-chevron-right"></i>',
+        //     timepicker: true
+        // })
     });
 </script>
 
