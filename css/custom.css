@@ -148,6 +148,8 @@ button:focus {
     font-size: 0.6rem;
 }
 
+/* custom inputs */
+
 .custom-modal .modal-content,
 .custom-inputs .form-control, .custom-inputs .btn {
     border-radius: 0 !important;
@@ -158,6 +160,21 @@ button:focus {
 .custom-inputs .btn,
 .custom-inputs-sub .form-control, .custom-inputs-sub .btn {
     height: 50px;
+}
+
+.custom-inputs .custom-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+}
+.custom-inputs input[type=checkbox].custom-checkbox:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    color: #e6e6e6;
 }
 
 select,
@@ -271,6 +288,20 @@ select::-ms-expand {
 }
 .custom-nav-tabs .nav-link.active {
     background-color: #434343;
+}
+.custom-nav-tabs.light {
+    border-bottom: 1px solid #dee2e6;
+}
+.custom-nav-tabs.light .nav-link {
+    border: 1px solid #dee2e6;
+    border-bottom: 0;
+}
+.custom-nav-tabs.light .nav-item:not(:first-child) .nav-link {
+    margin-left: -1px;
+}
+.custom-nav-tabs.light .nav-link.active {
+    background-color: #fff;
+    color: #222;
 }
 
 /* navigation - sub */

@@ -61,10 +61,10 @@
 
     <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-1">
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></a>
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
             <div class="ml-auto align-items-center d-lg-none d-flex">
                 <a class="text-dark mr-3 font-size-sm" href="#x"><i class="far fa-calendar-alt"></i></a>
-                <a class="text-dark mr-3 font-size-sm" href="member/recent_list.html"><i class="far fa-clock"></i></a>
+                <a class="text-dark mr-3 font-size-sm" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
                 <a class="text-dark mr-2 font-size-sm" href="#x"><i class="fas fa-shopping-cart"></i></a>
             </div>
             <button class="navbar-toggler border-0 font-size-md text-dark" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,24 +83,6 @@
                         <a class="nav-link text-dark" href="#x">장바구니</a>
                     </li>
                 </ul> -->
-
-                <ul class="navbar-nav m-auto font-weight-light top-nav">
-                    <li class="nav-item mx-lg-3 mx-2 active">
-                        <a class="nav-link text-dark" href="../sub/studio.html">Studio</a>
-                    </li>
-                    <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="#x">Class</a>
-                    </li>
-                    <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="../sub/performance.html">Performance</a>
-                    </li>
-                    <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="#x">Audition</a>
-                    </li>
-                    <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="#x">Store</a>
-                    </li>
-                </ul>
 
                 <!-- user -->
                 <ul class="navbar-nav border-top pt-3 m-lg-auto mt-2 font-size-xs d-block d-lg-none">
@@ -154,13 +136,12 @@
                 </ul>
 
                 <!-- user - lg -->
-                <!-- index에서만 ml-auto 추가 -->
-                <ul class="navbar-nav ml-auto_ align-items-center d-none d-lg-flex">
+                <ul class="navbar-nav ml-auto align-items-center d-none d-lg-flex">
                     <li class="nav-item mr-2 font-size-md">
                         <a class="nav-link text-dark" href="#x"><i class="far fa-calendar-alt"></i></a>
                     </li>
                     <li class="nav-item mr-2 font-size-md">
-                        <a class="nav-link text-dark" href="recent_list.html"><i class="far fa-clock"></i></a>
+                        <a class="nav-link text-dark" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
                     </li>
                     <li class="nav-item mr-3 font-size-md">
                         <a class="nav-link text-dark" href="#x"><i class="fas fa-shopping-cart"></i></a>
@@ -178,7 +159,7 @@
                                 <div class="d-flex">
                                     <div class="position-relative mr-2 nav-user-profile">
                                         <span class="position-absolute rounded-pill bg-hot-pink nav-user-notify"></span>
-                                        <img src="../img/profile-photo@3x.jpg" class="rounded-circle nav-user-profile-img" alt="김민범님">
+                                        <img src="img/profile-photo@3x.jpg" class="rounded-circle nav-user-profile-img" alt="김민범님">
                                     </div>
                                     <span>김민범</span>
                                 </div>
@@ -203,165 +184,68 @@
     </nav>
 
     <main role="main">
-        <div class="border-bottom mt-lg-5 mt-4">
-            <div class="container">
-                <div class="d-flex">
-                    <!-- 별도 스타일 -->
-                    <a class="border border-bottom-0 d-block text-decoration-none text-dark" href="recent_list.html">최근 본 리스트</a>
-                    <a class="bg-yellow d-block text-decoration-none text-dark" href="bookmark_list.html">찜한 리스트</a>
-                </div>
-            </div>
-        </div>
+        <div class="container py-lg-5 py-4">
+            <h3 class="mb-4">회원가입</h3>
+            <!-- terms -->
+            <div class="mb-2">
+                <!-- tab pages -->
+                <ul class="nav nav-pills nav-fill custom-nav-tabs light">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#terms">이용약관 <span class="text-red">(필수)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#privacy">개인정보처리방침 <span class="text-red">(필수)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#location">위치정보수집약관 <span class="text-red">(필수)</span></a>
+                    </li>
+                </ul>
 
-        <div class="container my-5">
-            <div class="row">
-                <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                    <div class="card border-0">
-                        <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                            <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
-                                <span class="align-self-center list-tag-title">바로결제</span>
-                            </div>
-                            <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-md" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                        </div>
-
-                        <img src="../img/section-1-photo.jpg" class="card-img-top rounded-0" srcset="../img/section-1-photo@2x.jpg 2x, ../img/section-1-photo@3x.jpg 3x" alt="">
-
-                        <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                        <p class="font-weight-light border-bottom pb-2 mb-2 font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                        <a href="#x" class="stretched-link text-decoration-none">
-                            <span class="text-red font-weight-bold font-size-l">1,500</span><span class="text-dark font-weight-light pl-1 font-size-s">원/시간</span>
-                        </a>
+                <div class="tab-content p-4 border border-top-0">
+                    <!-- tab 1 -->
+                    <div class="tab-pane fade show active" id="terms">
+                        <p class="font-weight-light font-size-s">
+                            그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
+                            할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
+                            할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
+                            굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
+                            가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
+                        </p>
                     </div>
-                </div>
-                <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                    <div class="card border-0">
-                        <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                            <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
-                                <span class="align-self-center list-tag-title">바로결제</span>
-                            </div>
-                            <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-md" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                        </div>
-
-                        <img src="../img/section-2-photo.jpg" class="card-img-top rounded-0" srcset="../img/section-2-photo@2x.jpg 2x, ../img/section-2-photo@3x.jpg 3x" alt="">
-
-                        <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                        <p class="font-weight-light border-bottom pb-2 mb-2 font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                        <a href="#x" class="stretched-link text-decoration-none">
-                            <span class="text-red font-weight-bold font-size-l">1,500</span><span class="text-dark font-weight-light pl-1 font-size-s">원/시간</span>
-                        </a>
+                    <!-- tab 2 -->
+                    <div class="tab-pane fade" id="privacy">
+                        <p class="font-weight-light font-size-s">
+                            그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
+                            할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
+                            할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
+                            굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
+                            가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
+                        </p>
                     </div>
-                </div>
-                <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                    <div class="card border-0">
-                        <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                            <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
-                                <span class="align-self-center list-tag-title">바로결제</span>
-                            </div>
-                            <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-md" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                        </div>
-
-                        <img src="../img/section-3-photo.jpg" class="card-img-top rounded-0" srcset="../img/section-3-photo@2x.jpg 2x, ../img/section-3-photo@3x.jpg 3x" alt="">
-
-                        <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                        <p class="font-weight-light border-bottom pb-2 mb-2 font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                        <a href="#x" class="stretched-link text-decoration-none">
-                            <span class="text-red font-weight-bold font-size-l">1,500</span><span class="text-dark font-weight-light pl-1 font-size-s">원/시간</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                    <div class="card border-0">
-                        <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                            <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
-                                <span class="align-self-center list-tag-title">바로결제</span>
-                            </div>
-                            <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-md" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                        </div>
-
-                        <img src="../img/section-4-photo.jpg" class="card-img-top rounded-0" srcset="../img/section-4-photo@2x.jpg 2x, ../img/section-4-photo@3x.jpg 3x" alt="">
-
-                        <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                        <p class="font-weight-light border-bottom pb-2 mb-2 font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                        <a href="#x" class="stretched-link text-decoration-none">
-                            <span class="text-red font-weight-bold font-size-l">1,500</span><span class="text-dark font-weight-light pl-1 font-size-s">원/시간</span>
-                        </a>
+                    <!-- tab 3 -->
+                    <div class="tab-pane fade" id="location">
+                        <p class="font-weight-light font-size-s">
+                            그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
+                            할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
+                            할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
+                            굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
+                            가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                    <div class="card border-0">
-                        <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                            <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
-                                <span class="align-self-center list-tag-title">바로결제</span>
-                            </div>
-                            <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-md" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                        </div>
+            <!-- checkbox -->
+            <div class="d-flex mb-4 custom-inputs">
+                <i class="fas fa-check"></i>
+                <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
+                <label for="all_agree" class="mb-0">위 약관을 이해하였으며 이에 동의합니다.</label>
+            </div>
 
-                        <img src="../img/section-1-photo.jpg" class="card-img-top rounded-0" srcset="../img/section-1-photo@2x.jpg 2x, ../img/section-1-photo@3x.jpg 3x" alt="">
-
-                        <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                        <p class="font-weight-light border-bottom pb-2 mb-2 font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                        <a href="#x" class="stretched-link text-decoration-none">
-                            <span class="text-red font-weight-bold font-size-l">1,500</span><span class="text-dark font-weight-light pl-1 font-size-s">원/시간</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                    <div class="card border-0">
-                        <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                            <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
-                                <span class="align-self-center list-tag-title">바로결제</span>
-                            </div>
-                            <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-md" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                        </div>
-
-                        <img src="../img/section-2-photo.jpg" class="card-img-top rounded-0" srcset="../img/section-2-photo@2x.jpg 2x, ../img/section-2-photo@3x.jpg 3x" alt="">
-
-                        <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                        <p class="font-weight-light border-bottom pb-2 mb-2 font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                        <a href="#x" class="stretched-link text-decoration-none">
-                            <span class="text-red font-weight-bold font-size-l">1,500</span><span class="text-dark font-weight-light pl-1 font-size-s">원/시간</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                    <div class="card border-0">
-                        <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                            <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
-                                <span class="align-self-center list-tag-title">바로결제</span>
-                            </div>
-                            <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-md" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                        </div>
-
-                        <img src="../img/section-3-photo.jpg" class="card-img-top rounded-0" srcset="../img/section-3-photo@2x.jpg 2x, ../img/section-3-photo@3x.jpg 3x" alt="">
-
-                        <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                        <p class="font-weight-light border-bottom pb-2 mb-2 font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                        <a href="#x" class="stretched-link text-decoration-none">
-                            <span class="text-red font-weight-bold font-size-l">1,500</span><span class="text-dark font-weight-light pl-1 font-size-s">원/시간</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                    <div class="card border-0">
-                        <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                            <div class="p-lg-2 p-1 d-flex list-tag list-tag-yellow">
-                                <span class="align-self-center list-tag-title">바로결제</span>
-                            </div>
-                            <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-md" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                        </div>
-
-                        <img src="../img/section-4-photo.jpg" class="card-img-top rounded-0" srcset="../img/section-4-photo@2x.jpg 2x, ../img/section-4-photo@3x.jpg 3x" alt="">
-
-                        <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                        <p class="font-weight-light border-bottom pb-2 mb-2 font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                        <a href="#x" class="stretched-link text-decoration-none">
-                            <span class="text-red font-weight-bold font-size-l">1,500</span><span class="text-dark font-weight-light pl-1 font-size-s">원/시간</span>
-                        </a>
-                    </div>
-                </div>
+            <!-- buttons -->
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn rounded-0 py-4 px-5 mr-2 bg-yellow font-size-s">개인 회원가입</button>
+                <button type="button" class="btn rounded-0 py-4 px-5 ml-2 text-white bg-sky font-size-s">사업자 회원가입</button>
             </div>
         </div>
     </main>
