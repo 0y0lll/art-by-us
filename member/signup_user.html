@@ -54,6 +54,18 @@
         </div>
     </div>
 
+    <!-- Terms Modal -->
+    <div class="modal fade custom-modal-full" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="modal-content">
+                <div class="modal-body">
+                    test
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="py-md-3 px-5 py-2 text-center text-white bg-deep-dark top-notice">
         <span class="font-weight-light">코로나19에 대한 아트바이어스의 대책 및 환불 정책에 대한 최신 정보를 확인하세요.</span>
         <a href="#x" class="text-white d-lg-inline-block d-block">자세히 알아보기</a>
@@ -185,52 +197,49 @@
 
     <main role="main">
         <div class="container py-lg-5 py-4">
-            <h3 class="mb-4">회원가입</h3>
-            <!-- terms -->
+            <h3 class="mb-4">개인 회원가입</h3>
+            <!-- form -->
             <div class="mb-2">
-                <!-- tab pages -->
-                <ul class="nav nav-pills nav-fill custom-nav-tabs light">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#terms">이용약관 <span class="text-red">(필수)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#privacy">개인정보처리방침 <span class="text-red">(필수)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#location">위치정보수집약관 <span class="text-red">(필수)</span></a>
-                    </li>
-                </ul>
-
-                <div class="tab-content p-4 border border-top-0">
-                    <!-- tab 1 -->
-                    <div class="tab-pane fade show active" id="terms">
-                        <p class="font-weight-light font-size-s">
-                            그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                            할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                            할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                            굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                            가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                        </p>
+                <div class="custom-inputs-sub mb-3">
+                    <label for="user_id" class="d-block text-gray">아이디(이메일)</label>
+                    <div class="d-flex">
+                        <input type="text" class="form-control flex-fill mr-4" id="user_id" placeholder="example@example.com">
+                        <button type="button" class="btn flex-fill w-25 bg-yellow">중복확인</button>
                     </div>
-                    <!-- tab 2 -->
-                    <div class="tab-pane fade" id="privacy">
-                        <p class="font-weight-light font-size-s">
-                            그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                            할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                            할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                            굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                            가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                        </p>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 custom-inputs-sub">
+                        <label for="user_pw" class="d-block text-gray">비밀번호</label>
+                        <input type="password" class="form-control" id="user_pw" placeholder="6~14자리 이상의 영문, 숫자">
                     </div>
-                    <!-- tab 3 -->
-                    <div class="tab-pane fade" id="location">
-                        <p class="font-weight-light font-size-s">
-                            그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                            할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                            할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                            굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                            가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                        </p>
+                    <div class="col-lg-6 custom-inputs-sub">
+                        <label for="user_pw2" class="d-block text-gray">비밀번호 확인</label>
+                        <input type="password" class="form-control" id="user_pw2" placeholder="비밀번호 확인">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 custom-inputs-sub">
+                        <label for="user_name" class="d-block text-gray">이름</label>
+                        <input type="text" class="form-control" id="user_name" placeholder="이름">
+                    </div>
+                    <div class="col-lg-6 custom-inputs-sub">
+                        <label for="user_nickname" class="d-block text-gray">닉네임</label>
+                        <input type="text" class="form-control" id="user_nickname" placeholder="아트바이어스">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 custom-inputs-sub">
+                        <label for="user_phone" class="d-block text-gray">연락처</label>
+                        <div class="d-flex">
+                            <div class="flex-fill mr-4">
+                                <input type="text" class="form-control" id="user_phone" placeholder="010-1234-5678">
+                            </div>
+                            <button type="button" class="btn flex-fill w-25 bg-yellow">인증번호 발송</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 custom-inputs-sub">
+                        <label for="user_auth" class="d-block text-gray">인증번호</label>
+                        <input type="text" class="form-control" id="user_auth" placeholder="인증번호">
                     </div>
                 </div>
             </div>
@@ -239,13 +248,15 @@
             <div class="d-flex mb-4 custom-inputs">
                 <i class="fas fa-check"></i>
                 <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
-                <label for="all_agree" class="mb-0">위 약관을 이해하였으며 이에 동의합니다.</label>
+                <label for="all_agree" class="mb-0">
+                    개인 회원 약관 및 개인정보이용방안을 이해하였으며 이에 동의합니다.
+                    <a href="#x" class="text-dark" data-toggle="modal" data-target="#termsModal">(보기)</a>
+                </label>
             </div>
 
-            <!-- buttons -->
-            <div class="d-flex justify-content-center">
-                <a href="../member/signup_user.html" class="btn rounded-0 py-4 px-5 mr-2 bg-yellow font-size-s">개인 회원가입</a>
-                <a href="../member/signup_host.html" class="btn rounded-0 py-4 px-5 ml-2 text-white bg-sky font-size-s">사업자 회원가입</a>
+            <!-- button -->
+            <div class="custom-inputs-sub">
+                <button type="button" class="btn btn-block bg-yellow">회원가입 완료</button>
             </div>
         </div>
     </main>

@@ -11,10 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <!-- Datepicker -->
-    <link href="../css/datepicker.css" rel="stylesheet">
-    <script src="../js/datepicker.js"></script>
-
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
     <script src="../js/custom.js"></script>
@@ -242,10 +238,10 @@
                         <!-- info tab pages -->
                         <ul class="nav nav-pills nav-fill custom-nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#info">정보</a>
+                                <a class="nav-link active" data-toggle="tab" href="#info">업체소개</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#terms">이용약관</a>
+                                <a class="nav-link" data-toggle="tab" href="#detail">상세정보</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#refund">환불규정</a>
@@ -254,7 +250,7 @@
                                 <a class="nav-link" data-toggle="tab" href="#review">후기 및 질문</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#contact">위치 및 호스트정보</a>
+                                <a class="nav-link" data-toggle="tab" href="#location">위치정보</a>
                             </li>
                         </ul>
 
@@ -293,9 +289,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="terms">
+                        <div class="tab-pane fade" id="detail">
                             <div class="my-5">
-                                <h4 class="mb-4 text-bullet">이용약관</h4>
+                                <h4 class="mb-4 text-bullet">상세정보</h4>
                                 <p class="font-weight-light font-size-s">
                                     그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
                                     할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
@@ -452,9 +448,9 @@
                                 <!-- Review <<<< -->
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="contact">
+                        <div class="tab-pane fade" id="location">
                             <div class="my-5">
-                                <h4 class="mb-4 text-bullet">주소</h4>
+                                <h4 class="mb-4 text-bullet">위치정보</h4>
                                 <!-- Google Map -->
                                 <div class="mb-2">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.2200823320336!2d126.94783625121208!3d37.47913253678695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe9d42c354ca061aa!2z7IK87J2867mM65Sp!5e0!3m2!1sko!2skr!4v1589899812488!5m2!1sko!2skr" width="100%" height="210" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -485,7 +481,7 @@
                         </div>
                     </div>
 
-                    <!-- schedule -->
+                    <!-- summary info -->
                     <div class="float-lg-right" style="width: 360px;">
                         <div class="row mb-4">
                             <div class="col-6">
@@ -505,81 +501,26 @@
                         <div class="card rounded-0 border-bottom-0">
                             <div class="card-body">
                                 <h6>감성을 그립니다, 고고일러스트의 샤프로 그리는 인물드로잉</h6>
-                                <p class="font-weight-bold mb-4 text-red font-size-l">35,000원/1일</p>
+                                <p class="pb-4 mb-4 border-bottom text-red font-size-xs">서울특별시 중구 광희동1가 35-1 싱일빌딩 5층</p>
 
-                                <!-- Calendar -->
-                                <div class="py- border-bottom">
-                                    <div id="datePicker" class="datepicker-inline mb-4"></div>
-
-                                    <div class="row mb-4">
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center">
-                                                <span class="d-inline-block bg-secondary" style="width: 18px; height: 18px;"></span>
-                                                <span class="font-weight-light font-size-xs ml-2">선택불가</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center">
-                                                <span class="d-inline-block bg-dark float-left" style="width: 6px; height: 18px;"></span>
-                                                <span class="d-inline-block bg-sky float-left" style="width: 6px; height: 18px;"></span>
-                                                <span class="d-inline-block bg-hot-pink float-left" style="width: 6px; height: 18px;"></span>
-                                                <span class="font-weight-light font-size-xs ml-2">선택가능</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center">
-                                                <span class="d-inline-block rounded-circle bg-red" style="width: 18px; height: 18px;"></span>
-                                                <span class="font-weight-light font-size-xs ml-2">선택일</span>
-                                            </div>
-                                        </div>
+                                <!-- Store info -->
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center rounded-circle overflow-hidden mx-auto my-4" style="width: 190px; height: 190px;">
+                                        <img src="../img/studio-host.jpg" class="align-self-center w-100 h-100" alt="">
                                     </div>
-                                </div>
-
-                                <!-- Time -->
-                                <div class="py-4 border-bottom">
-                                    <div class="row">
-                                        <div class="col-6 custom-inputs">
-                                            <p>시작시간</p>
-                                            <select name="" id="" class="form-control">
-                                                <option value="08:00">08:00</option>
-                                                <option value="09:00">09:00</option>
-                                                <option value="10:00">10:00</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-6 custom-inputs">
-                                            <p>종료시간</p>
-                                            <select name="" id="" class="form-control">
-                                                <option value="13:00">13:00</option>
-                                                <option value="14:00">14:00</option>
-                                                <option value="15:00">15:00</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Number of member -->
-                                <div class="py-4 border-bottom">
-                                    <p>인원수</p>
-                                    <div class="d-flex justify-content-between custom-inputs custom-inputs-sub">
-                                        <button type="button" id="increaseQuantity" class="btn border" style="width: 50px;">+</button>
-                                        <input type="text" id="numberUpDown" value="1" class="text-center form-control border-right-0 border-left-0" style="width: calc(100% - 100px);">
-                                        <button type="button" id="decreaseQuantity" class="btn border" style="width: 50px;">-</button>
-                                    </div>
-                                </div>
-
-                                <!-- Info -->
-                                <div class="pt-4">
-                                    <p>예약내용</p>
-                                    <p class="mb-0 font-weight-light font-size-xs">2020년 01월 24일 08:30</p>
-                                    <p class="font-weight-light font-size-xs">- 2020년 01월 27일 13:00</p>
-                                    <p class="font-weight-bold text-red font-size-l">173,000원 <span class="font-weight-light font-size-xs text-light-gray-more">(VAT포함)</span></p>
-                                    <button type="button" class="btn btn-block border rounded-0 py-2 font-weight-light"><i class="fas fa-shopping-cart mr-2"></i>장바구니</button>
+                                    <h4 class="mb-0">CompanyName</h4>
+                                    <span class="d-block mx-auto my-3" style="width: 100px; height: 1px; background: #eee"></span>
+                                    <p class="font-size-xs">
+                                        10년 차 디자이너입니다.<br>
+                                        웹, 편집, 브랜딩, 마케팅, 기획 프로젝트매니저 등
+                                        다양하고 풍부한 경험과 실력으로
+                                        모두가 만족하는 작업물을 만들어드립니다.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Buttons -->
-                        <button type="button" class="btn btn-block py-3 border-0 rounded-0 font-weight-light mb-3 bg-yellow">클래스 신청하기</button>
                         <div class="d-flex bg-yellow">
                             <button type="button" class="btn w-50 py-3 border-0 rounded-0 font-weight-light">전화하기</button>
                             <span class="d-inline-block my-3" style="border-right: 1px solid #fff"></span>
@@ -621,46 +562,5 @@
         </div>
     </footer>
 </body>
-
-<script>
-    $(function(){
-        // datepicker
-        $('#datePicker').datepicker({
-            language: 'ko',
-            multipleDatesSeparator: ' ~ ',
-            range: true,
-            navTitles: {
-                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
-            },
-            prevHtml: '<i class="fas fa-chevron-left"></i>',
-            nextHtml: '<i class="fas fa-chevron-right"></i>',
-        })
-
-        // number of people
-        $('#decreaseQuantity').click( function(e) {
-            e.preventDefault();
-            var stat = $('#numberUpDown').val();
-            var num = parseInt(stat, 10);
-            num--;
-
-            if (num <= 0) {
-                num = 1;
-            }
-            $('#numberUpDown').val(num);
-        });
-
-        $('#increaseQuantity').click(function(e){
-            e.preventDefault();
-            var stat = $('#numberUpDown').val();
-            var num = parseInt(stat, 10);
-            num++;
-
-            if (num > 100) {
-                num = 100;
-            }
-            $('#numberUpDown').val(num);
-        });
-    });
-</script>
 
 </html>
