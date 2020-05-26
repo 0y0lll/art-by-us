@@ -148,6 +148,11 @@ button:focus {
     font-size: 0.6rem;
 }
 
+.w-15 {
+    width: 15% !important;
+}
+
+
 /* custom inputs */
 
 .custom-modal .modal-content,
@@ -591,6 +596,12 @@ footer .text-divider {
     }
     .px-lg-10 {
         padding-right: 10rem!important;
+    }
+    .w-lg-50 {
+        width: 50% !important;
+    }
+    .w-lg-25 {
+        width: 25% !important;
     }
 
     .content-width {

@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- 캘린더 로드 문제로 문서 하단으로 이동함 -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 
-    <!-- Datepicker -->
-    <link href="../css/datepicker.css" rel="stylesheet">
-    <script src="../js/datepicker.js"></script>
+    <!--
+        Calendar
+        https://github.com/SaintSilver/FullCalendar-Example
+    -->
+    <link rel="stylesheet" href="../css/fullcalendar/main.css">
+    <link rel="stylesheet" href="../css/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../css/fullcalendar/select2.min.css">
+    <link rel="stylesheet" href="../css/fullcalendar/bootstrap-datetimepicker.min.css">
 
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
@@ -164,7 +170,7 @@
                         <a class="nav-link text-dark" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
                     </li>
                     <li class="nav-item mr-2 font-size-md">
-                        <a class="nav-link text-dark" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
+                        <a class="nav-link text-dark" href="recent_list.html"><i class="far fa-clock"></i></a>
                     </li>
                     <li class="nav-item mr-3 font-size-md">
                         <a class="nav-link text-dark" href="../member/cart.html"><i class="fas fa-shopping-cart"></i></a>
@@ -207,147 +213,116 @@
     </nav>
 
     <main role="main">
-        <div class="container mb-5">
-            <!-- search keyword -->
-            <h2 class="font-weight-light text-center py-5 mb-0 text-gray search-result">
-                <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;모든지역&rdquo;</span> 에 있는<br>
-                <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;전체업종&rdquo;</span> 로 검색된 공연입니다.
-            </h2>
-            <!-- search category -->
-            <div class="row justify-content-between custom-inputs">
-                <div class="col-md-4">
-                    <p class="font-weight-light font-weight-light mb-1 font-size-sm">지역</p>
-                    <div class="input-group">
-                        <input type="text" class="form-control font-size-sm" value="서울특별시" placeholder="지역">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <p class="font-weight-light font-weight-light mb-1 font-size-sm">유형</p>
-                    <div class="input-group">
-                        <select name="" id="" class="form-control font-size-sm">
-                            <option value="seoul" selected>전체업종</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <p class="font-weight-light font-weight-light mb-1 font-size-sm">날짜</p>
-                    <div class="input-group date">
-                        <input type="text" class="form-control" id="datePicker">
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="border-top">
-            <div class="container my-4">
-                <div class="d-flex justify-content-between align-items-center mb-4 custom-inputs">
-                    <h2 class="mb-0">검색결과 <span class="d-none ml-2 font-weight-light text-red">48건</span></h2>
-                    <select name="" id="" class="form-control" style="width: 160px">
-                        <option value="random">랜덤순</option>
-                        <option value="recent">등록순</option>
-                    </select>
+            <!-- calendar -->
+            <div class="container my-5">
+                <!-- 일자 클릭시 메뉴오픈 -->
+                <div id="contextMenu" class="dropdown clearfix">
+                    <ul class="dropdown-menu dropNewEvent" role="menu" aria-labelledby="dropdownMenu"
+                        style="display:block;position:static;margin-bottom:5px;">
+                        <li><a tabindex="-1" href="#">카테고리1</a></li>
+                        <li><a tabindex="-1" href="#">카테고리2</a></li>
+                        <li><a tabindex="-1" href="#">카테고리3</a></li>
+                        <li><a tabindex="-1" href="#">카테고리4</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#" data-role="close">Close</a></li>
+                    </ul>
                 </div>
 
-                <!-- search result - list -->
-                <div class="row justify-content-between list-card">
-                    <div class="col-md-6 mb-4">
-                        <div class="card rounded-0">
-                            <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                                <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-l" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                            </div>
-
-                            <div class="d-flex overflow-hidden list-card-img-wrapper">
-                                <img src="../img/performance-1.jpg" class="card-img-top rounded-0 align-self-center" alt="">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="font-size-m">"홍대 미술 전공" 99퍼센트의 만족도 감사드립니다.</h4>
-                                <div class="bg-deep-dark my-4 list-card-divider"></div>
-                                <p class="font-weight-light text-red font-size-sm">서울특별시 중구</p>
-                                <p class="font-weight-light overflow-hidden list-card-content text-light-gray font-size-sm">
-                                    "성공 비즈니스를 위한 로고 CI.BI가 필요하신가요?"
-                                    검증된 "만족 1위"의 로고 및 명함까지 무료서비스 받으세요.
-                                    상담: 상담은 평일 및 주말에도 가능합니다.
-                                    * 로고제작 후 명함 등 요청하시는 홍보물 일사천리 진행
-                                    * 디자인-인쇄-배송-세금계산서 발행까지 체계적 시스템
-                                </p>
-                                <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card rounded-0">
-                            <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                                <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-l" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                            </div>
-
-                            <div class="d-flex overflow-hidden" style="max-height: 210px">
-                                <img src="../img/performance-2.jpg" class="card-img-top rounded-0 align-self-center" alt="">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="font-size-m">견적받고, 결제하셔요. 모든 작업을 제 일처럼 정성껏 디자인 해 드립니다.</h4>
-                                <div class="bg-deep-dark my-4 list-card-divider"></div>
-                                <p class="font-weight-light text-red font-size-sm">서울특별시 종로구</p>
-                                <p class="font-weight-light overflow-hidden list-card-content text-light-gray font-size-sm">
-                                    ※ 결제 먼저 하지 마시고^^ "문의하기"로 견적상담과 일정조율 후에 결제 진행해 주세요!!<br>
-                                    => 작업에 들어가는 정확한 내용과 사이즈, 샘플(컨셉)을 문의 대화창에
-                                    말씀해주시면 견적드립니다.
-                                </p>
-                                <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card rounded-0">
-                            <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                                <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-l" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                            </div>
-
-                            <div class="d-flex overflow-hidden" style="max-height: 210px">
-                                <img src="../img/performance-3.jpg" class="card-img-top rounded-0 align-self-center" alt="">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="font-size-m">브랜드의 가치를 높여주는 전문적인 로고, 아이덴티티를 디자인 해 드립니다.</h4>
-                                <div class="bg-deep-dark my-4 list-card-divider"></div>
-                                <p class="font-weight-light text-red font-size-sm">경기도 성남시</p>
-                                <p class="font-weight-light overflow-hidden list-card-content text-light-gray font-size-sm">
-                                    "의뢰인의 기본적인 선호를 반영" 하는 것을 최우선으로 작업 합니다.<br>
-                                    디자인은 작업물의 목적과 용도가 정해져 있습니다.
-                                    의뢰자 분의 브랜드를 의뢰자 분이 생각하시는 방향에 맞게 계획하고
-                                    설계하되, 명확하지 않은 부분과 어려운 부분을 다수의 브랜딩 ...
-                                </p>
-                                <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card rounded-0">
-                            <div class="position-absolute p-md-2 p-1 w-100 z-index-2">
-                                <button type="button" class="float-right bg-transparent border-0 p-0 text-white font-size-l" onclick="addWishList(this);"><i class="far fa-heart"></i></button>
-                            </div>
-
-                            <div class="d-flex overflow-hidden" style="max-height: 210px">
-                                <img src="../img/performance-4.jpg" class="card-img-top rounded-0 align-self-center" alt="">
-                            </div>
-
-                            <div class="card-body">
-                                <h4 class="font-size-m">원하는 대로 블로그디자인 트랜드에 맞게 디자인</h4>
-                                <div class="bg-deep-dark my-4 list-card-divider"></div>
-                                <p class="font-weight-light text-red font-size-sm">경상북도 포항시 남구</p>
-                                <p class="font-weight-light overflow-hidden list-card-content text-light-gray font-size-sm">
-                                    입점한지 얼마되지 않아 크몽내 판매량과 후기가 타판매자와 비교하여 많이 부족하지만,
-                                    디자인 퀄리티, 책임감은 밀리지 않는다고 자부합니다.
-                                    한분 한분, 정성을 다해 상담하고 디자인해드립니다.
-                                </p>
-                                <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                            </div>
-                        </div>
-                    </div>
+                <div id="wrapper" class="overflow-hidden">
+                    <div id="loading"></div>
+                    <!-- calendar -->
+                    <div id="calendar" class="float-lg-left pr-5" style="width: calc(100% - 360px);"></div>
+                    <!-- list -->
+                    <div id="eventList" class="float-lg-right" style="width: 360px;"></div>
                 </div>
 
-                <button type="button" class="btn btn-block border rounded-0 font-weight-light p-3 font-size-m text-light-gray">View More...</button>
+                <!-- 일정 추가 MODAL -->
+                <div class="modal fade" tabindex="-1" role="dialog" id="eventModal" aria-labelledby="eventModal" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title"></h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-allDay">하루종일</label>
+                                        <input class='allDayNewEvent' id="edit-allDay" type="checkbox"></label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-title">일정명</label>
+                                        <input class="inputModal" type="text" name="edit-title" id="edit-title"
+                                            required="required" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-start">시작</label>
+                                        <input class="inputModal" type="text" name="edit-start" id="edit-start" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-end">끝</label>
+                                        <input class="inputModal" type="text" name="edit-end" id="edit-end" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-type">구분</label>
+                                        <select class="inputModal" type="text" name="edit-type" id="edit-type">
+                                            <option value="카테고리1">카테고리1</option>
+                                            <option value="카테고리2">카테고리2</option>
+                                            <option value="카테고리3">카테고리3</option>
+                                            <option value="카테고리4">카테고리4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-color">색상</label>
+                                        <select class="inputModal" name="color" id="edit-color">
+                                            <option value="#D25565" style="color:#D25565;">빨간색</option>
+                                            <option value="#9775fa" style="color:#9775fa;">보라색</option>
+                                            <option value="#ffa94d" style="color:#ffa94d;">주황색</option>
+                                            <option value="#74c0fc" style="color:#74c0fc;">파란색</option>
+                                            <option value="#f06595" style="color:#f06595;">핑크색</option>
+                                            <option value="#63e6be" style="color:#63e6be;">연두색</option>
+                                            <option value="#a9e34b" style="color:#a9e34b;">초록색</option>
+                                            <option value="#4d638c" style="color:#4d638c;">남색</option>
+                                            <option value="#495057" style="color:#495057;">검정색</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-desc">설명</label>
+                                        <textarea rows="4" cols="50" class="inputModal" name="edit-desc"
+                                            id="edit-desc"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer modalBtnContainer-addEvent">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                                <button type="button" class="btn btn-primary" id="save-event">저장</button>
+                            </div>
+                            <div class="modal-footer modalBtnContainer-modifyEvent">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                                <button type="button" class="btn btn-danger" id="deleteEvent">삭제</button>
+                                <button type="button" class="btn btn-primary" id="updateEvent">저장</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+
             </div>
         </div>
     </main>
@@ -381,57 +356,20 @@
             </div>
         </div>
     </footer>
-</body>
 
-<script>
-    // datepicker
-    $(function () {
-        $('#datePicker').datepicker({
-            language: 'ko',
-            multipleDatesSeparator: ' ~ ',
-            range: true,
-            navTitles: {
-                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
-            },
-            prevHtml: '<i class="fas fa-chevron-left"></i>',
-            nextHtml: '<i class="fas fa-chevron-right"></i>',
-            onShow: function () {
-                if ($('.datepicker .btn').length > 0) {
-                    return false;
-                } else {
-                    $('.datepicker').append('<button type="button" class="btn btn-block py-3 border-0 rounded-0 font-weight-light bg-yellow">검색</button>');
-                }
-            }
-            // onShow: function () {
-            //     if ($('div.datepicker-time').length > 0) {
-            //         return false;
-            //     } else {
-            //         var inputs = '<div class="mx-4 py-4 border-top datepicker-time">' +
-            //                         '<div class="row">' +
-            //                             '<div class="col-6 custom-inputs">' +
-            //                                 '<p>시작시간</p>' +
-            //                                 '<select name="" id="" class="form-control">' +
-            //                                     '<option value="08:00">08:00</option>' +
-            //                                     '<option value="09:00">09:00</option>' +
-            //                                     '<option value="10:00">10:00</option>' +
-            //                                 '</select>' +
-            //                             '</div>' +
-            //                             '<div class="col-6 custom-inputs">' +
-            //                                 '<p>종료시간</p>' +
-            //                                 '<select name="" id="" class="form-control">' +
-            //                                     '<option value="13:00">13:00</option>' +
-            //                                     '<option value="14:00">14:00</option>' +
-            //                                     '<option value="15:00">15:00</option>' +
-            //                                 '</select>' +
-            //                             '</div>' +
-            //                         '</div>' +
-            //                     '</div>' +
-            //                     '<button type="button" class="btn btn-block py-3 border-0 rounded-0 font-weight-light bg-yellow">검색</button>';
-            //         $('.datepicker').append(inputs);
-            //     }
-            // }
-        })
-    });
-</script>
+    <!-- calendar -->
+    <script src="../js/fullcalendar/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="../js/fullcalendar/bootstrap.min.js"></script> -->
+    <script src="../js/moment.min.js"></script>
+    <script src="../js/fullcalendar/fullcalendar.min.js"></script>
+    <script src="../js/fullcalendar/ko.js"></script>
+    <!-- <script src="../js/fullcalendar/select2.min.js"></script> -->
+    <script src="../js/fullcalendar/bootstrap-datetimepicker.min.js"></script>
+    <script src="../js/fullcalendar/main.js"></script>
+    <script src="../js/fullcalendar/addEvent.js"></script>
+    <script src="../js/fullcalendar/editEvent.js"></script>
+    <script src="../js/fullcalendar/etcSetting.js"></script>
+</body>
 
 </html>

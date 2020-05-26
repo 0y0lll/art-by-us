@@ -54,6 +54,18 @@
         </div>
     </div>
 
+    <!-- Terms Modal -->
+    <div class="modal fade custom-modal-full" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="modal-content">
+                <div class="modal-body">
+                    test
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="py-md-3 px-5 py-2 text-center text-white bg-deep-dark top-notice">
         <span class="font-weight-light">코로나19에 대한 아트바이어스의 대책 및 환불 정책에 대한 최신 정보를 확인하세요.</span>
         <a href="#x" class="text-white d-lg-inline-block d-block">자세히 알아보기</a>
@@ -63,7 +75,7 @@
         <div class="container">
             <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
             <div class="ml-auto align-items-center d-lg-none d-flex">
-                <a class="text-dark mr-3 font-size-sm" href="#x"><i class="far fa-calendar-alt"></i></a>
+                <a class="text-dark mr-3 font-size-sm" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
                 <a class="text-dark mr-3 font-size-sm" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
                 <a class="text-dark mr-2 font-size-sm" href="../member/cart.html"><i class="fas fa-shopping-cart"></i></a>
             </div>
@@ -157,7 +169,7 @@
                 <!-- index에서만 ml-auto 추가 -->
                 <ul class="navbar-nav ml-auto_ align-items-center d-none d-lg-flex">
                     <li class="nav-item mr-2 font-size-md">
-                        <a class="nav-link text-dark" href="#x"><i class="far fa-calendar-alt"></i></a>
+                        <a class="nav-link text-dark" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
                     </li>
                     <li class="nav-item mr-2 font-size-md">
                         <a class="nav-link text-dark" href="recent_list.html"><i class="far fa-clock"></i></a>
@@ -316,6 +328,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="d-flex mb-4 custom-inputs">
                     <i class="fas fa-check"></i>
                     <input type="checkbox" class="custom-checkbox mr-2" id="order_def">
@@ -329,10 +342,94 @@
 
                 <div class="border mb-3">
                     <ul class="list-group list-group-flush mb-0">
-                        <li class="list-group-item text-gray">
+                        <li class="list-group-item py-3 text-gray">
                             <p>사당 제이그라운드 안무연습실 환불규정</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="pr-4 py-1">예약일 5일 전까지</td>
+                                        <td class="font-weight-light">100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pr-4 py-1">예약일 3일 전까지</td>
+                                        <td class="font-weight-light">70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pr-4 py-1">예약일 2일 전까지</td>
+                                        <td class="font-weight-light">50%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pr-4 py-1">예약일 전날, 당일</td>
+                                        <td class="font-weight-light">환불불가</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="list-group-item py-3 text-gray">
+                            <p>“너도 손글씨 잘 쓸 수 있어” 김민범의 캘리그라피 클래스 환불규정</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="pr-4 py-1">예약일 5일 전까지</td>
+                                        <td class="font-weight-light">100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pr-4 py-1">예약일 3일 전까지</td>
+                                        <td class="font-weight-light">70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pr-4 py-1">예약일 2일 전까지</td>
+                                        <td class="font-weight-light">50%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pr-4 py-1">예약일 전날, 당일</td>
+                                        <td class="font-weight-light">환불불가</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </li>
                     </ul>
+                </div>
+
+                <div class="d-flex mb-4 custom-inputs">
+                    <i class="fas fa-check"></i>
+                    <input type="checkbox" class="custom-checkbox mr-2" id="order_refund">
+                    <label for="order_refund" class="mb-0">환불규정에 대한 정보를 이해하였으며 이에 동의합니다.</label>
+                </div>
+            </div>
+
+            <!-- payment -->
+            <div class="mb-5">
+                <h5 class="mb-4">결제방식 선택</h5>
+
+                <div class="border mb-3">
+                    <div class="d-flex justify-content-between px-5 py-4">
+                        <div class="d-flex align-items-center">
+                            <input type="radio" name="payment" class="custom-radio mr-3" id="nPay">
+                            <label for="nPay"><img src="../img/logo.png" alt="..."></label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input type="radio" name="payment" class="custom-radio mr-3" id="kakaoPay">
+                            <label for="kakaoPay"><img src="../img/logo.png" alt="..."></label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input type="radio" name="payment" class="custom-radio mr-3" id="creditCard">
+                            <label for="creditCard" class="font-weight-light font-size-s">신용카드 결제</label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input type="radio" name="payment" class="custom-radio mr-3" id="depBank">
+                            <label for="depBank" class="font-weight-light font-size-s">무통장입금</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex mb-4 custom-inputs">
+                    <i class="fas fa-check"></i>
+                    <input type="checkbox" class="custom-checkbox mr-2" id="order_payment">
+                    <label for="order_payment" class="mb-0">
+                        서비스 및 결제방식에 대한 내용을 이해하였으며 이에 동의합니다.
+                        <a href="#x" class="text-dark" data-toggle="modal" data-target="#termsModal">(보기)</a>
+                    </label>
                 </div>
             </div>
 
