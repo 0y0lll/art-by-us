@@ -12,13 +12,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- Datepicker -->
-    <!-- with time -->
-    <script type="text/javascript" src="../js/moment.min.js"></script>
-    <script type="text/javascript" src="../js/daterangepicker.js"></script>
-    <link rel="stylesheet" href="../css/daterangepicker.css">
-
-    <!-- <link href="../css/datepicker.css" rel="stylesheet">
-    <script src="../js/datepicker.js"></script> -->
+    <link href="../css/datepicker.css" rel="stylesheet">
+    <script src="../js/datepicker.js"></script>
 
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
@@ -216,7 +211,7 @@
             <!-- search keyword -->
             <h2 class="font-weight-light text-center py-5 mb-0 text-gray search-result">
                 <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;동대문역사문화공원역&rdquo;</span> 에 있는<br>
-                <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;회의실&rdquo;</span> 로 검색된 결과입니다.
+                <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;클래식 음악&rdquo;</span> 로 검색된 결과입니다.
             </h2>
             <!-- search category -->
             <div class="row justify-content-between custom-inputs">
@@ -227,10 +222,15 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <p class="font-weight-light font-weight-light mb-1 font-size-sm">유형</p>
+                    <p class="font-weight-light font-weight-light mb-1 font-size-sm">항목</p>
                     <div class="input-group">
                         <select name="" id="" class="form-control font-size-sm">
-                            <option value="seoul" selected>회의실</option>
+                            <option value="" selected>무용</option>
+                            <option value="">연기</option>
+                            <option value="">음악</option>
+                            <option value="">보컬</option>
+                            <option value="">클래식 음악</option>
+                            <option value="">댄스</option>
                         </select>
                     </div>
                 </div>
@@ -603,32 +603,23 @@
 <script>
     // datepicker
     $(function () {
-        $('#datePicker').daterangepicker({
-            timePicker: true,
-            startDate: moment().startOf('hour'),
-            endDate: moment().startOf('hour').add(32, 'hour'),
-            locale: {
-                format: 'YY-MM-DD hh:00',
-                daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
-                monthNames: ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'],
-                applyLabel: '검색',
-                separator: ' ~ '
+        $('#datePicker').datepicker({
+            language: 'ko',
+            multipleDatesSeparator: ' ~ ',
+            range: false,
+            navTitles: {
+                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
             },
-            timePicker24Hour: true,
-            opens: 'left'
-        });
-
-        // $('#datePicker').datepicker({
-        //     language: 'ko',
-        //     multipleDatesSeparator: ' ~ ',
-        //     range: true,
-        //     navTitles: {
-        //         days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
-        //     },
-        //     prevHtml: '<i class="fas fa-chevron-left"></i>',
-        //     nextHtml: '<i class="fas fa-chevron-right"></i>',
-        //     timepicker: true
-        // })
+            prevHtml: '<i class="fas fa-chevron-left"></i>',
+            nextHtml: '<i class="fas fa-chevron-right"></i>',
+            onShow: function () {
+                if ($('.datepicker .btn').length > 0) {
+                    return false;
+                } else {
+                    $('.datepicker').append('<button type="button" class="btn btn-block py-3 border-0 rounded-0 font-weight-light bg-yellow">검색</button>');
+                }
+            }
+        })
     });
 </script>
 

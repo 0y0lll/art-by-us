@@ -97,29 +97,29 @@ var calendar = $('#calendar').fullCalendar({
   eventRender: function (event, element, view) {
 
     //일정에 hover시 요약
-    element.popover({
-      title: $('<div />', {
-        class: 'popoverTitleCalendar',
-        text: event.title
-      }).css({
-        'background': event.backgroundColor,
-        'color': event.textColor
-      }),
-      content: $('<div />', {
-          class: 'popoverInfoCalendar'
-        }).append('<p><strong>등록자:</strong> ' + event.username + '</p>')
-        .append('<p><strong>구분:</strong> ' + event.type + '</p>')
-        .append('<p><strong>시간:</strong> ' + getDisplayEventDate(event) + '</p>')
-        .append('<div class="popoverDescCalendar"><strong>설명:</strong> ' + event.description + '</div>'),
-      delay: {
-        show: "500",
-        hide: "50"
-      },
-      trigger: 'hover',
-      placement: 'top',
-      html: true,
-      container: 'body'
-    });
+    // element.popover({
+    //   title: $('<div />', {
+    //     class: 'popoverTitleCalendar',
+    //     text: event.title
+    //   }).css({
+    //     'background': event.backgroundColor,
+    //     'color': event.textColor
+    //   }),
+    //   content: $('<div />', {
+    //       class: 'popoverInfoCalendar'
+    //     }).append('<p><strong>등록자:</strong> ' + event.username + '</p>')
+    //     .append('<p><strong>구분:</strong> ' + event.type + '</p>')
+    //     .append('<p><strong>시간:</strong> ' + getDisplayEventDate(event) + '</p>')
+    //     .append('<div class="popoverDescCalendar"><strong>설명:</strong> ' + event.description + '</div>'),
+    //   delay: {
+    //     show: "500",
+    //     hide: "50"
+    //   },
+    //   trigger: 'hover',
+    //   placement: 'top',
+    //   html: true,
+    //   container: 'body'
+    // });
 
     return filtering(event);
 
@@ -163,7 +163,7 @@ var calendar = $('#calendar').fullCalendar({
   /* right */
   viewRender: function (view, element) {
     var menu = '<div class="d-flex justify-content-end w-100 custom-inputs-sub">' +
-                  '<button type="button" class="btn border mr-2 font-weight-light w-lg-25">' +
+                  '<button type="button" class="fc-add-schedule btn border mr-2 font-weight-light w-lg-25" data-toggle="modal" data-target="#addScheduleModal">' +
                     '<i class="fas fa-plus mr-1 text-sky"></i>일정추가' +
                   '</button >' +
                   '<select class="form-control font-weight-light filter w-lg-25" id="type_filter">' +
@@ -175,7 +175,13 @@ var calendar = $('#calendar').fullCalendar({
                     '<option value="personal">개인일정</option>' +
                   '</select>' +
                 '</div>';
-    $('div.fc-right').addClass('w-lg-50').html(menu);
+    $('#calendar .fc-right').addClass('w-lg-50').html(menu);
+    $('#calendar .fc-left').addClass('d-flex align-items-center');
+
+    $('#calendar .fc-left button').attr('class', 'btn font-size-md text-light-gray-more')
+    $('#calendar .fc-left button:first-child').html('<i class="fas fa-chevron-left"></i>');
+    $('#calendar .fc-left button:last-child').html('<i class="fas fa-chevron-right"></i>');
+    $('#calendar .fc-view-container').addClass('float-lg-left pr-lg-5 custom-calendar-left');
   },
 
   /* ****************
@@ -358,14 +364,11 @@ var calendar = $('#calendar').fullCalendar({
   selectLongPressDelay: 0
 });
 
+/* right list */
 var eventList = $('#eventList').fullCalendar({
   plugins: [ 'list' ],
   defaultView: 'listWeek',
-  header: {
-    left: 'prev, title, next',
-    center: '',
-    right: ''
-  },
+  header: false,
   views: {
     month: {
       columnFormat: 'dddd'

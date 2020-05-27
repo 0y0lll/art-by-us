@@ -93,28 +93,28 @@ body {
 }
 
 .font-size-x {
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
 }
 .font-size-xs {
-    font-size: 0.85rem;
+    font-size: 0.85rem !important;
 }
 .font-size-s {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
 }
 .font-size-sm {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
 }
 .font-size-m {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
 }
 .font-size-md {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
 }
 .font-size-l {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
 }
 .font-size-xl {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
 }
 /* 1.5rem
 1.25rem
@@ -455,6 +455,7 @@ select::-ms-expand {
     border-top: 0;
     box-shadow: none;
     box-sizing: inherit;
+    z-index: 2000;
 }
 .datepicker.-from-bottom- .datepicker--pointer{
     display: none;
@@ -805,27 +806,27 @@ footer .text-divider {
     }
     .h2, h2,
     .font-size-m {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
     }
     .h5, h5 {
-        font-size: 0.8rem;
+        font-size: 0.8rem !important;
     }
 
     .font-size-x {
-        font-size: 0.6rem;
+        font-size: 0.6rem !important;
     }
     .font-size-xs,
     .font-size-s {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
     }
     .font-size-sm {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
     .font-size-md {
-        font-size: 1.25rem;
+        font-size: 1.25rem !important;
     }
     .font-size-l {
-        font-size: 1.4rem;
+        font-size: 1.4rem !important;
     }
 
     .list-tag {

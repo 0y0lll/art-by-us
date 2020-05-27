@@ -290,3 +290,49 @@
 #edit-color {
   color: #d25565;
 }
+
+.fc .fc-row .fc-content-skeleton td {
+  text-align: center;
+}
+.fc-unthemed .fc-row,
+.fc-head-container.fc-widget-header,
+.fc-unthemed thead,
+.fc-unthemed th {
+  border: 0 !important;
+}
+.fc-day-header {
+  background: none;
+  color: #d7d7d7;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.fc-scroller {
+  height: 100% !important;
+  overflow: hidden !important;
+}
+.fc-day-number {
+  pointer-events: none;
+}
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+  float: none !important;
+  color: #717171;
+}
+.fc-toolbar.fc-header-toolbar {
+  padding-top: 0;
+}
+
+@media (min-width: 992px) {
+  .custom-calendar-left {
+    width: calc(100% - 360px);
+  }
+  .custom-calendar-right {
+    width: 360px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .custom-calendar-left .fc-scroller {
+    border-right: 1px solid #ddd;
+  }
+}
