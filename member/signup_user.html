@@ -100,7 +100,7 @@
                 <ul class="navbar-nav border-top pt-3 m-lg-auto mt-2 font-size-xs d-block d-lg-none">
                     <!-- Login -->
                     <li class="nav-item mx-lg-3 mx-2 mb-2">
-                        <button class="btn btn-block border text-dark dropdown-toggle p-2 rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
+                        <button class="btn btn-block border text-dark dropdown-toggle p-2 bg-white rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
                     </li>
@@ -131,7 +131,7 @@
                         <a class="nav-link" href="#x">채팅</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
+                        <a class="nav-link" href="../member/chat_user.html">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
                     </li>
                     <div class="dropdown-divider"></div>
                     <li class="nav-item mx-lg-3 mx-2">
@@ -160,14 +160,14 @@
                     </li>
                     <li class="nav-item">
                         <!-- Login -->
-                        <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
+                        <button class="btn border text-dark dropdown-toggle bg-white rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
 
                         <!-- Login - user -->
                         <!--
                         <div class="dropdown">
-                            <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn border text-dark dropdown-toggle bg-white rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="d-flex">
                                     <div class="position-relative mr-2 nav-user-profile">
                                         <span class="position-absolute rounded-pill bg-hot-pink nav-user-notify"></span>
@@ -181,7 +181,7 @@
                                 <a class="dropdown-item" href="#x">찜 리스트</a>
                                 <a class="dropdown-item" href="#x">나의 이용 후기</a>
                                 <a class="dropdown-item" href="#x">채팅</a>
-                                <a class="dropdown-item" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
+                                <a class="dropdown-item" href="../member/chat_user.html">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#x">회원 정보 관리</a>
                                 <a class="dropdown-item" href="#x">호스트 전환</a>
@@ -200,7 +200,7 @@
             <h3 class="mb-4">개인 회원가입</h3>
             <!-- form -->
             <div class="mb-2">
-                <div class="custom-inputs-sub mb-3">
+                <div class="custom-inputs-sub not mb-3">
                     <label for="user_id" class="d-block text-gray">아이디(이메일)</label>
                     <div class="d-flex">
                         <input type="text" class="form-control flex-fill mr-4" id="user_id" placeholder="example@example.com">
@@ -208,27 +208,27 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-lg-6 custom-inputs-sub">
+                    <div class="col-lg-6 custom-inputs-sub not">
                         <label for="user_pw" class="d-block text-gray">비밀번호</label>
                         <input type="password" class="form-control" id="user_pw" placeholder="6~14자리 이상의 영문, 숫자">
                     </div>
-                    <div class="col-lg-6 custom-inputs-sub">
+                    <div class="col-lg-6 custom-inputs-sub not">
                         <label for="user_pw2" class="d-block text-gray">비밀번호 확인</label>
                         <input type="password" class="form-control" id="user_pw2" placeholder="비밀번호 확인">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-lg-6 custom-inputs-sub">
+                    <div class="col-lg-6 custom-inputs-sub not mb-lg-0 mb-3">
                         <label for="user_name" class="d-block text-gray">이름</label>
                         <input type="text" class="form-control" id="user_name" placeholder="이름">
                     </div>
-                    <div class="col-lg-6 custom-inputs-sub">
+                    <div class="col-lg-6 custom-inputs-sub not">
                         <label for="user_nickname" class="d-block text-gray">닉네임</label>
                         <input type="text" class="form-control" id="user_nickname" placeholder="아트바이어스">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-lg-6 custom-inputs-sub">
+                    <div class="col-lg-6 custom-inputs-sub not mb-lg-0 mb-3">
                         <label for="user_phone" class="d-block text-gray">연락처</label>
                         <div class="d-flex">
                             <div class="flex-fill mr-4">
@@ -237,7 +237,7 @@
                             <button type="button" class="btn flex-fill w-25 bg-yellow">인증번호 발송</button>
                         </div>
                     </div>
-                    <div class="col-lg-6 custom-inputs-sub">
+                    <div class="col-lg-6 custom-inputs-sub not">
                         <label for="user_auth" class="d-block text-gray">인증번호</label>
                         <input type="text" class="form-control" id="user_auth" placeholder="인증번호">
                     </div>
@@ -246,7 +246,6 @@
 
             <!-- checkbox -->
             <div class="d-flex mb-4 custom-inputs">
-                <i class="fas fa-check"></i>
                 <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
                 <label for="all_agree" class="mb-0">
                     개인 회원 약관 및 개인정보이용방안을 이해하였으며 이에 동의합니다.
@@ -255,7 +254,7 @@
             </div>
 
             <!-- button -->
-            <div class="custom-inputs-sub">
+            <div class="custom-inputs-sub not">
                 <button type="button" class="btn btn-block bg-yellow">회원가입 완료</button>
             </div>
         </div>

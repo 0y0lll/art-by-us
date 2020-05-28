@@ -62,9 +62,10 @@
     <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-1">
         <div class="container">
             <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
+            <h3 class="mb-0 font-size-l">1:1문의</h3>
             <div class="ml-auto align-items-center d-lg-none d-flex">
                 <a class="text-dark mr-3 font-size-sm" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
-                <a class="text-dark mr-3 font-size-sm" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
+                <a class="text-dark mr-3 font-size-sm" href="member/recent_list.html"><i class="far fa-clock"></i></a>
                 <a class="text-dark mr-2 font-size-sm" href="../member/cart.html"><i class="fas fa-shopping-cart"></i></a>
             </div>
             <button class="navbar-toggler border-0 font-size-md text-dark" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -136,12 +137,13 @@
                 </ul>
 
                 <!-- user - lg -->
+                <!-- index, chat 페이지 ml-auto 추가 -->
                 <ul class="navbar-nav ml-auto align-items-center d-none d-lg-flex">
                     <li class="nav-item mr-2 font-size-md">
                         <a class="nav-link text-dark" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
                     </li>
                     <li class="nav-item mr-2 font-size-md">
-                        <a class="nav-link text-dark" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
+                        <a class="nav-link text-dark" href="recent_list.html"><i class="far fa-clock"></i></a>
                     </li>
                     <li class="nav-item mr-3 font-size-md">
                         <a class="nav-link text-dark" href="../member/cart.html"><i class="fas fa-shopping-cart"></i></a>
@@ -159,7 +161,7 @@
                                 <div class="d-flex">
                                     <div class="position-relative mr-2 nav-user-profile">
                                         <span class="position-absolute rounded-pill bg-hot-pink nav-user-notify"></span>
-                                        <img src="img/profile-photo@3x.jpg" class="rounded-circle nav-user-profile-img" alt="김민범님">
+                                        <img src="../img/profile-photo@3x.jpg" class="rounded-circle nav-user-profile-img" alt="김민범님">
                                     </div>
                                     <span>김민범</span>
                                 </div>
@@ -184,85 +186,137 @@
     </nav>
 
     <main role="main">
-        <div class="container py-lg-5 py-4">
-            <h3 class="mb-4">회원가입</h3>
-            <!-- terms -->
-            <div class="mb-2">
-                <!-- tab pages -->
-                <ul class="nav nav-pills nav-fill custom-nav-tabs light">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#terms">이용약관 <span class="text-red">(필수)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#privacy">개인정보처리방침 <span class="text-red">(필수)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#location">위치정보수집약관 <span class="text-red">(필수)</span></a>
-                    </li>
-                </ul>
-
-                <div class="tab-content">
-                    <!-- tab 1 -->
-                    <div class="tab-pane fade show active " id="terms">
-                        <div class="border border-top-0 p-4 mb-lg-4 mb-2">
-                            <p class="font-weight-light mb-0 font-size-s">
-                                그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                                할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                                할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                                굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                                가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                            </p>
+        <div class="container-fluid border-top custom-chat">
+            <div class="row">
+                <!-- chat list -->
+                <div class="col-xl-4 col-5 border-right px-0">
+                    <div class="d-flex align-items-start p-3 position-relative chat-item active">
+                        <div class="d-lg-flex d-none justify-content-center rounded-circle overflow-hidden mr-lg-4 mr-2 user-bg">
+                            <img src="../img/studio-host.jpg" class="align-self-center w-100 h-100" alt="">
                         </div>
-
-                        <!-- checkbox -->
-                        <div class="d-flex mb-4 custom-inputs">
-                            <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
-                            <label for="all_agree" class="mb-0">위 약관을 이해하였으며 이에 동의합니다.</label>
+                        <div class="font-weight-light">
+                            <p class="mb-1">사당안무연습실 호스트</p>
+                            <p class="mb-1 d-md-block d-none text-light-gray font-size-xs">최근 메시지는 최대 두 줄 까지 입력이 가능합니다.</p>
+                            <p class="mb-0 text-light-gray font-size-xs">19:00</p>
                         </div>
+                        <a href="#x" class="stretched-link text-decoration-none"></a>
                     </div>
-                    <!-- tab 2 -->
-                    <div class="tab-pane fade" id="privacy">
-                        <div class="border border-top-0 p-4 mb-lg-4 mb-2">
-                            <p class="font-weight-light mb-0 font-size-s">
-                                그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                                할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                                할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                                굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                                가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                            </p>
+                    <div class="d-flex align-items-start p-3 position-relative">
+                        <div class="d-lg-flex d-none justify-content-center rounded-circle overflow-hidden mr-lg-4 mr-2 user-bg">
+                            <!-- <img src="../img/studio-host.jpg" class="align-self-center w-100 h-100" alt=""> -->
                         </div>
-
-                        <!-- checkbox -->
-                        <div class="d-flex mb-4 custom-inputs">
-                            <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
-                            <label for="all_agree" class="mb-0">위 약관을 이해하였으며 이에 동의합니다.</label>
+                        <div class="font-weight-light">
+                            <p class="mb-1">토즈 평촌R&D센터점 호스트</p>
+                            <p class="mb-1 d-md-block d-none text-light-gray font-size-xs">최근 메시지는 최대 두 줄 까지 입력이 가능합니다.</p>
+                            <p class="mb-0 text-light-gray font-size-xs">19:00</p>
                         </div>
+                        <a href="#x" class="stretched-link text-decoration-none"></a>
                     </div>
-                    <!-- tab 3 -->
-                    <div class="tab-pane fade" id="location">
-                        <div class="border border-top-0 p-4 mb-lg-4 mb-2">
-                            <p class="font-weight-light mb-0 font-size-s">
-                                그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                                할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                                할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                                굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                                가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                            </p>
+                    <div class="d-flex align-items-start p-3 position-relative">
+                        <div class="d-lg-flex d-none justify-content-center rounded-circle overflow-hidden mr-lg-4 mr-2 user-bg">
+                            <!-- <img src="../img/studio-host.jpg" class="align-self-center w-100 h-100" alt=""> -->
                         </div>
-
-                        <!-- checkbox -->
-                        <div class="d-flex mb-4 custom-inputs">
-                            <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
-                            <label for="all_agree" class="mb-0">위 약관을 이해하였으며 이에 동의합니다.</label>
+                        <div class="font-weight-light">
+                            <p class="mb-1">스터디공간 경리단길점 호스트</p>
+                            <p class="mb-1 d-md-block d-none text-light-gray font-size-xs">최근 메시지는 최대 두 줄 까지 입력이 가능합니다.</p>
+                            <p class="mb-0 text-light-gray font-size-xs">19:00</p>
                         </div>
+                        <a href="#x" class="stretched-link text-decoration-none"></a>
+                    </div>
+                    <div class="d-flex align-items-start p-3 position-relative">
+                        <div class="d-lg-flex d-none justify-content-center rounded-circle overflow-hidden mr-lg-4 mr-2 user-bg">
+                            <!-- <img src="../img/studio-host.jpg" class="align-self-center w-100 h-100" alt=""> -->
+                        </div>
+                        <div class="font-weight-light">
+                            <p class="mb-1">서울대 오렌지카페 호스트</p>
+                            <p class="mb-1 d-md-block d-none text-light-gray font-size-xs">최근 메시지는 최대 두 줄 까지 입력이 가능합니다.</p>
+                            <p class="mb-0 text-light-gray font-size-xs">19:00</p>
+                        </div>
+                        <a href="#x" class="stretched-link text-decoration-none"></a>
+                    </div>
+                    <div class="d-flex align-items-start p-3 position-relative">
+                        <div class="d-lg-flex d-none justify-content-center rounded-circle overflow-hidden mr-lg-4 mr-2 user-bg">
+                            <!-- <img src="../img/studio-host.jpg" class="align-self-center w-100 h-100" alt=""> -->
+                        </div>
+                        <div class="font-weight-light">
+                            <p class="mb-1">한남동 파티룸 [&] 호스트</p>
+                            <p class="mb-1 d-md-block d-none text-light-gray font-size-xs">최근 메시지는 최대 두 줄 까지 입력이 가능합니다.</p>
+                            <p class="mb-0 text-light-gray font-size-xs">19:00</p>
+                        </div>
+                        <a href="#x" class="stretched-link text-decoration-none"></a>
+                    </div>
+                    <div class="d-flex align-items-start p-3 position-relative">
+                        <div class="d-lg-flex d-none justify-content-center rounded-circle overflow-hidden mr-lg-4 mr-2 user-bg">
+                            <!-- <img src="../img/studio-host.jpg" class="align-self-center w-100 h-100" alt=""> -->
+                        </div>
+                        <div class="font-weight-light">
+                            <p class="mb-1">종합연습실 인헌시장점</p>
+                            <p class="mb-1 d-md-block d-none text-light-gray font-size-xs">최근 메시지는 최대 두 줄 까지 입력이 가능합니다.</p>
+                            <p class="mb-0 text-light-gray font-size-xs">19:00</p>
+                        </div>
+                        <a href="#x" class="stretched-link text-decoration-none"></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- buttons -->
-            <div class="d-flex justify-content-center">
-                <a href="../member/signup_user.html" class="btn rounded-0 py-lg-4 px-lg-5 py-2 px-3 mr-2 bg-yellow font-size-s">개인 회원가입</a>
-                <a href="../member/signup_host.html" class="btn rounded-0 py-lg-4 px-lg-5 py-2 px-3 ml-2 text-white bg-sky font-size-s">사업자 회원가입</a>
+                <!-- chat -->
+                <div class="col-xl-8 col-7 px-0">
+                    <!-- date -->
+                    <div class="font-weight-light">
+                        <div class="text-center my-3">
+                            <span class="d-inline-block rounded-xl px-3 py-1 bg-light">2020년 05월 01일</span>
+                        </div>
+                    </div>
+
+                    <!-- msg -->
+                    <div class="px-3">
+                        <!-- Reciever -->
+                        <div class="d-flex justify-content-end mb-3">
+                            <div class="ml-auto font-weight-light">
+                                <div class="bg-sky rounded-xl p-md-3 p-2 mb-2 text-white chat-msg">
+                                    <img src="../img/section-2-photo.jpg" alt="" class="w-100 mb-2">
+                                    <p class="mb-2">사당 안무연습실 예약 요청이 되었습니다.<br>호스트의 답변을 기다려주세요.</p>
+                                    <p class="mb-0">예약자 : 김민범<br>호실 : G1<br>예약일시 : 2020-05-03 18:00 ~ 2020-05-04 20:00</p>
+                                </div>
+                                <p class="text-light-gray font-size-xs">14:51</p>
+                            </div>
+                        </div>
+
+                        <!-- Sender -->
+                        <div class="d-flex justify-content-start mb-3">
+                            <div class="mr-auto font-weight-light">
+                                <div class="d-flex mb-2">
+                                    <div class="d-flex justify-content-center rounded-circle overflow-hidden mr-2 user-bg sm">
+                                        <img src="../img/studio-host.jpg" class="align-self-center w-100 h-100" alt="">
+                                    </div>
+                                    <p class="mb-0">사당안무연습실 호스트</p>
+                                </div>
+                                <div class="bg-light rounded-xl p-md-3 p-2 mb-2 chat-msg">
+                                    <p class="mb-0">
+                                        안녕하세요 ^^ 사당안무연습실입니다.<br>
+                                        예약 내용 확인되어 예약 확정 진행하려고 합니다.<br>
+                                        괜찮으신가요?
+                                    </p>
+                                </div>
+                                <p class="text-right text-light-gray font-size-xs">19:00</p>
+                            </div>
+                        </div>
+
+                        <!-- Reciever -->
+                        <div class="d-flex justify-content-end mb-3">
+                            <div class="ml-auto font-weight-light">
+                                <div class="bg-sky rounded-xl p-md-3 p-2 mb-2 text-white chat-msg">
+                                    <p class="mb-0">네, 진행 부탁드립니다.</p>
+                                </div>
+                                <p class="text-light-gray font-size-xs">19:51</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- input -->
+                    <div class="custom-inputs chat-msg-input">
+                        <input type="text" class="form-control border-0 font-size-s" placeholder="여기에 메시지를 입력해 주세요">
+                    </div>
+                </div>
             </div>
         </div>
     </main>

@@ -99,7 +99,7 @@
                         <a class="nav-link text-dark" href="../sub/performance.html">Performance</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="#x">Audition</a>
+                        <a class="nav-link text-dark" href="../sub/audition.html">Audition</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
                         <a class="nav-link text-dark" href="../sub/store.html">Store</a>
@@ -110,7 +110,7 @@
                 <ul class="navbar-nav border-top pt-3 m-lg-auto mt-2 font-size-xs d-block d-lg-none">
                     <!-- Login -->
                     <li class="nav-item mx-lg-3 mx-2 mb-2">
-                        <button class="btn btn-block border text-dark dropdown-toggle p-2 rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
+                        <button class="btn btn-block border text-dark dropdown-toggle p-2 bg-white rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
                     </li>
@@ -141,7 +141,7 @@
                         <a class="nav-link" href="#x">채팅</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
+                        <a class="nav-link" href="../member/chat_user.html">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
                     </li>
                     <div class="dropdown-divider"></div>
                     <li class="nav-item mx-lg-3 mx-2">
@@ -158,7 +158,7 @@
                 </ul>
 
                 <!-- user - lg -->
-                <!-- index에서만 ml-auto 추가 -->
+                <!-- index, chat 페이지 ml-auto 추가 -->
                 <ul class="navbar-nav ml-auto_ align-items-center d-none d-lg-flex">
                     <li class="nav-item mr-2 font-size-md">
                         <a class="nav-link text-dark" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
@@ -171,14 +171,14 @@
                     </li>
                     <li class="nav-item">
                         <!-- Login -->
-                        <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
+                        <button class="btn border text-dark dropdown-toggle bg-white rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
 
                         <!-- Login - user -->
                         <!--
                         <div class="dropdown">
-                            <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn border text-dark dropdown-toggle bg-white rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="d-flex">
                                     <div class="position-relative mr-2 nav-user-profile">
                                         <span class="position-absolute rounded-pill bg-hot-pink nav-user-notify"></span>
@@ -192,7 +192,7 @@
                                 <a class="dropdown-item" href="#x">찜 리스트</a>
                                 <a class="dropdown-item" href="#x">나의 이용 후기</a>
                                 <a class="dropdown-item" href="#x">채팅</a>
-                                <a class="dropdown-item" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
+                                <a class="dropdown-item" href="../member/chat_user.html">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#x">회원 정보 관리</a>
                                 <a class="dropdown-item" href="#x">호스트 전환</a>
@@ -209,9 +209,9 @@
     <main role="main">
         <div class="bg-light-more py-lg-5 py-4">
             <div class="container">
-                <div class="d-lg-flex">
+                <div class="d-lg-flex view-type">
                     <!-- info -->
-                    <div class="float-lg-left mr-5_ pr-5 overflow-hidden"style="width: calc(100% - 360px);">
+                    <div class="float-lg-left mr-5_ pr-lg-5 overflow-hidden left">
                         <!-- slide -->
                         <div id="carouselStudioView" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators my-4">
@@ -262,7 +262,7 @@
                         <!-- tab 1 -->
                         <div class="tab-pane fade show active" id="info">
                             <div class="my-5">
-                                <h4 class="mb-4 text-bullet">소개</h4>
+                                <h4 class="mb-4 text-bullet font-size-s">소개</h4>
                                 <p class="font-weight-light font-size-s">
                                     그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
                                     할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
@@ -272,7 +272,7 @@
                                 </p>
                             </div>
                             <div class="my-5">
-                                <h4 class="mb-4 text-bullet">편의시설</h4>
+                                <h4 class="mb-4 text-bullet font-size-s">편의시설</h4>
                                 <div class="d-flex-fill font-weight-light font-size-s">
                                     <span class="mr-2">TV/프로젝트</span>
                                     <span class="mr-2">인터넷/와이파이</span>
@@ -295,7 +295,7 @@
                         </div>
                         <div class="tab-pane fade" id="terms">
                             <div class="my-5">
-                                <h4 class="mb-4 text-bullet">이용약관</h4>
+                                <h4 class="mb-4 text-bullet font-size-s">이용약관</h4>
                                 <p class="font-weight-light font-size-s">
                                     그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
                                     할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
@@ -309,7 +309,7 @@
                         <!-- tab 2 -->
                         <div class="tab-pane fade" id="refund">
                             <div class="my-5">
-                                <h4 class="mb-4 text-bullet">환불규정</h4>
+                                <h4 class="mb-4 text-bullet font-size-s">환불규정</h4>
                                 <p class="font-weight-light font-size-s">
                                     그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
                                     할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
@@ -326,16 +326,16 @@
                                 <!-- >>>> Q&A -->
                                 <div class="mb-10">
                                     <div class="d-flex justify-content-between">
-                                        <h4 class="mb-4 text-bullet">질문과 답변</h4>
+                                        <h4 class="mb-4 text-bullet font-size-s">질문과 답변</h4>
                                         <button type="button" class="btn rounded-pill bg-dark text-white font-weight-light px-4 font-size-xs" style="height: 40px">질문 작성하기</button>
                                     </div>
 
                                     <!-- list -->
-                                    <ul class="list-unstyled">
+                                    <ul class="list-unstyled view-type-review">
                                         <li class="mb-3">
                                             <div class="d-flex">
-                                                <div class="mr-4">
-                                                    <span class="d-inline-block rounded-circle" style="width: 67px; height: 67px; background: #c15454"></span>
+                                                <div class="mr-lg-4 mr-2">
+                                                    <span class="d-inline-block rounded-circle user-bg"></span>
                                                 </div>
                                                 <div class="">
                                                     <p class="font-size-m">BUMING</p>
@@ -351,8 +351,8 @@
                                         </li>
                                         <li class="mb-3">
                                             <div class="d-flex">
-                                                <div class="mr-4">
-                                                    <span class="d-inline-block rounded-circle" style="width: 67px; height: 67px; background: #c15454"></span>
+                                                <div class="mr-lg-4 mr-2">
+                                                    <span class="d-inline-block rounded-circle user-bg"></span>
                                                 </div>
                                                 <div class="border-bottom pb-4 mb-4"><!-- 답변이 달리면 border-bottom pb-4 mb-4 추가 -->
                                                     <p class="text-sky font-size-m">호스트의 답변</p>
@@ -367,8 +367,8 @@
                                         </li>
                                         <li class="mb-3">
                                             <div class="d-flex">
-                                                <div class="mr-4">
-                                                    <span class="d-inline-block rounded-circle" style="width: 67px; height: 67px; background: #c15454"></span>
+                                                <div class="mr-lg-4 mr-2">
+                                                    <span class="d-inline-block rounded-circle user-bg"></span>
                                                 </div>
                                                 <div class="">
                                                     <p class="font-size-m">whereismyplace</p>
@@ -381,8 +381,8 @@
                                         </li>
                                         <li class="mb-3">
                                             <div class="d-flex">
-                                                <div class="mr-4">
-                                                    <span class="d-inline-block rounded-circle" style="width: 67px; height: 67px; background: #c15454"></span>
+                                                <div class="mr-lg-4 mr-2">
+                                                    <span class="d-inline-block rounded-circle user-bg"></span>
                                                 </div>
                                                 <div class="border-bottom pb-4 mb-4"><!-- 답변이 달리면 border-bottom pb-4 mb-4 추가 -->
                                                     <p class="text-sky font-size-m">호스트의 답변</p>
@@ -414,14 +414,14 @@
 
                                 <!-- >>>> Review -->
                                 <div class="">
-                                    <h4 class="mb-4 text-bullet">이용후기 <span class="text-sky font-weight-light ml-3 mr-2">33개</span> 평균 <span class="text-sky font-weight-light">★4.7/5</span></h4>
+                                    <h4 class="mb-4 text-bullet font-size-s">이용후기 <span class="text-sky font-weight-light ml-3 mr-2">33개</span> 평균 <span class="text-sky font-weight-light">★4.7/5</span></h4>
 
                                     <!-- list -->
-                                    <ul class="list-unstyled">
+                                    <ul class="list-unstyled view-type-review">
                                         <li class="mb-3">
                                             <div class="d-flex">
-                                                <div class="mr-4">
-                                                    <span class="d-inline-block rounded-circle" style="width: 67px; height: 67px; background: #c15454"></span>
+                                                <div class="mr-lg-4 mr-2">
+                                                    <span class="d-inline-block rounded-circle user-bg"></span>
                                                 </div>
                                                 <div class="border-bottom pb-4 mb-4">
                                                     <p class="font-size-m">BUMING <span class="float-right font-weight-light font-size-s text-light-gray">★3.5/5</span></p>
@@ -454,7 +454,7 @@
                         </div>
                         <div class="tab-pane fade" id="contact">
                             <div class="my-5">
-                                <h4 class="mb-4 text-bullet">주소</h4>
+                                <h4 class="mb-4 text-bullet font-size-s">주소</h4>
                                 <!-- Google Map -->
                                 <div class="mb-2">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.2200823320336!2d126.94783625121208!3d37.47913253678695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe9d42c354ca061aa!2z7IK87J2867mM65Sp!5e0!3m2!1sko!2skr!4v1589899812488!5m2!1sko!2skr" width="100%" height="210" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -463,7 +463,7 @@
                             </div>
 
                             <div class="my-5">
-                                <h4 class="mb-4 text-bullet">대중교통</h4>
+                                <h4 class="mb-4 text-bullet font-size-s">대중교통</h4>
                                 <p class="font-weight-light font-size-s">
                                     3호선, 신분당선 - 양재역<br>
                                     6411, 451, 751, 강남05번 버스 - “말죽거리 입구. SPC푸드빌 정문” 정류소 하차
@@ -471,14 +471,14 @@
                             </div>
 
                             <div class="my-5 border bg-white d-flex p-4">
-                                <div class="d-flex justify-content-center rounded-circle overflow-hidden mr-5" style="width: 120px; height: 120px;">
+                                <div class="d-flex justify-content-center rounded-circle overflow-hidden mr-lg-5 mr-3 card-host">
                                     <img src="../img/studio-host.jpg" class="align-self-center" alt="">
                                 </div>
                                 <div>
-                                    <h4>호스트 이름을 표현하는 공간</h4>
+                                    <h4 class="font-size-m">호스트 이름을 표현하는 공간</h4>
                                     <p class="text-light-gray font-size-xs">한줄 자기소개로 자신을 알릴 수 있습니다. </p>
-                                    <button type="button" class="btn rounded-pill px-5 py-2 border-yellow font-size-xs mr-2">전화하기</button>
-                                    <button type="button" class="btn rounded-pill px-5 py-2 border-yellow font-size-xs">메시지 전송</button>
+                                    <button type="button" class="btn rounded-pill px-lg-5 px-3 py-2 border-yellow font-size-xs mr-2">전화하기</button>
+                                    <button type="button" class="btn rounded-pill px-lg-5 px-3 py-2 border-yellow font-size-xs">메시지 전송</button>
                                 </div>
                             </div>
                         </div>
@@ -486,7 +486,7 @@
                     </div>
 
                     <!-- schedule -->
-                    <div class="float-lg-right" style="width: 360px;">
+                    <div class="float-lg-right right">
                         <div class="row mb-4">
                             <div class="col-6">
                                 <button type="button" class="btn border rounded-xl bg-white btn-block py-2" onclick="addWishList(this);">

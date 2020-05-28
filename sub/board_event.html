@@ -54,18 +54,6 @@
         </div>
     </div>
 
-    <!-- Terms Modal -->
-    <div class="modal fade custom-modal-full" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <div class="modal-content">
-                <div class="modal-body">
-                    test
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="py-md-3 px-5 py-2 text-center text-white bg-deep-dark top-notice">
         <span class="font-weight-light">코로나19에 대한 아트바이어스의 대책 및 환불 정책에 대한 최신 정보를 확인하세요.</span>
         <a href="#x" class="text-white d-lg-inline-block d-block">자세히 알아보기</a>
@@ -76,7 +64,7 @@
             <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
             <div class="ml-auto align-items-center d-lg-none d-flex">
                 <a class="text-dark mr-3 font-size-sm" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
-                <a class="text-dark mr-3 font-size-sm" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
+                <a class="text-dark mr-3 font-size-sm" href="member/recent_list.html"><i class="far fa-clock"></i></a>
                 <a class="text-dark mr-2 font-size-sm" href="../member/cart.html"><i class="fas fa-shopping-cart"></i></a>
             </div>
             <button class="navbar-toggler border-0 font-size-md text-dark" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -215,226 +203,153 @@
     </nav>
 
     <main role="main">
-        <div class="container my-5">
-            <h3 class="mb-4">결제</h3>
+        <div class="border-bottom mt-lg-5 mt-4">
+            <div class="container">
+                <div class="d-flex text-center">
+                    <a class="border border-bottom-0 d-block text-decoration-none text-dark font-size-s w-20 py-md-3 py-2" href="board_notice.html">공지사항</a>
+                    <a class="bg-yellow d-block text-decoration-none text-dark font-size-s w-20 py-md-3 py-2" href="board_event.html">이벤트</a>
+                </div>
+            </div>
+        </div>
 
-            <!-- list -->
-            <div class="mb-5">
-                <h5 class="mb-4">예약 및 구입정보</h5>
+        <div class="bg-light-more">
+            <div class="container py-4">
+                <!-- search -->
+                <div class="d-flex justify-content-between mb-4 custom-inputs">
+                    <input type="text" class="form-control w-75 mr-4" placeholder="검색어를 입력해 주세요">
+                    <select name="" id="" class="form-control w-25">
+                        <option value="">전체보기</option>
+                        <option value="">게스트</option>
+                        <option value="">호스트</option>
+                    </select>
+                </div>
+                <!-- list -->
+                <ul class="list-group list-group-flush border border-top-0 mb-4 font-size-s">
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">호스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">커버위크 투표하시고, 댄서에게 연습실을 선물하세요!</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">게스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">[긴급] 네이버페이 서비스 오류로 인한 네이버페이 결제 불가 사항 안내드립니다.</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">게스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">아트바이어스 연습실 최대 이벤트, 커버위크가 돌아왔습니다!</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">호스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">아트바이어스 쿠폰 사용 가이드</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">게스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">법인 카드 결제관련 안내상세</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">게스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">CCTV 설치 및 운영에 대한 아트바이어스의 권고안을 확인해주세요.</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">게스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">네이버톡톡 1:1문의가 종료되고 사용에 더욱 편리한 방식으로 변경됩니다.</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">호스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">현재 서비스 내 예약이 불가한 사항이 접수되어 조치중에 있습니다.</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">게스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">아트바이어스 운영정책 일부 개정 안내</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                    <li class="list-group-item py-3 position-relative">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p class="mb-0 text-sky">호스트</p>
+                            </div>
+                            <div class="col-10">
+                                <p class="mb-0 font-weight-light">[공지] 코로나19 확산에 따라 게스트님에게 안내드립니다.</p>
+                            </div>
+                        </div>
+                        <a href="board_view.html" class="stretched-link text-decoration-none"></a>
+                    </li>
+                </ul>
 
-                <div class="border mb-4">
-                    <ul class="list-group list-group-flush cart-list">
-                        <li class="list-group-item pr-4 pl-3 py-4">
-                            <div class="d-lg-flex align-items-center custom-inputs">
-                                <div class="d-flex align-items-lg-center">
-                                    <input type="checkbox" class="custom-checkbox mr-3">
-                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-4 mr-2 cart-thumbs">
-                                        <img src="../img/section-2-photo.jpg" class="align-self-center w-100 h-100" alt="">
-                                    </div>
-                                    <div>
-                                        <span class="d-block font-weight-light text-red cart-item-category">연습실</span>
-                                        <a href="../sub/studio_view.html" class="text-decoration-none">
-                                            <h4 class="text-gray cart-item-title">사당역 제이그라운드 안무연습실</h4>
-                                        </a>
-                                        <p class="font-weight-light text-gray mb-0">예약일시 : 2020-05-28 13 : 05 ~ 2020-05-29 15 : 30</p>
-                                        <p class="font-weight-light text-gray">예약호실 : G101</p>
-                                        <p class="font-weight-light text-light-gray mb-0">추가인원<span class="ml-5">+10,000</span></p>
-                                        <p class="font-weight-light text-light-gray mb-0">추가옵션<span class="ml-5">노트북, 선풍기, 스피커</span></p>
-                                    </div>
-                                </div>
-                                <div class="text-right ml-auto">
-                                    <p class="font-weight-light text-gray mb-0">합계</p>
-                                    <h2 class="mb-0">65,000원</h2>
-                                    <p class="font-weight-light text-light-gray mb-0">(VAT포함)</p>
-                                </div>
-                            </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center custom-navigation">
+                        <li class="page-item">
+                            <a class="page-link" href="#x" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
                         </li>
-                        <li class="list-group-item pr-4 pl-3 py-4">
-                            <div class="d-lg-flex align-items-center custom-inputs">
-                                <div class="d-flex align-items-lg-center">
-                                    <input type="checkbox" class="custom-checkbox mr-3">
-                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-4 mr-2 cart-thumbs">
-                                        <img src="../img/section-3-photo.jpg" class="align-self-center w-100 h-100" alt="">
-                                    </div>
-                                    <div>
-                                        <span class="d-block font-weight-light text-red cart-item-category">클래스</span>
-                                        <a href="../sub/class_view.html" class="text-decoration-none">
-                                            <h4 class="text-gray cart-item-title">“너도 손글씨 잘 쓸 수 있어” 김민범의 캘리그라피</h4>
-                                        </a>
-                                        <p class="font-weight-light text-gray mb-0">수업일시 : 2020-05-30 15:00</p>
-                                        <p class="font-weight-light text-gray">수업차수 : 1차시</p>
-                                        <p class="font-weight-light text-light-gray mb-0">붓펜<span class="ml-5">+3,000</span></p>
-                                    </div>
-                                </div>
-                                <div class="text-right ml-auto">
-                                    <p class="font-weight-light text-gray mb-0">합계</p>
-                                    <h2 class="mb-0">150,000원</h2>
-                                    <p class="font-weight-light text-light-gray mb-0">(VAT포함)</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item pr-4 pl-3 py-4">
-                            <div class="d-lg-flex align-items-center custom-inputs">
-                                <div class="d-flex align-items-lg-center">
-                                    <input type="checkbox" class="custom-checkbox mr-3">
-                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-4 mr-2 cart-thumbs">
-                                        <img src="../img/section-1-photo.jpg" class="align-self-center w-100 h-100" alt="">
-                                    </div>
-                                    <div>
-                                        <span class="d-block font-weight-light text-red cart-item-category">클래스</span>
-                                        <a href="../sub/class_view.html" class="text-decoration-none">
-                                            <h4 class="text-gray cart-item-title">“너도 손글씨 잘 쓸 수 있어” 김민범의 캘리그라피</h4>
-                                        </a>
-                                        <p class="font-weight-light text-gray mb-0">수업일시 : 2020-06-01 15:00</p>
-                                        <p class="font-weight-light text-gray">수업차수 : 2차시</p>
-                                    </div>
-                                </div>
-                                <div class="text-right ml-auto">
-                                    <p class="font-weight-light text-gray mb-0">합계</p>
-                                    <h2 class="mb-0">147,000원</h2>
-                                    <p class="font-weight-light text-light-gray mb-0">(VAT포함)</p>
-                                </div>
-                            </div>
+                        <li class="page-item"><a class="page-link" href="#x">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#x">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#x">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#x" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
                         </li>
                     </ul>
-                </div>
-
-                <!-- price -->
-                <div class="d-flex justify-content-between">
-                    <p class="font-weight-light text-gray font-size-l">총 <span class="font-weight-bold">3건</span></p>
-                    <div class="d-flex text-right">
-                        <div class="mr-4">
-                            <p class="font-weight-light mb-0 text-gray">합계</p>
-                            <p class="font-weight-light mb-0 text-light-gray">(VAT포함)</p>
-                        </div>
-                        <h1 class="font-weight-bold text-red">362,000원</h1>
-                    </div>
-                </div>
-            </div>
-
-            <!-- orderer form -->
-            <div class="mb-5">
-                <h5 class="mb-4">예약 및 구매자 정보</h5>
-
-                <div class="custom-inputs-sub mb-3">
-                    <div class="d-md-flex">
-                        <div class="flex-fill w-25 mr-md-4 mb-3 mb-md-0">
-                            <label for="order_name" class="d-block text-gray">이름</label>
-                            <input type="text" class="form-control" id="order_name" value="김민범" placeholder="이름">
-                        </div>
-                        <div class="flex-fill w-75">
-                            <label for="order_email" class="d-block text-gray">이메일</label>
-                            <input type="text" class="form-control" id="order_email" value="minbum3934@gmail.com" placeholder="example@example.com">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex mb-4 custom-inputs">
-                    <input type="checkbox" class="custom-checkbox mr-2" id="order_def">
-                    <label for="order_def" class="mb-0">예약자 정보와 다를 경우 체크해 주세요.(동일한 예약자로 진행해야 중복결제가 가능합니다.)</label>
-                </div>
-            </div>
-
-            <!-- refund -->
-            <div class="mb-5">
-                <h5 class="mb-4">환불규정</h5>
-
-                <div class="border mb-3">
-                    <ul class="list-group list-group-flush mb-0">
-                        <li class="list-group-item py-3 text-gray">
-                            <p>사당 제이그라운드 안무연습실 환불규정</p>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="pr-4 py-1">예약일 5일 전까지</td>
-                                        <td class="font-weight-light">100%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="pr-4 py-1">예약일 3일 전까지</td>
-                                        <td class="font-weight-light">70%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="pr-4 py-1">예약일 2일 전까지</td>
-                                        <td class="font-weight-light">50%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="pr-4 py-1">예약일 전날, 당일</td>
-                                        <td class="font-weight-light">환불불가</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </li>
-                        <li class="list-group-item py-3 text-gray">
-                            <p>“너도 손글씨 잘 쓸 수 있어” 김민범의 캘리그라피 클래스 환불규정</p>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="pr-4 py-1">예약일 5일 전까지</td>
-                                        <td class="font-weight-light">100%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="pr-4 py-1">예약일 3일 전까지</td>
-                                        <td class="font-weight-light">70%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="pr-4 py-1">예약일 2일 전까지</td>
-                                        <td class="font-weight-light">50%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="pr-4 py-1">예약일 전날, 당일</td>
-                                        <td class="font-weight-light">환불불가</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="d-flex mb-4 custom-inputs">
-                    <input type="checkbox" class="custom-checkbox mr-2" id="order_refund">
-                    <label for="order_refund" class="mb-0">환불규정에 대한 정보를 이해하였으며 이에 동의합니다.</label>
-                </div>
-            </div>
-
-            <!-- payment -->
-            <div class="mb-5">
-                <h5 class="mb-4">결제방식 선택</h5>
-
-                <div class="border mb-3">
-                    <div class="d-flex justify-content-between px-lg-5 py-lg-4 p-3 custom-inputs">
-                        <div class="d-flex align-items-center">
-                            <input type="radio" name="payment" class="custom-radio mr-3" id="nPay">
-                            <!-- <label for="nPay"><img src="../img/logo.png" alt="..."></label> -->
-                            <label for="nPay" class="font-weight-light font-size-s mb-0">네이버페이</label>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <input type="radio" name="payment" class="custom-radio mr-3" id="kakaoPay">
-                            <!-- <label for="kakaoPay"><img src="../img/logo.png" alt="..."></label> -->
-                            <label for="kakaoPay" class="font-weight-light font-size-s mb-0">카카오페이</label>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <input type="radio" name="payment" class="custom-radio mr-3" id="creditCard">
-                            <label for="creditCard" class="font-weight-light font-size-s mb-0">신용카드 결제</label>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <input type="radio" name="payment" class="custom-radio mr-3" id="depBank">
-                            <label for="depBank" class="font-weight-light font-size-s mb-0">무통장입금</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex mb-4 custom-inputs">
-                    <input type="checkbox" class="custom-checkbox mr-2" id="order_payment">
-                    <label for="order_payment" class="mb-0">
-                        서비스 및 결제방식에 대한 내용을 이해하였으며 이에 동의합니다.
-                        <a href="#x" class="text-dark" data-toggle="modal" data-target="#termsModal">(보기)</a>
-                    </label>
-                </div>
-            </div>
-
-            <!-- button -->
-            <div class="custom-inputs">
-                <button type="button" class="btn btn-block bg-yellow">결제 진행하기</button>
+                </nav>
             </div>
         </div>
     </main>

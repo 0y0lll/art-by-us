@@ -14,6 +14,7 @@
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
     <script src="../js/custom.js"></script>
+    <link rel="stylesheet" href="../css/custom_map.css">
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="../css/fontawesome/css/all.min.css">
@@ -54,12 +55,7 @@
         </div>
     </div>
 
-    <div class="py-md-3 px-5 py-2 text-center text-white bg-deep-dark top-notice">
-        <span class="font-weight-light">코로나19에 대한 아트바이어스의 대책 및 환불 정책에 대한 최신 정보를 확인하세요.</span>
-        <a href="#x" class="text-white d-lg-inline-block d-block">자세히 알아보기</a>
-    </div>
-
-    <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-1">
+    <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-1 custom-other-nav">
         <div class="container">
             <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
             <div class="ml-auto align-items-center d-lg-none d-flex">
@@ -159,7 +155,7 @@
                                 <div class="d-flex">
                                     <div class="position-relative mr-2 nav-user-profile">
                                         <span class="position-absolute rounded-pill bg-hot-pink nav-user-notify"></span>
-                                        <img src="img/profile-photo@3x.jpg" class="rounded-circle nav-user-profile-img" alt="김민범님">
+                                        <img src="../img/profile-photo@3x.jpg" class="rounded-circle nav-user-profile-img" alt="김민범님">
                                     </div>
                                     <span>김민범</span>
                                 </div>
@@ -183,119 +179,80 @@
         </div>
     </nav>
 
-    <main role="main">
-        <div class="container py-lg-5 py-4">
-            <h3 class="mb-4">회원가입</h3>
-            <!-- terms -->
-            <div class="mb-2">
-                <!-- tab pages -->
-                <ul class="nav nav-pills nav-fill custom-nav-tabs light">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#terms">이용약관 <span class="text-red">(필수)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#privacy">개인정보처리방침 <span class="text-red">(필수)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#location">위치정보수집약관 <span class="text-red">(필수)</span></a>
-                    </li>
-                </ul>
+    <main role="main" class="h-100">
+        <!-- Map -->
+        <div class="map-full-area">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12700.699382964323!2d127.02076139089357!3d37.26728075416708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b435b2d8aaa3b%3A0x8c28f57d1b8bff40!2z6rK96riw64-EIOyImOybkOyLnCDtjJTri6zqtawg7J246rOE64-Z!5e0!3m2!1sko!2skr!4v1590681481755!5m2!1sko!2skr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
 
-                <div class="tab-content">
-                    <!-- tab 1 -->
-                    <div class="tab-pane fade show active " id="terms">
-                        <div class="border border-top-0 p-4 mb-lg-4 mb-2">
-                            <p class="font-weight-light mb-0 font-size-s">
-                                그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                                할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                                할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                                굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                                가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                            </p>
-                        </div>
-
-                        <!-- checkbox -->
-                        <div class="d-flex mb-4 custom-inputs">
-                            <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
-                            <label for="all_agree" class="mb-0">위 약관을 이해하였으며 이에 동의합니다.</label>
-                        </div>
-                    </div>
-                    <!-- tab 2 -->
-                    <div class="tab-pane fade" id="privacy">
-                        <div class="border border-top-0 p-4 mb-lg-4 mb-2">
-                            <p class="font-weight-light mb-0 font-size-s">
-                                그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                                할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                                할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                                굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                                가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                            </p>
-                        </div>
-
-                        <!-- checkbox -->
-                        <div class="d-flex mb-4 custom-inputs">
-                            <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
-                            <label for="all_agree" class="mb-0">위 약관을 이해하였으며 이에 동의합니다.</label>
-                        </div>
-                    </div>
-                    <!-- tab 3 -->
-                    <div class="tab-pane fade" id="location">
-                        <div class="border border-top-0 p-4 mb-lg-4 mb-2">
-                            <p class="font-weight-light mb-0 font-size-s">
-                                그들을 동력은 우리의 공자는 굳세게 구하지 낙원을 그들의 이것이다. 위하여, 얼음과 꽃이 사는가 새 하였으며, 끝에 것이다. 청춘의 착목한는 얼음이 따뜻한
-                                할지니, 천자만홍이 원대하고, 그들에게 굳세게 것이다.<br><br>
-                                할지니, 군영과 이상 꾸며 힘있다. 인생을 밥을 쓸쓸한 더운지라 황금시대다. 할지니, 우리 청춘의 이것을 가치를 무엇을 있으며, 것이다. 이상의 시들어 이상의
-                                굳세게 대한 약동하다. 이상, 싶이 목숨이 두기 방황하여도, 풍부하게 쓸쓸한 것이다.<br><br>
-                                가슴이 것은 모래뿐일 끓는 살 수 이것이다. 피고, 위하여서 반짝이는 안고, 같지 뼈 우리의 황금시대다
-                            </p>
-                        </div>
-
-                        <!-- checkbox -->
-                        <div class="d-flex mb-4 custom-inputs">
-                            <input type="checkbox" class="custom-checkbox mr-2" id="all_agree">
-                            <label for="all_agree" class="mb-0">위 약관을 이해하였으며 이에 동의합니다.</label>
-                        </div>
-                    </div>
-                </div>
+        <!-- List -->
+        <div class="float-lg-right map-list">
+            <div class="border-bottom p-4">
+                <h4 class="mb-0">경기도 수원시 팔달구 인계동</h4>
+            </div>
+            <div class="d-flex justify-content-between align-items-center px-4 py-3 custom-inputs">
+                <p class="font-weight-light mb-0">주변 검색 결과</p>
+                <select name="" id="" class="form-control map-sort">
+                    <option value="">전체</option>
+                </select>
             </div>
 
-            <!-- buttons -->
-            <div class="d-flex justify-content-center">
-                <a href="../member/signup_user.html" class="btn rounded-0 py-lg-4 px-lg-5 py-2 px-3 mr-2 bg-yellow font-size-s">개인 회원가입</a>
-                <a href="../member/signup_host.html" class="btn rounded-0 py-lg-4 px-lg-5 py-2 px-3 ml-2 text-white bg-sky font-size-s">사업자 회원가입</a>
-            </div>
+            <ul class="list-group list-group-flush map-list-item">
+                <li class="list-group-item py-3">
+                    <div class="float-left d-flex justify-content-center overflow-hidden mr-3 map-thumbs">
+                        <img src="../img/section-2-photo.jpg" class="align-self-center h-100" alt="">
+                    </div>
+                    <div>
+                        <span class="d-block font-weight-light mb-2 text-red">공유 공간</span>
+                        <a href="../sub/studio_view.html" class="text-decoration-none text-dark">
+                            <h4>표시 되는 제목은 한줄로...</h4>
+                        </a>
+                        <p class="font-weight-light mb-1 text-gray">설명은 간략하게 한 줄 입력부터 두줄 입력까지 가능합니다</p>
+                        <p class="mb-0 text-red font-size-l">35,000원 <span class="text-dark">원/시간</span></p>
+                    </div>
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="float-left d-flex justify-content-center overflow-hidden mr-3 map-thumbs">
+                        <img src="../img/section-2-photo.jpg" class="align-self-center h-100" alt="">
+                    </div>
+                    <div>
+                        <span class="d-block font-weight-light mb-2 text-red">클래스</span>
+                        <a href="../sub/class_view.html" class="text-decoration-none text-dark">
+                            <h4>표시 되는 제목은 한줄로...</h4>
+                        </a>
+                        <p class="font-weight-light mb-1 text-gray">설명은 간략하게 한 줄 입력부터 두줄 입력까지 가능합니다</p>
+                        <p class="mb-0 text-red font-size-l">35,000원 <span class="text-dark">원/주</span></p>
+                    </div>
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="float-left d-flex justify-content-center overflow-hidden mr-3 map-thumbs" style="width: 152px; height: 152px;">
+                        <img src="../img/section-2-photo.jpg" class="align-self-center h-100" alt="">
+                    </div>
+                    <div>
+                        <span class="d-block font-weight-light mb-2 text-red">공유 공간</span>
+                        <a href="../sub/studio_view.html" class="text-decoration-none text-dark">
+                            <h4>표시 되는 제목은 한줄로...</h4>
+                        </a>
+                        <p class="font-weight-light mb-1 text-gray">설명은 간략하게 한 줄 입력부터 두줄 입력까지 가능합니다</p>
+                        <p class="mb-0 text-red font-size-l">35,000원 <span class="text-dark">원/시간</span></p>
+                    </div>
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="float-left d-flex justify-content-center overflow-hidden mr-3 map-thumbs" style="width: 152px; height: 152px;">
+                        <img src="../img/section-2-photo.jpg" class="align-self-center h-100" alt="">
+                    </div>
+                    <div>
+                        <span class="d-block font-weight-light mb-2 text-red">공유 공간</span>
+                        <a href="../sub/studio_view.html" class="text-decoration-none text-dark">
+                            <h4>표시 되는 제목은 한줄로...</h4>
+                        </a>
+                        <p class="font-weight-light mb-1 text-gray">설명은 간략하게 한 줄 입력부터 두줄 입력까지 가능합니다</p>
+                        <p class="mb-0 text-red font-size-l">35,000원 <span class="text-dark">원/시간</span></p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </main>
-
-    <footer class="bg-light">
-        <div class="container py-lg-5 py-4">
-            <div class="d-lg-flex align-items-center justify-content-between mb-lg-4 mb-3">
-                <a href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
-                <ul class="d-flex list-unstyled mb-0 font-weight-light footer-menu font-size-x mt-lg-0 mt-3">
-                    <li class="px-md-2 px-1 position-relative"><a href="../sub/terms.html" class="text-muted text-decoration-none">이용약관</a></li>
-                    <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">서비스정보</a></li>
-                    <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">공지사항</a></li>
-                    <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">도움말</a></li>
-                    <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">광고신청하기</a></li>
-                    <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">호스트등록</a></li>
-                </ul>
-            </div>
-
-            <div class="border-top text-muted font-weight-light pt-lg-4 pt-3 font-size-x">
-                <p class="mb-0">상호명 : 아트바이어스<span class="text-divider"></span>대표 : 김사람<span class="text-divider"></span>사업자등록번호 : 123-45-67890<span class="text-divider"></span>통신판매업신고번호 : 2018-서울관악-12345<span class="text-divider"></span>
-                    <a href="#x" class="text-dark text-decoration-none font-weight-normal">사업자등록정보 ></a></p>
-                <p>영업소재지 : 서울특별시 강남구 테헤란로 123<span class="text-divider"></span>이메일 : info@artbyus.com<span class="text-divider"></span>대표전화 : 02-123-4567 (평일 오전 9시 ~ 오후 6시, 공휴일 제외)</p>
-
-                <div class="d-lg-flex mb-3">
-                    <a href="#x" class="text-dark text-decoration-none font-weight-normal mr-2">온라인 1:1문의 바로가기</a>
-                    <span>(평일 2시 ~ 오후 6시) * 공간에 대한 문의사항은 해당 공간 호스트에게 직접 문의해 주세요.</span>
-                </div>
-
-                <p>아트바이어스는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 아트바이어스는 공간 거래정보 및 거래에 대해 책임지지 않습니다.</p>
-                <p class="text-right font-weight-light text-light-gray">Copyright ART BY US crop. All Right Reserved.</p>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>

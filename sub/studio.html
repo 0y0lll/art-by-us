@@ -13,12 +13,12 @@
 
     <!-- Datepicker -->
     <!-- with time -->
-    <script type="text/javascript" src="../js/moment.min.js"></script>
+    <!-- <script type="text/javascript" src="../js/moment.min.js"></script>
     <script type="text/javascript" src="../js/daterangepicker.js"></script>
-    <link rel="stylesheet" href="../css/daterangepicker.css">
+    <link rel="stylesheet" href="../css/daterangepicker.css"> -->
 
-    <!-- <link href="../css/datepicker.css" rel="stylesheet">
-    <script src="../js/datepicker.js"></script> -->
+    <link href="../css/datepicker.css" rel="stylesheet">
+    <script src="../js/datepicker.js"></script>
 
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
@@ -104,7 +104,7 @@
                         <a class="nav-link text-dark" href="../sub/performance.html">Performance</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="#x">Audition</a>
+                        <a class="nav-link text-dark" href="../sub/audition.html">Audition</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
                         <a class="nav-link text-dark" href="../sub/store.html">Store</a>
@@ -115,7 +115,7 @@
                 <ul class="navbar-nav border-top pt-3 m-lg-auto mt-2 font-size-xs d-block d-lg-none">
                     <!-- Login -->
                     <li class="nav-item mx-lg-3 mx-2 mb-2">
-                        <button class="btn btn-block border text-dark dropdown-toggle p-2 rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
+                        <button class="btn btn-block border text-dark dropdown-toggle p-2 bg-white rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
                     </li>
@@ -146,7 +146,7 @@
                         <a class="nav-link" href="#x">채팅</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
+                        <a class="nav-link" href="../member/chat_user.html">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
                     </li>
                     <div class="dropdown-divider"></div>
                     <li class="nav-item mx-lg-3 mx-2">
@@ -163,7 +163,7 @@
                 </ul>
 
                 <!-- user - lg -->
-                <!-- index에서만 ml-auto 추가 -->
+                <!-- index, chat 페이지 ml-auto 추가 -->
                 <ul class="navbar-nav ml-auto_ align-items-center d-none d-lg-flex">
                     <li class="nav-item mr-2 font-size-md">
                         <a class="nav-link text-dark" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
@@ -176,14 +176,14 @@
                     </li>
                     <li class="nav-item">
                         <!-- Login -->
-                        <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
+                        <button class="btn border text-dark dropdown-toggle bg-white rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
 
                         <!-- Login - user -->
                         <!--
                         <div class="dropdown">
-                            <button class="btn border text-dark dropdown-toggle rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn border text-dark dropdown-toggle bg-white rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="d-flex">
                                     <div class="position-relative mr-2 nav-user-profile">
                                         <span class="position-absolute rounded-pill bg-hot-pink nav-user-notify"></span>
@@ -197,7 +197,7 @@
                                 <a class="dropdown-item" href="#x">찜 리스트</a>
                                 <a class="dropdown-item" href="#x">나의 이용 후기</a>
                                 <a class="dropdown-item" href="#x">채팅</a>
-                                <a class="dropdown-item" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
+                                <a class="dropdown-item" href="../member/chat_user.html">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#x">회원 정보 관리</a>
                                 <a class="dropdown-item" href="#x">호스트 전환</a>
@@ -212,18 +212,35 @@
     </nav>
 
     <main role="main">
-        <div class="container mb-5">
-            <!-- search keyword -->
-            <h2 class="font-weight-light text-center py-5 mb-0 text-gray search-result">
-                <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;동대문역사문화공원역&rdquo;</span> 에 있는<br>
-                <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;회의실&rdquo;</span> 로 검색된 결과입니다.
-            </h2>
+        <div class="container  my-md-5 my-3">
+            <!-- title -->
+            <h2 class="d-inline-block font-weight-bold position-relative px-2 mb-md-5 mb-4 sub-title"><span class="sub-title-text">스튜디오</span></h2>
+
             <!-- search category -->
             <div class="row justify-content-between custom-inputs">
                 <div class="col-md-4">
                     <p class="font-weight-light font-weight-light mb-1 font-size-sm">지역</p>
                     <div class="input-group">
-                        <input type="text" class="form-control font-size-sm" value="봉천동" placeholder="지역">
+                        <input type="text" class="form-control font-size-sm" id="locationInput" value="봉천동" placeholder="지역">
+                        <div class="position-absolute w-100 d-none location-input-list" id="locationList">
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-center form-control border-top-0">
+                                    <a href="../sub/map.html" class="text-decoration-none text-dark">
+                                        <i class="fas fa-map-marker-alt mr-2 text-red"></i>지도에서 검색하기
+                                    </a>
+                                </li>
+                                <li class="d-flex align-items-center form-control border-top-0 font-weight-light">
+                                    <a href="#x" class="text-decoration-none text-gray">
+                                        서울특별시 관악구 <span class="font-weight-bold">봉천동</span>
+                                    </a>
+                                </li>
+                                <li class="d-flex align-items-center form-control border-top-0 font-weight-light">
+                                    <a href="#x" class="text-decoration-none text-gray">
+                                        봉천역, 2호선
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -603,33 +620,38 @@
 <script>
     // datepicker
     $(function () {
-        $('#datePicker').daterangepicker({
-            timePicker: true,
-            startDate: moment().startOf('hour'),
-            endDate: moment().startOf('hour').add(32, 'hour'),
-            locale: {
-                format: 'YY-MM-DD hh:00',
-                daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
-                monthNames: ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'],
-                applyLabel: '검색',
-                separator: ' ~ '
-            },
-            timePicker24Hour: true,
-            opens: 'left'
-        });
-
-        // $('#datePicker').datepicker({
-        //     language: 'ko',
-        //     multipleDatesSeparator: ' ~ ',
-        //     range: true,
-        //     navTitles: {
-        //         days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
+        // $('#datePicker').daterangepicker({
+        //     timePicker: true,
+        //     startDate: moment().startOf('hour'),
+        //     endDate: moment().startOf('hour').add(32, 'hour'),
+        //     locale: {
+        //         format: 'YY-MM-DD hh:00',
+        //         daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
+        //         monthNames: ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'],
+        //         applyLabel: '검색',
+        //         separator: ' ~ '
         //     },
-        //     prevHtml: '<i class="fas fa-chevron-left"></i>',
-        //     nextHtml: '<i class="fas fa-chevron-right"></i>',
-        //     timepicker: true
-        // })
+        //     timePicker24Hour: true,
+        //     opens: 'left'
+        // });
+
+        $('#datePicker').datepicker({
+            language: 'ko',
+            multipleDatesSeparator: ' ~ ',
+            range: true,
+            navTitles: {
+                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
+            },
+            prevHtml: '<i class="fas fa-chevron-left"></i>',
+            nextHtml: '<i class="fas fa-chevron-right"></i>',
+            timepicker: true
+        })
     });
+
+    // locationInput
+    $('#locationInput').click( function () {
+        $(this).siblings('#locationList').toggleClass('d-none');
+    })
 </script>
 
 </html>
