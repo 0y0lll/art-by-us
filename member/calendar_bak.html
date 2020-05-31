@@ -9,11 +9,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- 캘린더 로드 문제로 문서 하단으로 이동함 -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+
+    <!--
+        Calendar
+        https://github.com/SaintSilver/FullCalendar-Example
+    -->
+    <link rel="stylesheet" href="../css/fullcalendar/main.css">
+    <link rel="stylesheet" href="../css/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../css/fullcalendar/select2.min.css">
+    <link rel="stylesheet" href="../css/fullcalendar/bootstrap-datetimepicker.min.css">
+
+    <!-- Datepicker -->
+    <link href="../css/datepicker.css" rel="stylesheet">
 
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
     <script src="../js/custom.js"></script>
-    <link rel="stylesheet" href="../css/custom_calendar.css">
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="../css/fontawesome/css/all.min.css">
@@ -204,95 +217,187 @@
 
     <main role="main">
         <div class="border-top">
+            <!-- calendar -->
             <div class="container my-5">
+                <!-- 일자 클릭시 메뉴오픈 : 플러그인 -->
+                <div id="contextMenu" class="dropdown clearfix">
+                    <ul class="dropdown-menu dropNewEvent" role="menu" aria-labelledby="dropdownMenu"
+                        style="display:block;position:static;margin-bottom:5px;">
+                        <li><a tabindex="-1" href="#">카테고리1</a></li>
+                        <li><a tabindex="-1" href="#">카테고리2</a></li>
+                        <li><a tabindex="-1" href="#">카테고리3</a></li>
+                        <li><a tabindex="-1" href="#">카테고리4</a></li>
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#" data-role="close">Close</a></li>
+                    </ul>
+                </div>
 
-                <div class="overflow-hidden view-type custom-calendar">
+                <div id="wrapper" class="overflow-hidden">
+                    <div id="loading"></div>
                     <!-- calendar -->
-                    <div class="float-lg-left pr-lg-5 mb-lg-0 mb-4 left days">
-                        <div class="wrapper">
-                            <div class="main">
-                                <div class="toolbar">
-                                    <div class="d-flex align-items-center">
-                                        <button type="button" class="btn font-size-md text-light-gray-more" aria-label="prev"><i class="fas fa-chevron-left"></i></button>
-                                        <h2>2020년 5월</h2>
-                                        <button type="button" class="btn font-size-md text-light-gray-more" aria-label="next"><i class="fas fa-chevron-right"></i></button>
-                                    </div>
-                                </div>
+                    <div id="calendar" class="mb-lg-0 mb-4"></div>
+                    <!-- list -->
+                    <div id="eventList" class="float-lg-right custom-calendar-right"></div>
+                </div>
 
-                                <div class="calendar">
-                                    <div class="calendar__header">
-                                        <div>SUN</div>
-                                        <div>MON</div>
-                                        <div>TUE</div>
-                                        <div>WED</div>
-                                        <div>THU</div>
-                                        <div>FRI</div>
-                                        <div>SAT</div>
-                                    </div>
-                                    <div class="calendar__week">
-                                        <div class="calendar__day day">1</div>
-                                        <div class="calendar__day day">2</div>
-                                        <div class="calendar__day day">3</div>
-                                        <div class="calendar__day day">4</div>
-                                        <div class="calendar__day day">5</div>
-                                        <div class="calendar__day day">6</div>
-                                        <div class="calendar__day day">7</div>
-                                    </div>
-                                    <div class="calendar__week">
-                                        <div class="calendar__day day">8</div>
-                                        <div class="calendar__day day">9</div>
-                                        <div class="calendar__day day">10</div>
-                                        <div class="calendar__day day">11</div>
-                                        <div class="calendar__day day">12</div>
-                                        <div class="calendar__day day">13</div>
-                                        <div class="calendar__day day">14</div>
-                                    </div>
-                                    <div class="calendar__week">
-                                        <div class="calendar__day day">15</div>
-                                        <div class="calendar__day day">16</div>
-                                        <div class="calendar__day day">17</div>
-                                        <div class="calendar__day day">18</div>
-                                        <div class="calendar__day day">19</div>
-                                        <div class="calendar__day day">20</div>
-                                        <div class="calendar__day day">21</div>
-                                    </div>
-                                    <div class="calendar__week">
-                                        <div class="calendar__day day">22</div>
-                                        <div class="calendar__day day">23</div>
-                                        <div class="calendar__day day">24</div>
-                                        <div class="calendar__day day">25</div>
-                                        <div class="calendar__day day">26</div>
-                                        <div class="calendar__day day">27</div>
-                                        <div class="calendar__day day">28</div>
-                                    </div>
-                                    <div class="calendar__week">
-                                        <div class="calendar__day day">29</div>
-                                        <div class="calendar__day day">30</div>
-                                        <div class="calendar__day day">31</div>
-                                        <div class="calendar__day day">1</div>
-                                        <div class="calendar__day day">2</div>
-                                        <div class="calendar__day day">3</div>
-                                        <div class="calendar__day day">4</div>
+                <!-- 일정 view MODAL : 플러그인 -->
+                <div class="modal fade" tabindex="-1" role="dialog" id="eventModal" aria-labelledby="eventModal" aria-hidden="true">
+                    <div class="modal-dialog custom-modal" role="document">
+                        <div class="modal-content px-lg-5 px-3 py-lg-5 py-4">
+                            <div class="modal-header p-0 mb-4 border-0 d-flex custom-inputs-sub">
+                                <button type="button" class="btn btn-outline border mr-3">
+                                    <span class="d-block bg-red" style="width: 34px; height: 34px;"></span>
+                                </button>
+                                <input type="text" class="form-control" name="edit-title" id="edit-title" required="required" />
+                            </div>
+                            <div class="modal-body p-0 mb-4 custom-inputs">
+                                <p class="font-weight-light mb-2 font-size-sm">예약 날짜 및 시간</p>
+                                <input type="text" class="form-control mb-3" id="datePicker2">
+                                <p class="font-weight-light mb-2 font-size-sm">추가옵션</p>
+                                <div class="container">
+                                    <div class="row border custom-inputs">
+                                        <div class="col-lg-3 col-md-4 col-6 my-3">
+                                            <div class="d-flex align-items-center">
+                                                <input type="checkbox" class="mr-2 custom-checkbox">
+                                                <p class="font-weight-light mb-0">빔 프로젝터</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 my-3">
+                                            <div class="d-flex align-items-center">
+                                                <input type="checkbox" class="mr-2 custom-checkbox">
+                                                <p class="font-weight-light mb-0">TV</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 my-3">
+                                            <div class="d-flex align-items-center">
+                                                <input type="checkbox" class="mr-2 custom-checkbox">
+                                                <p class="font-weight-light mb-0">복사/인쇄기</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 my-3">
+                                            <div class="d-flex align-items-center">
+                                                <input type="checkbox" class="mr-2 custom-checkbox">
+                                                <p class="font-weight-light mb-0">PC/노트북</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 my-3">
+                                            <div class="d-flex align-items-center">
+                                                <input type="checkbox" class="mr-2 custom-checkbox">
+                                                <p class="font-weight-light mb-0">거울</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 my-3">
+                                            <div class="d-flex align-items-center">
+                                                <input type="checkbox" class="mr-2 custom-checkbox">
+                                                <p class="font-weight-light mb-0">주차요청</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 my-3">
+                                            <div class="d-flex align-items-center">
+                                                <input type="checkbox" class="mr-2 custom-checkbox">
+                                                <p class="font-weight-light mb-0">음향/마이크</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 my-3">
+                                            <div class="d-flex align-items-center">
+                                                <input type="checkbox" class="mr-2 custom-checkbox">
+                                                <input type="text" class="form-control font-weight-light" placeholder="직접입력..." style="height: 34px !important">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- list -->
-                    <div class="float-lg-right right list">
-                        <div class="border p-2">
-                            <div class="d-flex">
-                                <p class="font-weight-light">하루종일</p>
-                                <div class="bg-sky" style="width: 5px; height: 100%"></div>
-                                <div>
-                                    <p>JYP Ent. 보컬 오디션</p>
-                                    <span>서울특별시 강동구 양재대로 123</span>
-                                </div>
+                            <div class="modal-footer p-0 border-0 custom-inputs">
+                                <button type="button" class="btn btn-block text-white bg-red">적용</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 일정 추가 MODAL : 플러그인 -->
+                <!-- <div class="modal fade" tabindex="-1" role="dialog" id="eventModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title"></h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-allDay">하루종일</label>
+                                        <input class='allDayNewEvent' id="edit-allDay" type="checkbox"></label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-title">일정명</label>
+                                        <input class="inputModal" type="text" name="edit-title" id="edit-title"
+                                            required="required" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-start">시작</label>
+                                        <input class="inputModal" type="text" name="edit-start" id="edit-start" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-end">끝</label>
+                                        <input class="inputModal" type="text" name="edit-end" id="edit-end" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-type">구분</label>
+                                        <select class="inputModal" type="text" name="edit-type" id="edit-type">
+                                            <option value="카테고리1">카테고리1</option>
+                                            <option value="카테고리2">카테고리2</option>
+                                            <option value="카테고리3">카테고리3</option>
+                                            <option value="카테고리4">카테고리4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-color">색상</label>
+                                        <select class="inputModal" name="color" id="edit-color">
+                                            <option value="#D25565" style="color:#D25565;">빨간색</option>
+                                            <option value="#9775fa" style="color:#9775fa;">보라색</option>
+                                            <option value="#ffa94d" style="color:#ffa94d;">주황색</option>
+                                            <option value="#74c0fc" style="color:#74c0fc;">파란색</option>
+                                            <option value="#f06595" style="color:#f06595;">핑크색</option>
+                                            <option value="#63e6be" style="color:#63e6be;">연두색</option>
+                                            <option value="#a9e34b" style="color:#a9e34b;">초록색</option>
+                                            <option value="#4d638c" style="color:#4d638c;">남색</option>
+                                            <option value="#495057" style="color:#495057;">검정색</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="col-xs-4" for="edit-desc">설명</label>
+                                        <textarea rows="4" cols="50" class="inputModal" name="edit-desc"
+                                            id="edit-desc"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer modalBtnContainer-addEvent">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                                <button type="button" class="btn btn-primary" id="save-event">저장</button>
+                            </div>
+                            <div class="modal-footer modalBtnContainer-modifyEvent">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                                <button type="button" class="btn btn-danger" id="deleteEvent">삭제</button>
+                                <button type="button" class="btn btn-primary" id="updateEvent">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
 
                 <!-- 일정 추가 modal 디자인 -->
                 <div class="modal fade" tabindex="-1" role="dialog" id="addScheduleModal" aria-labelledby="addScheduleModal" aria-hidden="true">
@@ -327,7 +432,7 @@
                 <ul class="d-flex list-unstyled mb-0 font-weight-light footer-menu font-size-x mt-lg-0 mt-3">
                     <li class="px-md-2 px-1 position-relative"><a href="../sub/terms.html" class="text-muted text-decoration-none">이용약관</a></li>
                     <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">서비스정보</a></li>
-                    <li class="px-md-2 px-1 position-relative"><a href="../sub/board_notice.html" class="text-muted text-decoration-none">공지사항</a></li>
+                    <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">공지사항</a></li>
                     <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">도움말</a></li>
                     <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">광고신청하기</a></li>
                     <li class="px-md-2 px-1 position-relative"><a href="#x" class="text-muted text-decoration-none">호스트등록</a></li>
@@ -349,6 +454,68 @@
             </div>
         </div>
     </footer>
+
+    <!-- calendar -->
+    <script src="../js/fullcalendar/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="../js/fullcalendar/bootstrap.min.js"></script> -->
+    <script src="../js/moment.min.js"></script>
+    <script src="../js/fullcalendar/fullcalendar.min.js"></script>
+    <script src="../js/fullcalendar/ko.js"></script>
+    <!-- <script src="../js/fullcalendar/select2.min.js"></script> -->
+    <script src="../js/fullcalendar/bootstrap-datetimepicker.min.js"></script>
+    <script src="../js/fullcalendar/main.js"></script>
+    <script src="../js/fullcalendar/addEvent.js"></script>
+    <script src="../js/fullcalendar/editEvent.js"></script>
+    <script src="../js/fullcalendar/etcSetting.js"></script>
+
+    <!-- Datepicker -->
+
+    <script src="../js/datepicker.js"></script>
+
+    <script>
+        // datepicker
+        $(function () {
+            $('#datePicker1, #datePicker2').datepicker({
+                language: 'ko',
+                multipleDatesSeparator: ' ~ ',
+                range: true,
+                navTitles: {
+                    days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
+                },
+                prevHtml: '<i class="fas fa-chevron-left"></i>',
+                nextHtml: '<i class="fas fa-chevron-right"></i>',
+                // onShow: function () {
+                //     if ($('div.datepicker-time').length > 0) {
+                //         return false;
+                //     } else {
+                //         var inputs = '<div class="mx-4 py-4 border-top datepicker-time">' +
+                //                         '<div class="row">' +
+                //                             '<div class="col-6 custom-inputs">' +
+                //                                 '<p>시작시간</p>' +
+                //                                 '<select name="" id="" class="form-control">' +
+                //                                     '<option value="08:00">08:00</option>' +
+                //                                     '<option value="09:00">09:00</option>' +
+                //                                     '<option value="10:00">10:00</option>' +
+                //                                 '</select>' +
+                //                             '</div>' +
+                //                             '<div class="col-6 custom-inputs">' +
+                //                                 '<p>종료시간</p>' +
+                //                                 '<select name="" id="" class="form-control">' +
+                //                                     '<option value="13:00">13:00</option>' +
+                //                                     '<option value="14:00">14:00</option>' +
+                //                                     '<option value="15:00">15:00</option>' +
+                //                                 '</select>' +
+                //                             '</div>' +
+                //                         '</div>' +
+                //                     '</div>' +
+                //                     '<button type="button" class="btn btn-block py-3 border-0 rounded-0 font-weight-light bg-yellow">검색</button>';
+                //         $('.datepicker').append(inputs);
+                //     }
+                // }
+            })
+        });
+    </script>
 </body>
 
 </html>
