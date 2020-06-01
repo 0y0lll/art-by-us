@@ -659,7 +659,7 @@
         if (!next.length) {
             next = $(this).siblings(':first');
         }
-        // next.children(':first-child').clone().appendTo($(this));
+        next.children(':first-child').clone().appendTo($(this));
 
         for (var i = 0; i < minPerSlide; i++) {
             next = next.next();
