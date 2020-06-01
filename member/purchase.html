@@ -40,8 +40,8 @@
                     <button type="button" class="btn btn-block bg-hot-pink text-white">로그인</button>
 
                     <div class="border-top mt-3 mb-4 pt-3">
-                        <button type="button" class="btn btn-block" style="background: #ffe82d"><i class="fas fa-comment"></i> 카카오계정으로 로그인</button>
-                        <button type="button" class="btn btn-block text-white" style="background: #02c73c"><i class="fas fa-comment"></i> 네이버계정으로 로그인</button>
+                        <button type="button" class="btn btn-block bg-kakao"><img src="../img/logo_kakao.svg" class="mr-3" width="20px">카카오계정으로 로그인</button>
+                        <button type="button" class="btn btn-block text-white bg-naver"><img src="../img/logo_naver.svg" class="mr-3" width="20px">네이버계정으로 로그인</button>
                         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button> -->
                     </div>
@@ -49,18 +49,6 @@
                         <a href="../member/signup.html" class="text-decoration-none font-weight-light d-block text-light-gray mb-2">아직 아트바이어스의 회원이 아니신가요?</a>
                         <a href="#x" class="text-decoration-none font-weight-light d-block text-light-gray">계정 정보 찾기</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Terms Modal -->
-    <div class="modal fade custom-modal-full" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <div class="modal-content">
-                <div class="modal-body">
-                    test
                 </div>
             </div>
         </div>
@@ -96,35 +84,123 @@
                     </li>
                 </ul> -->
 
-                <ul class="navbar-nav m-auto font-weight-light top-nav">
+                <ul class="navbar-nav m-auto font-weight-light sub-nav">
                     <li class="nav-item mx-lg-3 mx-2 active">
-                        <a class="nav-link text-dark" href="../sub/studio.html">Studio</a>
+                        <div class="d-flex justify-content-between">
+                            <a class="nav-link text-dark" href="../sub/studio.html" id="menu1">Studio</a>
+                            <button class="navbar-toggler border-0 font-size-md text-dark" type="button" data-toggle="collapse" data-target="#subNavDropdown1" aria-controls="subNavDropdown1" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <!-- sub menu : mobile -->
+                        <div class="collapse navbar-collapse sub-nav-dropdown" id="subNavDropdown1">
+                            <ul class="navbar-nav m-auto font-weight-light">
+                                <li class="nav-item border-bottom p-2"><a href="../sub/studio.html" class="text-decoration-none text-dark">무용</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/studio.html" class="text-decoration-none text-dark">연기</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/studio.html" class="text-decoration-none text-dark">음악</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/studio.html" class="text-decoration-none text-dark">보컬</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/studio.html" class="text-decoration-none text-dark">댄스</a></li>
+                                <li class="nav-item p-2"><a href="../sub/studio.html" class="text-decoration-none text-dark">촬영스튜디오</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="../sub/class.html">Class</a>
+                        <div class="d-flex justify-content-between">
+                            <a class="nav-link text-dark" href="../sub/class.html" id="menu2">Class</a>
+                            <button class="navbar-toggler border-0 font-size-md text-dark" type="button" data-toggle="collapse" data-target="#subNavDropdown2" aria-controls="subNavDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <!-- sub menu : mobile -->
+                        <div class="collapse navbar-collapse sub-nav-dropdown" id="subNavDropdown2">
+                            <ul class="navbar-nav m-auto font-weight-light">
+                                <li class="nav-item border-bottom p-2"><a href="../sub/class.html" class="text-decoration-none text-dark">특강</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/class.html" class="text-decoration-none text-dark">무용</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/class.html" class="text-decoration-none text-dark">연기</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/class.html" class="text-decoration-none text-dark">클래식</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/class.html" class="text-decoration-none text-dark">음악</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/class.html" class="text-decoration-none text-dark">댄스</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/class.html" class="text-decoration-none text-dark">보컬</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/class.html" class="text-decoration-none text-dark">그외</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="../sub/performance.html">Performance</a>
+                        <div class="d-flex justify-content-between">
+                            <a class="nav-link text-dark" href="../sub/performance.html" id="menu3">Performance</a>
+                            <button class="navbar-toggler border-0 font-size-md text-dark" type="button" data-toggle="collapse" data-target="#subNavDropdown3" aria-controls="subNavDropdown3" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <!-- sub menu : mobile -->
+                        <div class="collapse navbar-collapse sub-nav-dropdown" id="subNavDropdown3">
+                            <ul class="navbar-nav m-auto font-weight-light">
+                                <li class="nav-item border-bottom p-2"><a href="../sub/performance.html" class="text-decoration-none text-dark">뮤지컬</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/performance.html" class="text-decoration-none text-dark">연극</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/performance.html" class="text-decoration-none text-dark">콘서트</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/performance.html" class="text-decoration-none text-dark">무용</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/performance.html" class="text-decoration-none text-dark">클래식</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/performance.html" class="text-decoration-none text-dark">오페라</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/performance.html" class="text-decoration-none text-dark">마술</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/performance.html" class="text-decoration-none text-dark">그외</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="../sub/audition.html">Audition</a>
+                        <div class="d-flex justify-content-between">
+                            <a class="nav-link text-dark" href="../sub/audition.html" id="menu4">Audition</a>
+                            <button class="navbar-toggler border-0 font-size-md text-dark" type="button" data-toggle="collapse" data-target="#subNavDropdown4" aria-controls="subNavDropdown4" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <!-- sub menu : mobile -->
+                        <div class="collapse navbar-collapse sub-nav-dropdown" id="subNavDropdown4">
+                            <ul class="navbar-nav m-auto font-weight-light">
+                                <li class="nav-item border-bottom p-2"><a href="../sub/audition.html" class="text-decoration-none text-dark">뮤지컬</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/audition.html" class="text-decoration-none text-dark">영화</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/audition.html" class="text-decoration-none text-dark">무용</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/audition.html" class="text-decoration-none text-dark">음악</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/audition.html" class="text-decoration-none text-dark">엔터테인먼트</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/audition.html" class="text-decoration-none text-dark">오디션 캘린더</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link text-dark" href="../sub/store.html">Store</a>
+                        <div class="d-flex justify-content-between">
+                            <a class="nav-link text-dark" href="../sub/store.html" id="menu5">Store</a>
+                            <button class="navbar-toggler border-0 font-size-md text-dark" type="button" data-toggle="collapse" data-target="#subNavDropdown5" aria-controls="subNavDropdown5" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <!-- sub menu : mobile -->
+                        <div class="collapse navbar-collapse sub-nav-dropdown" id="subNavDropdown5">
+                            <ul class="navbar-nav m-auto font-weight-light">
+                                <li class="nav-item border-bottom p-2"><a href="../sub/store.html" class="text-decoration-none text-dark">교육</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/store.html" class="text-decoration-none text-dark">공연</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/store.html" class="text-decoration-none text-dark">판매점</a></li>
+                                <li class="nav-item border-bottom p-2"><a href="../sub/store.html" class="text-decoration-none text-dark">제작</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
 
                 <!-- user -->
                 <ul class="navbar-nav border-top pt-3 m-lg-auto mt-2 font-size-xs d-block d-lg-none">
                     <!-- Login -->
+                    <!--
                     <li class="nav-item mx-lg-3 mx-2 mb-2">
                         <button class="btn btn-block border text-dark dropdown-toggle p-2 bg-white rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
                     </li>
+                    -->
 
                     <!-- Login - user -->
-                    <!--
                     <li class="nav-item mx-lg-3 mx-2 mb-2">
                         <div class="d-flex">
                             <div class="position-relative mr-2 nav-user-profile">
@@ -134,7 +210,6 @@
                             <span class="align-self-center">김민범</span>
                         </div>
                     </li>
-                    -->
 
                     <li class="nav-item mx-lg-3 mx-2">
                         <a class="nav-link" href="#x">예약 리스트</a>
@@ -172,19 +247,20 @@
                         <a class="nav-link text-dark" href="../member/calendar.html"><i class="far fa-calendar-alt"></i></a>
                     </li>
                     <li class="nav-item mr-2 font-size-md">
-                        <a class="nav-link text-dark" href="recent_list.html"><i class="far fa-clock"></i></a>
+                        <a class="nav-link text-dark" href="../member/recent_list.html"><i class="far fa-clock"></i></a>
                     </li>
                     <li class="nav-item mr-3 font-size-md">
                         <a class="nav-link text-dark" href="../member/cart.html"><i class="fas fa-shopping-cart"></i></a>
                     </li>
                     <li class="nav-item">
                         <!-- Login -->
+                        <!--
                         <button class="btn border text-dark dropdown-toggle bg-white rounded-xl" type="button" data-toggle="modal" data-target="#loginModal">
                             <span>로그인</span>
                         </button>
+                        -->
 
                         <!-- Login - user -->
-                        <!--
                         <div class="dropdown">
                             <button class="btn border text-dark dropdown-toggle bg-white rounded-xl" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="d-flex">
@@ -207,15 +283,144 @@
                                 <a class="dropdown-item text-hot-pink" href="#x">로그아웃</a>
                             </div>
                         </div>
-                        -->
                     </li>
                 </ul>
+            </div>
+
+            <!-- submenu : pc -->
+            <div class="sub-nav-menu">
+                <div class="border-top border-bottom menu1">
+                    <div class="container">
+                        <ul class="nav justify-content-center py-2">
+                            <li class="nav-item">
+                                <a href="../sub/studio.html" class="nav-link px-5 text-decoration-none text-dark">무용</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/studio.html" class="nav-link px-5 text-decoration-none text-dark">연기</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/studio.html" class="nav-link px-5 text-decoration-none text-dark">음악</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/studio.html" class="nav-link px-5 text-decoration-none text-dark">보컬</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/studio.html" class="nav-link px-5 text-decoration-none text-dark">댄스</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/studio.html" class="nav-link px-5 text-decoration-none text-dark">촬영스튜디오</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-top border-bottom menu2">
+                    <div class="container">
+                        <ul class="nav justify-content-center py-2">
+                            <li class="nav-item">
+                                <a href="../sub/class.html" class="nav-link px-5 text-decoration-none text-dark">특강</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/class.html" class="nav-link px-5 text-decoration-none text-dark">무용</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/class.html" class="nav-link px-5 text-decoration-none text-dark">연기</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/class.html" class="nav-link px-5 text-decoration-none text-dark">클래식</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/class.html" class="nav-link px-5 text-decoration-none text-dark">음악</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/class.html" class="nav-link px-5 text-decoration-none text-dark">댄스</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/class.html" class="nav-link px-5 text-decoration-none text-dark">보컬</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/class.html" class="nav-link px-5 text-decoration-none text-dark">그외</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-top border-bottom menu3">
+                    <div class="container">
+                        <ul class="nav justify-content-center py-2">
+                            <li class="nav-item">
+                                <a href="../sub/performance.html" class="nav-link px-5 text-decoration-none text-dark">뮤지컬</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/performance.html" class="nav-link px-5 text-decoration-none text-dark">연극</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/performance.html" class="nav-link px-5 text-decoration-none text-dark">콘서트</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/performance.html" class="nav-link px-5 text-decoration-none text-dark">무용</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/performance.html" class="nav-link px-5 text-decoration-none text-dark">클래식</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/performance.html" class="nav-link px-5 text-decoration-none text-dark">오페라</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/performance.html" class="nav-link px-5 text-decoration-none text-dark">마술</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/performance.html" class="nav-link px-5 text-decoration-none text-dark">그외</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-top border-bottom menu4">
+                    <div class="container">
+                        <ul class="nav justify-content-center py-2">
+                            <li class="nav-item">
+                                <a href="../sub/audition.html" class="nav-link px-5 text-decoration-none text-dark">뮤지컬</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/audition.html" class="nav-link px-5 text-decoration-none text-dark">영화</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/audition.html" class="nav-link px-5 text-decoration-none text-dark">무용</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/audition.html" class="nav-link px-5 text-decoration-none text-dark">음악</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/audition.html" class="nav-link px-5 text-decoration-none text-dark">엔터테인먼트</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/audition.html" class="nav-link px-5 text-decoration-none text-dark">오디션 캘린더</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-top border-bottom menu5">
+                    <div class="container">
+                        <ul class="nav justify-content-center py-2">
+                            <li class="nav-item">
+                                <a href="../sub/store.html" class="nav-link px-5 text-decoration-none text-dark">교육</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/store.html" class="nav-link px-5 text-decoration-none text-dark">공연</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/store.html" class="nav-link px-5 text-decoration-none text-dark">판매점</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../sub/store.html" class="nav-link px-5 text-decoration-none text-dark">제작</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
     <main role="main">
-        <div class="container my-5">
+        <div class="container my-md-5 my-3">
             <h3 class="mb-4">결제</h3>
 
             <!-- list -->
@@ -227,9 +432,9 @@
                         <li class="list-group-item pr-4 pl-3 py-4">
                             <div class="d-lg-flex align-items-center custom-inputs">
                                 <div class="d-flex align-items-lg-center">
-                                    <input type="checkbox" class="custom-checkbox mr-3">
-                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-4 mr-2 cart-thumbs">
-                                        <img src="../img/section-2-photo.jpg" class="align-self-center w-100 h-100" alt="">
+                                    <input type="checkbox" class="custom-checkbox mr-sm-3 mr-2">
+                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-3 mr-2 cart-thumbs">
+                                        <img src="../img/cart-1.jpg" class="align-self-center w-100 h-100" alt="">
                                     </div>
                                     <div>
                                         <span class="d-block font-weight-light text-red cart-item-category">연습실</span>
@@ -252,9 +457,9 @@
                         <li class="list-group-item pr-4 pl-3 py-4">
                             <div class="d-lg-flex align-items-center custom-inputs">
                                 <div class="d-flex align-items-lg-center">
-                                    <input type="checkbox" class="custom-checkbox mr-3">
-                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-4 mr-2 cart-thumbs">
-                                        <img src="../img/section-3-photo.jpg" class="align-self-center w-100 h-100" alt="">
+                                    <input type="checkbox" class="custom-checkbox mr-sm-3 mr-2">
+                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-3 mr-2 cart-thumbs">
+                                        <img src="../img/cart-2.jpg" class="align-self-center w-100 h-100" alt="">
                                     </div>
                                     <div>
                                         <span class="d-block font-weight-light text-red cart-item-category">클래스</span>
@@ -276,9 +481,9 @@
                         <li class="list-group-item pr-4 pl-3 py-4">
                             <div class="d-lg-flex align-items-center custom-inputs">
                                 <div class="d-flex align-items-lg-center">
-                                    <input type="checkbox" class="custom-checkbox mr-3">
-                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-4 mr-2 cart-thumbs">
-                                        <img src="../img/section-1-photo.jpg" class="align-self-center w-100 h-100" alt="">
+                                    <input type="checkbox" class="custom-checkbox mr-sm-3 mr-2">
+                                    <div class="d-flex justify-content-center overflow-hidden mr-sm-3 mr-2 cart-thumbs">
+                                        <img src="../img/cart-2.jpg" class="align-self-center w-100 h-100" alt="">
                                     </div>
                                     <div>
                                         <span class="d-block font-weight-light text-red cart-item-category">클래스</span>
@@ -403,21 +608,19 @@
                 <div class="border mb-3">
                     <div class="d-flex justify-content-between px-lg-5 py-lg-4 p-3 custom-inputs">
                         <div class="d-flex align-items-center">
-                            <input type="radio" name="payment" class="custom-radio mr-3" id="nPay">
-                            <!-- <label for="nPay"><img src="../img/logo.png" alt="..."></label> -->
-                            <label for="nPay" class="font-weight-light font-size-s mb-0">네이버페이</label>
+                            <input type="radio" name="payment" class="custom-radio mr-lg-3 mr-2" id="nPay">
+                            <label for="nPay" class="mb-0"><img src="../img/logo_Npay.png" class="payment-logo" alt="..."></label>
                         </div>
                         <div class="d-flex align-items-center">
-                            <input type="radio" name="payment" class="custom-radio mr-3" id="kakaoPay">
-                            <!-- <label for="kakaoPay"><img src="../img/logo.png" alt="..."></label> -->
-                            <label for="kakaoPay" class="font-weight-light font-size-s mb-0">카카오페이</label>
+                            <input type="radio" name="payment" class="custom-radio mr-lg-3 mr-2" id="kakaoPay">
+                            <label for="kakaoPay" class="mb-0"><img src="../img/logo_kakaoPay.png" class="payment-logo" alt="..."></label>
                         </div>
                         <div class="d-flex align-items-center">
-                            <input type="radio" name="payment" class="custom-radio mr-3" id="creditCard">
+                            <input type="radio" name="payment" class="custom-radio mr-lg-3 mr-2" id="creditCard">
                             <label for="creditCard" class="font-weight-light font-size-s mb-0">신용카드 결제</label>
                         </div>
                         <div class="d-flex align-items-center">
-                            <input type="radio" name="payment" class="custom-radio mr-3" id="depBank">
+                            <input type="radio" name="payment" class="custom-radio mr-lg-3 mr-2" id="depBank">
                             <label for="depBank" class="font-weight-light font-size-s mb-0">무통장입금</label>
                         </div>
                     </div>
@@ -427,7 +630,7 @@
                     <input type="checkbox" class="custom-checkbox mr-2" id="order_payment">
                     <label for="order_payment" class="mb-0">
                         서비스 및 결제방식에 대한 내용을 이해하였으며 이에 동의합니다.
-                        <a href="#x" class="text-dark" data-toggle="modal" data-target="#termsModal">(보기)</a>
+                        <a href="../sub/payment_notice.html" class="text-dark" target="_blank">(보기)</a>
                     </label>
                 </div>
             </div>

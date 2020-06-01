@@ -7,3 +7,18 @@ function addWishList(obj) {
         $(icon).attr('class', 'far fa-heart');
     }
 }
+
+// sub-nav hover : pc
+$(function() {
+    $('.sub-nav .nav-item .nav-link').hover(function () {
+        let id = $(this).attr('id');
+        let menu = $('.sub-nav-menu .' + id);
+
+        menu.siblings('div').hide();
+        menu.show();
+
+        $(menu).mouseleave(function () {
+            $(menu).hide()
+        })
+    })
+})
