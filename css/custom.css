@@ -190,6 +190,9 @@ button:focus {
 .search-bar-border {
     border-bottom: 6px solid #fff;
 }
+.search-bar-border .search-text {
+    font-size: 0.8rem;
+}
 
 .z-index-2 {
     z-index: 2;
@@ -372,7 +375,7 @@ select::-ms-expand {
 .text-bullet:before {
     content: '';
     width: 3px;
-    height: 16px;
+    height: 11px;
     display: inline-block;
     margin-right: 8px;
     background-color: #434343;
@@ -385,8 +388,11 @@ select::-ms-expand {
 /* cart */
 
 .cart-thumbs {
-    width: 120px;
-    height: 80px;
+    width: 100px;
+    height: 60px;
+}
+.cart-thumbs img {
+    width: inherit !important;
 }
 
 /* chat */
@@ -625,15 +631,11 @@ select::-ms-expand {
 */
 
 .datepicker.-from-bottom- {
-    width: 350px;
+    width: 300px;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
-    top: 0;
-    /* 임시 */
-    /* top: 0;
-    left: 0;
-    opacity: 1;*/
-    border-top: 0;
+    /* top: 0; */
+    /* border-top: 0; */
     box-shadow: none;
     box-sizing: inherit;
     z-index: 2000;
@@ -1020,19 +1022,24 @@ footer .text-divider {
     .custom-inputs .custom-radio + label {
         font-size: inherit;
     }
+    .search-bar-border .search-text {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 768px) {
     /* layout */
     .h1, h1 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .h2, h2,
+    .h3, h3,
     .font-size-m {
-        font-size: 1.1rem !important;
+        font-size: 0.95rem !important;
     }
+    .h4, h4,
     .h5, h5 {
-        font-size: 0.9rem !important;
+        font-size: 0.8rem !important;
     }
 
     .font-size-x {
@@ -1040,7 +1047,7 @@ footer .text-divider {
     }
     .font-size-xs,
     .font-size-s {
-        font-size: 0.85rem !important;
+        font-size: 0.8rem !important;
     }
     .font-size-sm {
         font-size: 1rem !important;
