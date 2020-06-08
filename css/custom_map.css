@@ -21,7 +21,7 @@ html, body {
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scroll: touch;
-    height: calc(100% - 180px);
+    height: calc(100% - 160px);
 }
 .map-list-item > *:first-child {
     border-top: 0;

@@ -167,13 +167,10 @@ body {
 .font-size-xl {
     font-size: 2.5rem !important;
 }
-/* 1.5rem
-1.25rem
-1.4rem
-0.85rem
-14px = 0.8rem
-25px = 1.2rem
-1.6rem */
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
 
 .form-control:focus,
 .btn:focus,
@@ -225,8 +222,16 @@ button:focus {
     background: #c15454;
 }
 .view-type .card-host {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+}
+.view-type .card-host-lg {
+    width: 120px;
+    height: 120px;
+}
+.view-type .card-host img,
+.view-type .card-host-lg img {
+    width: inherit;
 }
 
 
@@ -535,6 +540,15 @@ select::-ms-expand {
     vertical-align: top;
 }
 
+.performance-actor-profile {
+    width: 120px;
+    height: 120px;
+}
+.performance-actor-profile img {
+    width: inherit;
+    height: 100%;
+}
+
 /*
     datepicker - Air Datepicker
     https://www.jqueryscript.net/time-clock/Simple-Clean-Date-Picker-Plugin-with-jQuery-Air-Datepicker.html
@@ -789,6 +803,11 @@ footer .text-divider {
     .custom-chat .user-msg {
         max-width: 50%;
     }
+
+    .performance-actor-profile {
+        width: 164px !important;
+        height: 164px !important;
+    }
 }
 
 @media (min-width: 992px) {
@@ -891,6 +910,10 @@ footer .text-divider {
         width: 120px;
         height: 120px;
     }
+    .view-type .card-host-lg {
+        width: 190px;
+        height: 190px;
+    }
 
     .navbar-expand-lg .navbar-collapse .sub-nav-dropdown {
         display: none !important;
@@ -929,6 +952,15 @@ footer .text-divider {
     }
     .carousel-multiple-slide .carousel-control-next {
         right: -7%;
+    }
+
+    .btn-sm {
+        height: 40px;
+    }
+
+    .performance-actor-profile {
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -989,7 +1021,7 @@ footer .text-divider {
         top: 5px;
     }
 
-    .custom-inputs-sub .w-25 {
+    .custom-inputs-sub .w-md-25 {
         width: 25% !important;
     }
     .custom-inputs-sub .w-75 {
