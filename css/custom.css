@@ -1140,16 +1140,17 @@ footer .text-divider {
 }
 .slide-prev,
 .slide-next {
-    width: 5%;
+    width: auto;
     height: 100%;
     position: absolute;
     top: 0;
+    z-index: 1000;
 }
 .slide-prev {
-    left: -5%;
+    left: -25px;
 }
 .slide-next {
-    right: -5%;
+    right: -25px;
 }
 .slide-prev-icon {
     background-image: url('../img/left-btn-x-2.svg');
