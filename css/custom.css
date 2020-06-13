@@ -205,6 +205,12 @@ button:focus {
 .w-lg-20 {
     width: auto;
 }
+.w-70 {
+    width: 70% !important;
+}
+.w-30 {
+    width: 30% !important;
+}
 
 .custom-other-nav {
     z-index: 1049;
@@ -324,6 +330,19 @@ button:focus {
 .custom-inputs-sub:not(.not) .w-25,
 .custom-inputs-sub:not(.not) .w-75 {
     width: 100% !important;
+}
+
+/* custom list style */
+.custom-list-style {
+    list-style-type: '-';
+    padding-left: 10px;
+}
+.custom-list-style .list-item {
+    padding-left: 12px;
+    margin-bottom: 15px;
+}
+.custom-list-style .list-item:last-child {
+    margin-bottom: 0;
 }
 
 select,
@@ -833,6 +852,9 @@ footer .text-divider {
     }
     .w-lg-25 {
         width: 25% !important;
+    }
+    .w-lg-75 {
+        width: 75% !important;
     }
     .w-20,
     .w-lg-20 {
