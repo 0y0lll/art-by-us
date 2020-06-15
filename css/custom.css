@@ -422,6 +422,7 @@ select::-ms-expand {
 
 /* chat */
 
+.custom-chat,
 .custom-chat .chat-item {
     position: relative;
 }
@@ -443,6 +444,12 @@ select::-ms-expand {
 .custom-chat .chat-msg,
 .custom-chat .chat-date {
     font-size: 0.85rem;
+}
+.custom-chat .chat-msg-input {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 /* list tag */

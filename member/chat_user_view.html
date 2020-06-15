@@ -422,7 +422,7 @@
     <main role="main">
         <div class="border-top">
             <!-- view nav -->
-            <div class="border-bottom">
+            <div class="border-bottom overflow-hidden">
                 <div class="container my-md-3 my-2">
                     <div class="d-flex align-items-center">
                         <a href="#x" class="mr-3 text-light-gray-more font-size-m" onclick="history.back();"><i class="fa fa-chevron-left align-middle"></i></a>
@@ -432,7 +432,7 @@
             </div>
 
             <!-- chat view -->
-            <div class="container my-md-5 my-3 custom-chat">
+            <div class="container my-3 overflow-hidden custom-chat">
                 <!-- date -->
                 <div class="font-weight-light">
                     <div class="text-center my-3">
@@ -484,14 +484,16 @@
                 </div>
 
                 <!-- input -->
-                <div class="custom-inputs chat-msg-input">
-                    <input type="text" class="form-control font-size-s" placeholder="여기에 메시지를 입력해 주세요">
+                <div class="chat-msg-input">
+                    <div class="container custom-inputs">
+                        <input type="text" class="form-control font-size-s" placeholder="여기에 메시지를 입력해 주세요">
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-light">
+    <!-- <footer class="bg-light">
         <div class="container py-lg-5 py-4">
             <div class="d-lg-flex align-items-center justify-content-between mb-lg-4 mb-3">
                 <a href="../index.html"><img src="../img/logo.png" srcset="../img/logo@2x.png 2x, ../img/logo@3x.png 3x"></a>
@@ -520,7 +522,7 @@
                 <p class="text-right font-weight-light text-light-gray">Copyright ART BY US corp. All Right Reserved.</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
