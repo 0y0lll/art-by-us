@@ -144,7 +144,7 @@
   padding: 0 .3rem;
   font-weight: 300;
   font-size: 0.8rem;
-  z-index: 10;
+  z-index: 1;
   min-height: 20px;
   cursor: pointer;
 }
@@ -153,10 +153,13 @@
   min-width: 320px;
   background: #fff;
   position: absolute;
-  top: 30px;
+  z-index: 2;
+  top: 70px;
   border: 1px solid #e1e1e1;
   padding: 1rem 1rem 1rem 2rem;
   cursor: initial;
+  text-align: left;
+  font-weight: 300;
 }
 .custom-calendar .day-event-popover.left-down {
   left: 80px;
@@ -191,8 +194,11 @@
 .custom-calendar .day-event-popover.left-down:before {
   left: 30px;
 }
+.custom-calendar .day-event-popover.left-down {
+  left: 5px;
+}
 .custom-calendar .day-event-popover.right-down {
-  right: 0;
+  right: 5px;
 }
 .custom-calendar .day-event-popover.right-down:after {
     right: 31px;
@@ -203,17 +209,20 @@
 .custom-calendar .day-event-popover .header {
   font-size: 1.2rem;
 }
+.custom-calendar .day-event-popover .content {
+  font-size: 0.8rem;
+}
 .custom-calendar .day-event-popover .event-color {
   width: 14px;
   height: 14px;
 }
 .custom-calendar .day-event-popover .event-buttons > * {
-  font-size: inherit;
   font-weight: inherit;
   border-radius: 0;
   color: #fff;
   padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 0.8rem;
 }
 
 .custom-calendar .border,
@@ -239,6 +248,10 @@
   left: 20px;
 }
 
+.custom-calendar .event-list-toggle {
+  color: inherit;
+}
+
 @media (min-width: 992px) {
   .custom-calendar .function > * {
     min-width: 160px;
@@ -250,7 +263,5 @@
 }
 
 @media (min-width: 768px) {
-  .custom-calendar .day-event-popover.left-down {
-    left: 110px;
-  }
+
 }

@@ -225,7 +225,7 @@
                         <a class="nav-link" href="#x">채팅</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-2">
-                        <a class="nav-link" href="../member/chat_user.html">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
+                        <a class="nav-link" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
                     </li>
                     <div class="dropdown-divider"></div>
                     <li class="nav-item mx-lg-3 mx-2">
@@ -277,7 +277,7 @@
                                 <a class="dropdown-item" href="#x">찜 리스트</a>
                                 <a class="dropdown-item" href="#x">나의 이용 후기</a>
                                 <a class="dropdown-item" href="#x">채팅</a>
-                                <a class="dropdown-item" href="../member/chat_user.html">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
+                                <a class="dropdown-item" href="#x">1:1 문의<span class="ml-2 d-inline-block rounded-pill align-top mt-1 bg-hot-pink nav-notify"></span></a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#x">회원 정보 관리</a>
                                 <a class="dropdown-item" href="#x">호스트 전환</a>
@@ -450,6 +450,14 @@
                         </div>
 
                         <!-- calendar -->
+                        <!--
+                            <PC> - min-width(992px)
+                            이벤트 클릭시 툴팁 노출 event info : left-down / right-down / left-up / right-up
+                            일자 클릭 및 +3(더 많은 이벤트 표시) 클릭시 우측 이벤트 리스트 출력
+
+                            <Mobile>
+                            일자 및 이벤트 클릭시 리스트 페이지로 이동(calendar_event_list.html)
+                        -->
                         <div class="float-lg-left pr-lg-5 mb-lg-0 mb-4 left">
                             <div class="calendar">
                                 <div class="calendar-header">
@@ -462,23 +470,16 @@
                                     <div>SAT</div>
                                 </div>
                                 <div class="calendar-week">
-                                    <div class="calendar-day day">1
-                                        <!-- event list -->
-                                        <div class="day-event bg-red text-white" style="width: 290%; margin-top: 5px;">
-                                            <span>사당 ABC 댄스연습실 - G1</span>
-                                        </div>
-                                        <div class="day-event bg-purple text-white" style="width: 190%; margin-top: 30px;">
-                                            <span>공병각의 캘리그라피...</span>
-                                        </div>
-                                        <div class="day-event bg-yellow text-dark" style="width: 190%; margin-top: 55px;">
-                                            <span>JYP 1차 오디션</span>
-
-                                            <!-- event info : left-down -->
-                                            <div class="day-event-popover left-down">
-                                                <div class="mb-2 header">
-                                                    <span class="d-inline-block align-middle mr-1 event-color bg-yellow"></span>
-                                                    <span class="d-inline-block align-middle text-dark">JYP 1차 오디션</span>
-                                                </div>
+                                    <div class="calendar-day day">
+                                        <!-- event list 출력(right) : 예시로 1일만 작업 -->
+                                        <button type="button" class="btn bg-transparent py-0 align-top event-list-toggle" onclick="onEventList()">1</button>
+                                        <!-- event info : left-down -->
+                                        <div class="day-event-popover left-down" style="left: 110px; top: 120px">
+                                            <div class="mb-2 header">
+                                                <span class="d-inline-block align-middle mr-1 event-color bg-yellow"></span>
+                                                <span class="d-inline-block align-middle text-dark">JYP 1차 오디션</span>
+                                            </div>
+                                            <div class="content">
                                                 <p class="text-red">2020.05.01 오후 13:30 시작<br>2020.05.02 오전 10:00 종료</p>
                                                 <p class="mb-4 text-light-gray">
                                                     예약자 : 김인간, 010-1234-5678<br>
@@ -487,11 +488,22 @@
                                                     예약상태 : 예약완료<br>
                                                     추가옵션 : 프로젝터, 반주테이프
                                                 </p>
-                                                <div class="d-flex justify-content-end text-white event-buttons">
-                                                    <button type="button" class="btn mr-2 bg-mid-gray" data-toggle="modal" data-target="#editEventModal">편집</button>
-                                                    <button type="button" class="btn bg-red">예약취소</button>
-                                                </div>
                                             </div>
+                                            <div class="d-flex justify-content-end text-white event-buttons">
+                                                <button type="button" class="btn mr-2 bg-mid-gray" data-toggle="modal" data-target="#editEventModal">편집</button>
+                                                <button type="button" class="btn bg-red">예약취소</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- event item list -->
+                                        <div class="day-event bg-red text-white" style="width: 290%; margin-top: 5px;">
+                                            <span>사당 ABC 댄스연습실 - G1</span>
+                                        </div>
+                                        <div class="day-event bg-purple text-white" style="width: 190%; margin-top: 30px;">
+                                            <span>공병각의 캘리그라피...</span>
+                                        </div>
+                                        <div class="day-event bg-yellow text-dark" style="width: 190%; margin-top: 55px;">
+                                            <span>JYP 1차 오디션</span>
                                         </div>
                                         <div class="day-event bg-dark-gray text-white" style="width: 90%; margin-top: 80px;">
                                             <span>+3 ...</span>
@@ -511,16 +523,13 @@
                                     <div class="calendar-day day">11</div>
                                     <div class="calendar-day day">12</div>
                                     <div class="calendar-day day">13
-                                        <!-- event list -->
-                                        <div class="day-event bg-light-green text-white" style="width: 90%; margin-top: 5px;">
-                                            <span>강남 술약속</span>
-
-                                            <!-- event info : right-down -->
-                                            <div class="day-event-popover right-down" style="display_: none">
-                                                <div class="mb-2 header">
-                                                    <span class="d-inline-block align-middle mr-1 event-color bg-yellow"></span>
-                                                    <span class="d-inline-block align-middle text-dark">JYP 1차 오디션</span>
-                                                </div>
+                                        <!-- event info : right-down -->
+                                        <div class="day-event-popover right-down" style="display_: none">
+                                            <div class="mb-2 header">
+                                                <span class="d-inline-block align-middle mr-1 event-color bg-yellow"></span>
+                                                <span class="d-inline-block align-middle text-dark">JYP 1차 오디션</span>
+                                            </div>
+                                            <div class="content">
                                                 <p class="text-red">2020.05.01 오후 13:30 시작<br>2020.05.02 오전 10:00 종료</p>
                                                 <p class="mb-4 text-light-gray">
                                                     예약자 : 김인간, 010-1234-5678<br>
@@ -529,11 +538,16 @@
                                                     예약상태 : 예약완료<br>
                                                     추가옵션 : 프로젝터, 반주테이프
                                                 </p>
-                                                <div class="d-flex justify-content-end text-white event-buttons">
-                                                    <button type="button" class="btn mr-2 bg-mid-gray" data-toggle="modal" data-target="#editEventModal">편집</button>
-                                                    <button type="button" class="btn bg-red">예약취소</button>
-                                                </div>
                                             </div>
+                                            <div class="d-flex justify-content-end text-white event-buttons">
+                                                <button type="button" class="btn mr-2 bg-mid-gray" data-toggle="modal" data-target="#editEventModal">편집</button>
+                                                <button type="button" class="btn bg-red">예약취소</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- event item list -->
+                                        <div class="day-event bg-light-green text-white" style="width: 90%; margin-top: 5px;">
+                                            <span>강남 술약속</span>
                                         </div>
                                     </div>
                                     <div class="calendar-day day">14</div>
@@ -591,8 +605,8 @@
                             </div>
                         </div>
 
-                        <!-- list -->
-                        <div class="float-lg-right right list">
+                        <!-- event list -->
+                        <div id="eventList" class="float-lg-right right list">
                             <div class="border p-3">
                                 <!-- selected date -->
                                 <div class="d-flex align-items-center font-weight-light border-bottom pb-3">
@@ -857,6 +871,10 @@
         $('.event-color-chart').toggleClass('d-none');
     })
 
+    /* calendar event list view */
+    function onEventList() {
+        $('#eventList').toggle();
+    }
 </script>
 
 </html>
