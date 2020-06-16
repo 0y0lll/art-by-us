@@ -453,7 +453,7 @@
                         <!--
                             <PC> - min-width(992px)
                             이벤트 클릭시 툴팁 노출 event info : left-down / right-down / left-up / right-up
-                            일자 클릭 및 +3(더 많은 이벤트 표시) 클릭시 우측 이벤트 리스트 출력
+                            일자 클릭 및 +3(더 많은 이벤트 표시) 클릭시 우측 이벤트 리스트(eventList) 출력
 
                             <Mobile>
                             일자 및 이벤트 클릭시 리스트 페이지로 이동(calendar_event_list.html)
@@ -472,7 +472,7 @@
                                 <div class="calendar-week">
                                     <div class="calendar-day day">
                                         <!-- event list 출력(right) : 예시로 1일만 작업 -->
-                                        <button type="button" class="btn bg-transparent py-0 align-top event-list-toggle" onclick="onEventList()">1</button>
+                                        <button type="button" class="btn bg-transparent py-0 align-top event-list-toggle" onclick="handleEventList()">1</button>
                                         <!-- event info : left-down -->
                                         <div class="day-event-popover left-down" style="left: 110px; top: 120px">
                                             <div class="mb-2 header">
@@ -502,7 +502,12 @@
                                         <div class="day-event bg-purple text-white" style="width: 190%; margin-top: 30px;">
                                             <span>공병각의 캘리그라피...</span>
                                         </div>
-                                        <div class="day-event bg-yellow text-dark" style="width: 190%; margin-top: 55px;">
+
+                                        <!--
+                                            클릭시 툴팁 출력 / 모바일에선 calendar_event_list.html로 이동
+                                            툴팁은 이벤트 좌표에 따라 class 다름
+                                        -->
+                                        <div class="day-event bg-yellow text-dark loc-left-down" style="width: 190%; margin-top: 55px;">
                                             <span>JYP 1차 오디션</span>
                                         </div>
                                         <div class="day-event bg-dark-gray text-white" style="width: 90%; margin-top: 80px;">
@@ -524,7 +529,7 @@
                                     <div class="calendar-day day">12</div>
                                     <div class="calendar-day day">13
                                         <!-- event info : right-down -->
-                                        <div class="day-event-popover right-down" style="display_: none">
+                                        <div class="day-event-popover right-down" style="display: none">
                                             <div class="mb-2 header">
                                                 <span class="d-inline-block align-middle mr-1 event-color bg-yellow"></span>
                                                 <span class="d-inline-block align-middle text-dark">JYP 1차 오디션</span>
@@ -546,7 +551,7 @@
                                         </div>
 
                                         <!-- event item list -->
-                                        <div class="day-event bg-light-green text-white" style="width: 90%; margin-top: 5px;">
+                                        <div class="day-event bg-light-green text-white loc-right-down" style="width: 90%; margin-top: 5px;">
                                             <span>강남 술약속</span>
                                         </div>
                                     </div>
@@ -605,10 +610,17 @@
                             </div>
                         </div>
 
-                        <!-- event list -->
+                        <!--
+                            우측 event list : 기본적으로 접속한 날짜의 일정 리스트 출력
+                        -->
                         <div id="eventList" class="float-lg-right right list">
                             <div class="border p-3">
-                                <!-- selected date -->
+                                <!-- 등록된 이벤트 없을 시 템플릿 -->
+                                <!-- <div class="font-weight-light text-center text-light-gray">
+                                    <p class="mb-0">등록된 일정이 없습니다.</p>
+                                </div> -->
+
+                                <!-- all day event -->
                                 <div class="d-flex align-items-center font-weight-light border-bottom pb-3">
                                     <div class="align-self-start" style="min-width: 80px;">
                                         <p class="text-light-gray-more mb-0">하루종일</p>
@@ -620,7 +632,7 @@
                                     </div>
                                 </div>
 
-                                <!-- other date -->
+                                <!-- other event -->
                                 <div class="pt-3">
                                     <div class="d-flex align-items-center font-weight-light pb-2">
                                         <div class="align-self-start" style="min-width: 80px;">
@@ -871,10 +883,42 @@
         $('.event-color-chart').toggleClass('d-none');
     })
 
-    /* calendar event list view */
-    function onEventList() {
-        $('#eventList').toggle();
+    let windowWidth = $(window).width();
+
+    /* date click event */
+    function handleEventList() {
+        if (windowWidth > 992) {
+            $('#eventList').toggle();
+        } else {
+            location.href='../member/calendar_event_list.html';
+        }
     }
+
+    /* day-event click event */
+    $('.day-event').each( function () {
+        $(this).on('click', function (event) {
+            // console.log(event)
+            if (windowWidth > 992) {
+                if ($(event.target).hasClass('loc-left-down')) {
+                    $('.day-event-popover.left-down').toggle();
+                } else if ($(event.target).hasClass('loc-right-down')) {
+                    $('.day-event-popover.right-down').toggle();
+                }
+            } else {
+                location.href='../member/calendar_event_list.html';
+            }
+        })
+    })
+
+    $(window).resize( function () {
+        if ($(this).width() < 992) {
+            $('#eventList').addClass('d-none');
+            $('.day-event-popover').addClass('d-none');
+        } else {
+            $('#eventList').removeClass('d-none');
+            $('.day-event-popover').removeClass('d-none');
+        }
+    })
 </script>
 
 </html>
