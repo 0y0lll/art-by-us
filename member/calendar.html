@@ -425,18 +425,18 @@
             <div class="container my-md-5 my-4">
                 <div class="wrapper view-type custom-calendar overflow-hidden">
                     <div class="main">
-                        <div class="toolbar mb-lg-4 mb-2">
+                        <div class="toolbar mb-lg-4 mb-0">
                             <!-- date -->
                             <div class="d-flex align-items-center">
-                                <button type="button" class="btn font-size-md text-light-gray-more" aria-label="prev"><i class="fas fa-chevron-left"></i></button>
-                                <h2 class="mx-lg-5 mx-md-3 mx-2 mb-0">2020년 5월</h2>
-                                <button type="button" class="btn font-size-md text-light-gray-more" aria-label="next"><i class="fas fa-chevron-right"></i></button>
+                                <button type="button" class="btn px-md-2 px-1 font-size-md text-light-gray-more" aria-label="prev"><i class="fas fa-chevron-left"></i></button>
+                                <h2 class="mx-lg-4 mx-md-3 mx-2 mb-0">2020년 5월</h2>
+                                <button type="button" class="btn px-md-2 px-1 font-size-md text-light-gray-more" aria-label="next"><i class="fas fa-chevron-right"></i></button>
                             </div>
 
                             <!-- function -->
                             <div class="d-flex custom-inputs-sub function">
-                                <button type="button" class="btn border mr-2 font-weight-light" data-toggle="modal" data-target="#addEventModal">
-                                    <i class="fas fa-plus mr-1 text-sky"></i>일정추가
+                                <button type="button" class="btn border mr-2 font-weight-light text-btn" data-toggle="modal" data-target="#addEventModal">
+                                    <i class="fas fa-plus mr-lg-1 mr-0 text-sky"></i><span class="d-lg-inline-block d-none">일정추가</span>
                                 </button>
                                 <select class="form-control font-weight-light">
                                     <option value="">전체</option>
@@ -474,7 +474,7 @@
                                         <!-- event list 출력(right) : 예시로 1일만 작업 -->
                                         <button type="button" class="btn bg-transparent py-0 align-top event-list-toggle" onclick="handleEventList()">1</button>
                                         <!-- event info : left-down -->
-                                        <div class="day-event-popover left-down" style="left: 110px; top: 120px">
+                                        <div class="day-event-popover left-down d-none" style="left: 110px; top: 120px">
                                             <div class="mb-2 header">
                                                 <span class="d-inline-block align-middle mr-1 event-color bg-yellow"></span>
                                                 <span class="d-inline-block align-middle text-dark">JYP 1차 오디션</span>
@@ -529,7 +529,7 @@
                                     <div class="calendar-day day">12</div>
                                     <div class="calendar-day day">13
                                         <!-- event info : right-down -->
-                                        <div class="day-event-popover right-down" style="display: none">
+                                        <div class="day-event-popover right-down d-none">
                                             <div class="mb-2 header">
                                                 <span class="d-inline-block align-middle mr-1 event-color bg-yellow"></span>
                                                 <span class="d-inline-block align-middle text-dark">JYP 1차 오디션</span>
@@ -698,12 +698,16 @@
                         </div>
                     </div>
 
-                    <!-- 일정 추가 modal -->
+                    <!-- <PC> 일정 추가 modal -->
                     <div class="modal fade" tabindex="-1" role="dialog" id="addEventModal" aria-labelledby="addEventModal" aria-hidden="true">
-                        <div class="modal-dialog custom-modal" role="document">
+                        <div class="modal-dialog modal-dialog-centered custom-modal full-modal" role="document">
                             <div class="modal-content px-lg-5 px-3 py-lg-5 py-4">
+                                <button type="button" class="close text-right mb-3 d-md-none" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+
                                 <div class="modal-header p-0 mb-4 border-0 d-flex position-relative custom-inputs-sub">
-                                    <button type="button" class="btn btn-outline border mr-3 eventColor">
+                                    <button type="button" class="btn btn-outline border mr-lg-3 mr-2 p-2 eventColor">
                                         <span class="d-block bg-red event-color-box"></span>
                                     </button>
                                     <!--
@@ -711,21 +715,21 @@
                                         bg-red / bg-sky / bg-yellow / bg-purple / bg-light-green / bg-orange / bg-light-pink /
                                         bg-mint / bg-light-brown / bg-gray / bg-mid-gray / bg-deep-dark
                                     -->
-                                    <div class="event-color-chart border p-3 d-none">
+                                    <div class="event-color-chart border p-lg-3 p-2 d-none">
                                         <div class="d-flex mb-3">
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-red"></span></div>
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-sky"></span></div>
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-yellow"></span></div>
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-purple"></span></div>
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-light-green"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-red"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-sky"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-yellow"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-purple"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-light-green"></span></div>
                                             <div class="border p-2"><span class="d-block event-color-box bg-orange"></span></div>
                                         </div>
                                         <div class="d-flex">
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-pink"></span></div>
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-mint"></span></div>
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-light-brown"></span></div>
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-gray"></span></div>
-                                            <div class="border p-2 mr-3"><span class="d-block event-color-box bg-mid-gray"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-pink"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-mint"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-light-brown"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-gray"></span></div>
+                                            <div class="border p-2 mr-lg-3 mr-2"><span class="d-block event-color-box bg-mid-gray"></span></div>
                                             <div class="border p-2"><span class="d-block event-color-box bg-deep-dark"></span></div>
                                         </div>
                                     </div>
@@ -744,12 +748,16 @@
                         </div>
                     </div>
 
-                    <!-- 편집 modal -->
+                    <!-- <PC> 편집 modal -->
                     <div class="modal fade" tabindex="-1" role="dialog" id="editEventModal" aria-labelledby="editEventModal" aria-hidden="true">
-                        <div class="modal-dialog custom-modal" role="document">
+                        <div class="modal-dialog modal-dialog-centered custom-modal full-modal" role="document">
                             <div class="modal-content px-lg-5 px-3 py-lg-5 py-4">
+                                <button type="button" class="close text-right mb-3 d-md-none" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+
                                 <div class="modal-header p-0 mb-4 border-0 d-flex justify-content-start align-items-center position-relative custom-inputs-sub">
-                                    <button type="button" class="btn btn-outline border mr-3 eventColor">
+                                    <button type="button" class="btn btn-outline border mr-lg-3 mr-2 p-2 eventColor">
                                         <span class="d-block bg-red event-color-box"></span>
                                     </button>
                                     <!--
@@ -888,7 +896,7 @@
     /* date click event */
     function handleEventList() {
         if (windowWidth > 992) {
-            $('#eventList').toggle();
+            $('#eventList').toggleClass('d-none');
         } else {
             location.href='../member/calendar_event_list.html';
         }
@@ -900,9 +908,9 @@
             // console.log(event)
             if (windowWidth > 992) {
                 if ($(event.target).hasClass('loc-left-down')) {
-                    $('.day-event-popover.left-down').toggle();
+                    $('.day-event-popover.left-down').toggleClass('d-none');
                 } else if ($(event.target).hasClass('loc-right-down')) {
-                    $('.day-event-popover.right-down').toggle();
+                    $('.day-event-popover.right-down').toggleClass('d-none');
                 }
             } else {
                 location.href='../member/calendar_event_list.html';
@@ -911,13 +919,7 @@
     })
 
     $(window).resize( function () {
-        if ($(this).width() < 992) {
-            $('#eventList').addClass('d-none');
-            $('.day-event-popover').addClass('d-none');
-        } else {
-            $('#eventList').removeClass('d-none');
-            $('.day-event-popover').removeClass('d-none');
-        }
+        windowWidth = $(this).width();
     })
 </script>
 

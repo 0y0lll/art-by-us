@@ -51,7 +51,7 @@
   text-align: center;
   border-right: 1px solid #e1e1e1;
   border-left: 1px solid #e1e1e1;
-  height: 160px;
+  height: 140px;
 }
 
 .custom-calendar .calendar-header {
@@ -105,6 +105,9 @@
   font-size: 0.8rem;
   height: 35px;
 }
+.custom-calendar .function .text-btn {
+  min-width: auto;
+}
 
 .custom-calendar .list {
   margin-top: 30px;
@@ -119,6 +122,7 @@
 .custom-calendar .calendar-header > div {
   text-transform: uppercase;
   color: #d7d7d7;
+  font-size: 0.8rem;
 }
 
 .custom-calendar .calendar-day {
@@ -147,6 +151,8 @@
   z-index: 1;
   min-height: 20px;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .custom-calendar .day-event-popover {
@@ -231,8 +237,8 @@
 }
 
 .custom-calendar .event-color-box {
-  width: 34px;
-  height: 34px;
+  width: 25px;
+  height: 25px;
 }
 
 .custom-calendar .event-color-chart {
@@ -257,11 +263,39 @@
     min-width: 160px;
     font-size: inherit;
   }
+  .custom-calendar .function .text-btn {
+    min-width: 160px;
+  }
   .custom-calendar .list {
     margin-top: 50px;
+  }
+  .custom-calendar .event-color-box {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+@media (max-width: 991px) {
+  .custom-calendar.view-type .right {
+    display: none;
   }
 }
 
 @media (min-width: 768px) {
+  .custom-calendar .calendar-header > div {
+    font-size: inherit;
+  }
+}
 
+@media (max-width: 767px) {
+  .custom-calendar .custom-modal.full-modal.modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .custom-calendar .custom-modal.full-modal .modal-content {
+    height: auto;
+    min-height: 100%;
+  }
 }
