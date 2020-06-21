@@ -109,8 +109,11 @@
   min-width: auto;
 }
 
-.custom-calendar .list {
+.custom-calendar .list:not(:first-child) {
   margin-top: 30px;
+}
+.custom-calendar .list .list-item > * {
+  position: relative;
 }
 
 /* COSMETIC STYLING */
@@ -264,6 +267,9 @@
 .custom-calendar .list .event-color-line {
   width: 5px;
   min-height: 40px
+}
+.custom-calendar .list .list-item .item-wrapper {
+  max-width: 250px;
 }
 
 @media (min-width: 992px) {
