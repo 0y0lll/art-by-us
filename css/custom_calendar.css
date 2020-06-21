@@ -258,6 +258,14 @@
   color: inherit;
 }
 
+.custom-calendar .list .event-time {
+  min-width: 70px;
+}
+.custom-calendar .list .event-color-line {
+  width: 5px;
+  min-height: 40px
+}
+
 @media (min-width: 992px) {
   .custom-calendar .function > * {
     min-width: 160px;
@@ -272,6 +280,14 @@
   .custom-calendar .event-color-box {
     width: 33px;
     height: 33px;
+  }
+
+  .custom-calendar .list .event-time {
+    min-width: 80px;
+  }
+  .custom-calendar .list .event-color-line {
+    width: 5px;
+    min-height: 40px
   }
 }
 
