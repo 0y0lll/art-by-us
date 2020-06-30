@@ -1,15 +1,8 @@
-// wishlist btn
-function addWishList(obj) {
-    let icon = $(obj).find('i');
-    if (icon.hasClass('far fa-heart')) {
-        $(icon).attr('class', 'fas fa-heart text-red');
-    } else {
-        $(icon).attr('class', 'far fa-heart');
-    }
-}
+$(function () {
+    // console.log('1')
+    $('html').scrollTop(0);
 
-// sub-nav hover : pc
-$(function() {
+    // sub-nav hover : pc
     $('.sub-nav .nav-item .nav-link').hover(function () {
         let id = $(this).attr('id');
         let menu = $('.sub-nav-menu .' + id);
@@ -22,6 +15,16 @@ $(function() {
         })
     })
 })
+
+// wishlist btn
+function addWishList(obj) {
+    let icon = $(obj).find('i');
+    if (icon.hasClass('far fa-heart')) {
+        $(icon).attr('class', 'fas fa-heart text-red');
+    } else {
+        $(icon).attr('class', 'far fa-heart');
+    }
+}
 
 /* index carousel */
 // $('.carousel-multiple-slide.carousel .carousel-item').each(function() {
