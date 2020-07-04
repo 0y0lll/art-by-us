@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART BY US</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/custom_host.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../css/fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main role="main">
+        <div class="container overflow-hidden my-md-5 my-4 px-md-0">
+            <!-- 등록 프로세스 : min-width 992에서 글자 줄바꿈 현상 때문에, 해당 프로세스 글자만 출력 -->
+            <div class="mb-md-5 mb-4 font-weight-light host-regist-proc">
+                <div class="row">
+                    <div class="col-lg-3 col-12">
+                        <p class="mb-0 pb-2 step active">01. 카테고리 선택</p>
+                    </div>
+                    <div class="col-lg-3 col-12 d-lg-block d-none">
+                        <p class="mb-0 pb-2 step">02. 소개 입력</p>
+                    </div>
+                    <div class="col-lg-3 col-12 d-lg-block d-none">
+                        <p class="mb-0 pb-2 step">03. 세부 정보 입력</p>
+                    </div>
+                    <div class="col-lg-3 col-12 d-lg-block d-none">
+                        <p class="mb-0 pb-2 step">04. 요금 체계 및 시간 설정</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카테고리 : 기본 6개씩 출력 -->
+            <h3 class="mb-md-4 mb-3">카테고리를 선택해 주세요<span class="d-lg-inline-block d-block text-light-gray font-weight-light ml-lg-3 ml-0 mt-lg-0 mt-3 font-size-s">1개만 선택 가능합니다.</span></h3>
+            <div class="row host-register-items mb-md-5 mb-4">
+                <div class="col-lg-2 col-md-3 col-4">
+                    <label class="radio-items">
+                        <input type="radio" name="category" value="studio" checked="checked">
+                        <span>스튜디오</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <label class="radio-items">
+                        <input type="radio" name="category" value="class">
+                        <span>클래스</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <label class="radio-items">
+                        <input type="radio" name="category" value="performance">
+                        <span>퍼포먼스</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mt-md-0 mt-3">
+                    <label class="radio-items">
+                        <input type="radio" name="category" value="audition">
+                        <span>오디션</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mt-lg-0 mt-3">
+                    <label class="radio-items">
+                        <input type="radio" name="category" value="store">
+                        <span>스토어</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- 세부 카테고리 : 기본 6개씩 출력 -->
+            <h3 class="mb-md-4 mb-3">세부 카테고리를 선택해 주세요<span class="d-lg-inline-block d-block text-light-gray font-weight-light ml-lg-3 ml-0 mt-lg-0 mt-3 font-size-s">최대 2개까지 선택 가능 합니다.</span></h3>
+            <div class="row host-register-items mb-md-5 mb-4">
+                <div class="col-lg-2 col-md-3 col-4">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="1">
+                        <span>무용</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="2">
+                        <span>연기</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="3">
+                        <span>음악</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mt-md-0 mt-3">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="4">
+                        <span>보컬</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mt-lg-0 mt-3">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="5">
+                        <span>댄스</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mt-lg-0 mt-3">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="5">
+                        <span>녹음 스튜디오</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mt-3">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="6">
+                        <span>촬영 스튜디오</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mt-3">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="6">
+                        <span>추가01</span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4 mt-3">
+                    <label class="checkbox-items">
+                        <input type="checkbox" name="category_depth" value="6">
+                        <span>추가02</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 다음단계 -->
+        <a href="studio_register2.html" class="btn bg-yellow btn-block rounded-0 py-lg-4 py-3 mt-lg-5 mt-3 font-size-m">다음으로 이동</a>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="../js/include_html_host.js"></script>
+    <script src="../js/custom.js"></script>
+</body>
+
+</html>

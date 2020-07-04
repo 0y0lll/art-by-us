@@ -30,7 +30,7 @@
 
 /* MAIN */
 
-.custom-calendar .toolbar{
+.custom-calendar .toolbar:not(.not) {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,7 +105,10 @@
   font-size: 0.8rem;
   height: 35px;
 }
-.custom-calendar .function .text-btn {
+.custom-calendar .function.not > * {
+  min-width: 30%;
+}
+.custom-calendar .function:not(.not) .text-btn {
   min-width: auto;
 }
 
@@ -274,7 +277,7 @@
 
 @media (min-width: 992px) {
   .custom-calendar .function > * {
-    min-width: 160px;
+    min-width: 160px !important;
     font-size: inherit;
   }
   .custom-calendar .function .text-btn {
@@ -294,6 +297,13 @@
   .custom-calendar .list .event-color-line {
     width: 5px;
     min-height: 40px
+  }
+
+  .custom-calendar .toolbar.not {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
   }
 }
 
