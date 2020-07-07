@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // console.log('2')
 
-    $('#header').load('../include/header_sub.html')
-    $('#footer').load('../include/footer_sub.html')
+    $('#header').load('../include/common/header_sub.html')
+    $('#footer').load('../include/common/footer_sub.html')
 })

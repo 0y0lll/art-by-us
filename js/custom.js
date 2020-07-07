@@ -2,6 +2,26 @@ $(function () {
     // console.log('1')
     $('html').scrollTop(0);
 
+    // index slick slide
+    $('.main-item-slide').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        prevArrow: '<button type="button" class="btn slide-prev"><span class="slide-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></button>',
+        nextArrow: '<button type="button" class="btn slide-next"><span class="slide-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></button>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+              }
+            }
+        ]
+    });
+
     // sub-nav hover : pc
     $('.sub-nav .nav-item .nav-link').hover(function () {
         let id = $(this).attr('id');
@@ -25,21 +45,3 @@ function addWishList(obj) {
         $(icon).attr('class', 'far fa-heart');
     }
 }
-
-/* index carousel */
-// $('.carousel-multiple-slide.carousel .carousel-item').each(function() {
-//     var next = $(this).next();
-//     if (!next.length) {
-//         next = $(this).siblings(':first');
-//     }
-//     next.children(':first-child').clone().appendTo($(this));
-
-//     for (var i=0;i<3;i++) {
-//         next=next.next();
-//         if (!next.length) {
-//             next = $(this).siblings(':first');
-//         }
-
-//         next.children(':first-child').clone().appendTo($(this));
-//     }
-// })

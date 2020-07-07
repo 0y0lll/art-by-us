@@ -19,19 +19,22 @@
 </head>
 
 <body>
+    <!-- 서브 헤더 -->
     <header id="header"></header>
 
     <main role="main">
         <div class="container my-md-5 my-4">
-            <!-- title -->
+            <!-- 페이지 타이틀 -->
             <h2 class="d-inline-block font-weight-bold position-relative px-2 mb-md-5 mb-4 sub-title"><span class="sub-title-text">오디션</span></h2>
 
-            <!-- search category -->
+            <!-- 검색 항목 -->
             <div class="row justify-content-between custom-inputs">
                 <div class="col-md-4 mb-md-0 mb-2">
                     <p class="font-weight-light font-weight-light mb-1 font-size-sm">지역</p>
                     <div class="input-group">
                         <input type="text" class="form-control font-size-sm" id="locationInput" value="서울특별시" placeholder="지역">
+
+                        <!-- 지역 선택시 드롭다운 -->
                         <div class="position-absolute w-100 d-none location-input-list" id="locationList">
                             <ul class="list-unstyled">
                                 <li class="d-flex align-items-center form-control border-top-0">
@@ -184,6 +187,7 @@
         </div>
     </main>
 
+    <!-- 서브 푸터 -->
     <footer id="footer"></footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
