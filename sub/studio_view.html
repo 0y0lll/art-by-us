@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Datepicker -->
-    <link href="../css/datepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/datepicker.css">
 
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    <!-- 모달 -->
+    <div id="modals"></div>
+
     <!-- 서브 헤더 -->
     <header id="header"></header>
 
@@ -27,7 +30,7 @@
             <div class="container">
                 <div class="d-lg-flex view-type">
                     <!-- info -->
-                    <div class="float-lg-left mr-5_ pr-lg-5 overflow-hidden left">
+                    <div class="float-lg-left pr-lg-5 overflow-hidden left">
                         <!-- slide -->
                         <div id="carouselStudioView" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators my-4">
@@ -325,7 +328,7 @@
 
                                 <!-- Calendar -->
                                 <div class="py- border-bottom">
-                                    <div id="datePicker" class="datepicker-inline mb-4"></div>
+                                    <div id="datePickerInline" class="datepicker-inline mb-4"></div>
 
                                     <div class="row mb-4">
                                         <div class="col-4">
@@ -373,7 +376,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Number of member -->
+                                <!-- 인원수 설정 -->
                                 <div class="py-4 border-bottom">
                                     <p>인원수</p>
                                     <div class="d-flex justify-content-between custom-inputs custom-inputs-sub">
@@ -383,7 +386,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Info -->
+                                <!-- 예약일자, 금액 -->
                                 <div class="pt-4">
                                     <p>예약내용</p>
                                     <p class="mb-0 font-weight-light font-size-xs">2020년 01월 24일 08:30</p>
@@ -394,7 +397,7 @@
                             </div>
                         </div>
 
-                        <!-- Buttons -->
+                        <!-- 버튼 -->
                         <button type="button" class="btn btn-block py-3 border-0 rounded-0 font-weight-light mb-3 bg-yellow">클래스 신청하기</button>
                         <div class="d-flex bg-yellow">
                             <button type="button" class="btn w-50 py-3 border-0 rounded-0 font-weight-light">전화하기</button>
@@ -417,49 +420,8 @@
     <script src="../js/datepicker.js"></script>
 
     <script src="../js/include_html.js"></script>
-    <script src="../js/custom.js"></script>
+    <!-- 스크립트가 동작하지 않아 include_html.js에서 getScript로 불러옴 -->
+    <!-- <script src="../js/custom.js"></script> -->
 </body>
-
-<script>
-    $(function(){
-        // datepicker
-        $('#datePicker').datepicker({
-            language: 'ko',
-            // multipleDatesSeparator: ' ~ ',
-            // range: true,
-            // multipleDates: true,
-            navTitles: {
-                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
-            },
-            prevHtml: '<i class="fas fa-chevron-left"></i>',
-            nextHtml: '<i class="fas fa-chevron-right"></i>',
-        })
-
-        // number of people
-        $('#decreaseQuantity').click( function(e) {
-            e.preventDefault();
-            var stat = $('#numberUpDown').val();
-            var num = parseInt(stat, 10);
-            num--;
-
-            if (num <= 0) {
-                num = 1;
-            }
-            $('#numberUpDown').val(num);
-        });
-
-        $('#increaseQuantity').click(function(e){
-            e.preventDefault();
-            var stat = $('#numberUpDown').val();
-            var num = parseInt(stat, 10);
-            num++;
-
-            if (num > 100) {
-                num = 100;
-            }
-            $('#numberUpDown').val(num);
-        });
-    });
-</script>
 
 </html>

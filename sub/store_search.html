@@ -8,9 +8,6 @@
     <!-- Bootstrap 4.3.1 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Datepicker -->
-    <link href="../css/datepicker.css" rel="stylesheet">
-
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
 
@@ -19,155 +16,29 @@
 </head>
 
 <body>
+    <!-- 모달 -->
+    <div id="modals"></div>
+
     <!-- 서브 헤더 -->
     <header id="header"></header>
 
     <main role="main">
-        <div class="container mb-md-5 mb-4">
-            <!-- search keyword -->
-            <h2 class="font-weight-light text-center py-md-5 py-3 mb-0 text-gray search-result">
-                <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;모든지역&rdquo;</span> 에 있는<br>
-                <span class="font-weight-bold text-dark position-relative search-keyword">&ldquo;전체업종&rdquo;</span> 로 검색된 공연입니다.
-            </h2>
-            <!-- 검색 항목 -->
-            <div class="row justify-content-between custom-inputs">
-                <div class="col-md-6 mb-md-0 mb-2">
-                    <p class="font-weight-light font-weight-light mb-1 font-size-sm">지역</p>
-                    <div class="input-group">
-                        <input type="text" class="form-control font-size-sm" id="locationInput" value="서울특별시" placeholder="지역">
+        <!-- 페이지 상단 -->
+        <!--
+            검색 항목
+                type-a : 지역/유형/날짜(studio, performance, audition)
+                type-b : 지역/항목/날짜(class)
+                type-c : 지역/유형(store)
+        -->
+        <div id="pageNav" class="container my-md-5 my-4 page-store type-c">
+            <!-- 검색된 키워드 -->
+            <div id="searchKeyword"></div>
 
-                        <!-- 지역 선택시 드롭다운 -->
-                        <div class="position-absolute w-100 d-none location-input-list" id="locationList">
-                            <ul class="list-unstyled">
-                                <li class="d-flex align-items-center form-control border-top-0">
-                                    <a href="../sub/map.html" class="text-decoration-none text-dark">
-                                        <i class="fas fa-map-marker-alt mr-2 text-red"></i>지도에서 검색하기
-                                    </a>
-                                </li>
-                                <li class="d-flex align-items-center form-control border-top-0 font-weight-light">
-                                    <a href="#x" class="text-decoration-none text-gray">
-                                        <span class="font-weight-bold">서울특별시</span> 관악구 봉천동
-                                    </a>
-                                </li>
-                                <li class="d-flex align-items-center form-control border-top-0 font-weight-light">
-                                    <a href="#x" class="text-decoration-none text-gray">
-                                        서울역, 1호선
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-md-0 mb-2">
-                    <p class="font-weight-light font-weight-light mb-1 font-size-sm">유형</p>
-                    <div class="input-group">
-                        <select name="" id="" class="form-control font-size-sm">
-                            <option value="seoul" selected>전체업종</option>
-                            <option value="seoul">교육</option>
-                            <option value="seoul">공연관련</option>
-                            <option value="seoul">용품판매</option>
-                            <option value="seoul">제작</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+            <div id="searchArea"></div>
         </div>
 
-        <div class="border-top">
-            <!-- search result - list -->
-            <div class="container my-md-5 my-4">
-                <div class="d-flex justify-content-between align-items-center mb-4 custom-inputs">
-                    <h2 class="mb-0">검색결과 <span class="d-none ml-2 font-weight-light text-red">48건</span></h2>
-                    <select name="" id="" class="form-control" style="width: 160px">
-                        <option value="random">랜덤순</option>
-                        <option value="distance">거리순</option>
-                        <option value="review">후기순</option>
-                    </select>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                        <div class="card border-0 bg-transparent">
-                            <img src="../img/store-1.jpg" class="card-img-top rounded-0" alt="">
-
-                            <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                            <p class="font-weight-light font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                            <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                        <div class="card border-0 bg-transparent">
-                            <img src="../img/store-2.jpg" class="card-img-top rounded-0" alt="">
-
-                            <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                            <p class="font-weight-light font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                            <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                        <div class="card border-0 bg-transparent">
-                            <img src="../img/store-3.jpg" class="card-img-top rounded-0" alt="">
-
-                            <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                            <p class="font-weight-light font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                            <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                        <div class="card border-0 bg-transparent">
-                            <img src="../img/store-4.jpg" class="card-img-top rounded-0" alt="">
-
-                            <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                            <p class="font-weight-light font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                            <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                        <div class="card border-0 bg-transparent">
-                            <img src="../img/store-1.jpg" class="card-img-top rounded-0" alt="">
-
-                            <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                            <p class="font-weight-light font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                            <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                        <div class="card border-0 bg-transparent">
-                            <img src="../img/store-2.jpg" class="card-img-top rounded-0" alt="">
-
-                            <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                            <p class="font-weight-light font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                            <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                        <div class="card border-0 bg-transparent">
-                            <img src="../img/store-3.jpg" class="card-img-top rounded-0" alt="">
-
-                            <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                            <p class="font-weight-light font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                            <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6 mb-lg-5 mb-4">
-                        <div class="card border-0 bg-transparent">
-                            <img src="../img/store-4.jpg" class="card-img-top rounded-0" alt="">
-
-                            <h5 class="mt-lg-3 mt-2">타이틀은 한줄부터 두줄까지 가능합니다.</h5>
-                            <p class="font-weight-light font-size-xs">설명은 짧게는 한줄 다 채워 주시고, 두 줄도 가능합니다.</p>
-                            <a href="store_view.html" class="stretched-link text-decoration-none"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center">
-                    <button type="button" class="btn border rounded-0 font-weight-light px-5 py-3 font-size-m text-light-gray">View More...</button>
-                </div>
-            </div>
-        </div>
+        <!-- 검색 결과 리스트 -->
+        <div id="itemList"></div>
     </main>
 
     <!-- 서브 푸터 -->
@@ -177,66 +48,12 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <!-- Datepicker : 날짜 선택 기능이 있는 페이지에서만 사용 -->
     <script src="../js/datepicker.js"></script>
 
     <script src="../js/include_html.js"></script>
-    <script src="../js/custom.js"></script>
+    <!-- 스크립트가 동작하지 않아 include_html.js에서 getScript로 불러옴 -->
+    <!-- <script src="../js/custom.js"></script> -->
 </body>
-
-<script>
-    // datepicker
-    $(function () {
-        $('#datePicker').datepicker({
-            language: 'ko',
-            multipleDatesSeparator: ' ~ ',
-            range: true,
-            navTitles: {
-                days: '<span class="font-weight-bold mr-2">M</span> MM, <i>yyyy</i>'
-            },
-            prevHtml: '<i class="fas fa-chevron-left"></i>',
-            nextHtml: '<i class="fas fa-chevron-right"></i>',
-            onShow: function () {
-                if ($('.datepicker .btn').length > 0) {
-                    return false;
-                } else {
-                    $('.datepicker').append('<button type="button" class="btn btn-block py-3 border-0 rounded-0 font-weight-light bg-yellow">검색</button>');
-                }
-            }
-            // onShow: function () {
-            //     if ($('div.datepicker-time').length > 0) {
-            //         return false;
-            //     } else {
-            //         var inputs = '<div class="mx-4 py-4 border-top datepicker-time">' +
-            //                         '<div class="row">' +
-            //                             '<div class="col-6 custom-inputs">' +
-            //                                 '<p>시작시간</p>' +
-            //                                 '<select name="" id="" class="form-control">' +
-            //                                     '<option value="08:00">08:00</option>' +
-            //                                     '<option value="09:00">09:00</option>' +
-            //                                     '<option value="10:00">10:00</option>' +
-            //                                 '</select>' +
-            //                             '</div>' +
-            //                             '<div class="col-6 custom-inputs">' +
-            //                                 '<p>종료시간</p>' +
-            //                                 '<select name="" id="" class="form-control">' +
-            //                                     '<option value="13:00">13:00</option>' +
-            //                                     '<option value="14:00">14:00</option>' +
-            //                                     '<option value="15:00">15:00</option>' +
-            //                                 '</select>' +
-            //                             '</div>' +
-            //                         '</div>' +
-            //                     '</div>' +
-            //                     '<button type="button" class="btn btn-block py-3 border-0 rounded-0 font-weight-light bg-yellow">검색</button>';
-            //         $('.datepicker').append(inputs);
-            //     }
-            // }
-        })
-    });
-
-    // locationInput
-    $('#locationInput').click( function () {
-        $(this).siblings('#locationList').toggleClass('d-none');
-    })
-</script>
 
 </html>

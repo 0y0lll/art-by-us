@@ -390,6 +390,10 @@ select::-ms-expand {
     z-index: -1;
 }
 
+.sort-box {
+    width: 160px;
+}
+
 .tooltip-icon {
     width: 18px;
     height: 18px;
@@ -577,6 +581,21 @@ select::-ms-expand {
     color: #222;
 }
 
+/* nav-tab - modal */
+.modal-tabs .nav-item {
+    width: 50%;
+}
+.modal-tabs .nav-item .nav-link {
+    border-radius: 0;
+    font-weight: 300;
+    color: #a7a7a7;
+    background-color: #f1f1f1;
+}
+.modal-tabs .nav-item .nav-link.active {
+    color: #222;
+    background: #ffde3b;
+}
+
 
 /* navigation - sub */
 
@@ -713,7 +732,6 @@ select::-ms-expand {
 */
 
 .datepicker.-from-bottom- {
-    width: 300px;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
     /* top: 0; */

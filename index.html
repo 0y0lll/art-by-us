@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    <!-- 모달 -->
+    <div id="modals"></div>
+
     <!-- 인덱스 헤더 -->
     <header id="header"></header>
 
@@ -517,6 +520,8 @@
         $(function () {
             // 인덱스 헤더
            $('#header').load('include/common/header.html')
+           // 모달
+           $('#modals').load('include/common/header_modal.html')
            // 광고 슬라이드
            $('#carouselSlide').load('include/common/carousel_slide.html')
            // 인덱스 푸터
