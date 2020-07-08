@@ -483,7 +483,7 @@ select::-ms-expand {
 .custom-chat .chat-msgs.user {
     height: calc(100vh - 204px);
 }
-..custom-chat .chat-msgs.host {
+.custom-chat .chat-msgs.host {
     height: calc(100vh - 132px);
 }
 .custom-chat .chat-msgs::-webkit-scrollbar {
@@ -1170,7 +1170,7 @@ footer .text-divider {
     .custom-chat .chat-msgs.user {
         height: calc(100vh - 277px);
     }
-    ..custom-chat .chat-msgs.host {
+    .custom-chat .chat-msgs.host {
         height: calc(100vh - 215px);
     }
 }
