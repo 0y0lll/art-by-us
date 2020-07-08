@@ -479,7 +479,12 @@ select::-ms-expand {
     scrollbar-width: none; /* Firefox */
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100vh - 200px);
+}
+.custom-chat .chat-msgs.user {
+    height: calc(100vh - 204px);
+}
+..custom-chat .chat-msgs.host {
+    height: calc(100vh - 132px);
 }
 .custom-chat .chat-msgs::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
@@ -1162,8 +1167,11 @@ footer .text-divider {
     .custom-chat .chat-date {
         font-size: inherit !important;
     }
-    .custom-chat .chat-msgs {
-        height: calc(100vh - 300px);
+    .custom-chat .chat-msgs.user {
+        height: calc(100vh - 277px);
+    }
+    ..custom-chat .chat-msgs.host {
+        height: calc(100vh - 215px);
     }
 }
 
