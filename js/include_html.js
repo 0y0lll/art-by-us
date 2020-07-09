@@ -96,7 +96,14 @@ $(document).ready(function () {
     // 서브 view 2단 페이지 - 사용자
 
 
-    // 서브 view 2단 페이지 왼편 슬라이드 - 사용자
+    // 서브 view 2단 페이지 왼편 상단 슬라이드 - 사용자
+    $('#viewTopSlide').load('../include/user/view_top_slide.html')
+
+    // 서브 view 2단 페이지 왼편 상단 인트로 - 사용자
+    $('#viewTopIntro').load('../include/user/view_top_intro.html')
+
+    // 서브 view 2단 페이지 왼편 후기 및 질문 - 사용자
+    $('.tab-content #review').load('../include/user/view_tab_board.html')
 
     // include_html을 불러오는 서브페이지 파일에서는 스크립트가 동작하지 않아 getScript 사용
     $.getScript('../js/custom.js');

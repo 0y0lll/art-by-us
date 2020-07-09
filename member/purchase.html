@@ -26,7 +26,7 @@
         <div class="container my-md-5 my-4">
             <h3 class="mb-lg-4 mb-2">결제</h3>
 
-            <!-- list -->
+            <!-- 결제 리스트 -->
             <div class="mb-5">
                 <h5 class="mb-lg-4 mb-2">예약 및 구입정보</h5>
 
@@ -57,6 +57,7 @@
                                 </div>
                             </div>
                         </li>
+
                         <li class="list-group-item pr-4 pl-3 py-4">
                             <div class="d-lg-flex align-items-center custom-inputs">
                                 <div class="d-flex align-items-lg-center">
@@ -81,6 +82,7 @@
                                 </div>
                             </div>
                         </li>
+
                         <li class="list-group-item pr-4 pl-3 py-4">
                             <div class="d-lg-flex align-items-center custom-inputs">
                                 <div class="d-flex align-items-lg-center">
@@ -107,7 +109,7 @@
                     </ul>
                 </div>
 
-                <!-- price -->
+                <!-- 총 결제 금액 -->
                 <div class="d-flex justify-content-between">
                     <p class="font-weight-light text-gray font-size-l">총 <span class="font-weight-bold">3건</span></p>
                     <div class="d-flex text-right">
@@ -120,7 +122,7 @@
                 </div>
             </div>
 
-            <!-- orderer form -->
+            <!-- 주문폼 -->
             <div class="mb-5">
                 <h5 class="mb-md-4 mb-2">예약 및 구매자 정보</h5>
 
@@ -143,7 +145,7 @@
                 </div>
             </div>
 
-            <!-- refund -->
+            <!-- 환불규정 -->
             <div class="mb-5">
                 <h5 class="mb-md-4 mb-2">환불규정</h5>
 
@@ -204,7 +206,7 @@
                 </div>
             </div>
 
-            <!-- payment -->
+            <!-- 결제방식 -->
             <div class="mb-md-5 mb-3">
                 <h5 class="mb-md-4 mb-2">결제방식 선택</h5>
 
@@ -240,7 +242,8 @@
 
             <!-- button -->
             <div class="custom-inputs">
-                <button type="button" class="btn btn-block bg-yellow">결제 진행하기</button>
+                <!-- <button type="button" class="btn btn-block bg-yellow">결제 진행하기</button> -->
+                <a href="purchase_result.html" class="btn btn-block bg-yellow d-flex justify-content-center align-items-center">결제 진행하기</a>
             </div>
         </div>
     </main>
@@ -253,17 +256,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script src="../js/include_html.js"></script>
-    <script src="../js/custom.js"></script>
+    <!-- 스크립트가 동작하지 않아 include_html.js에서 getScript로 불러옴 -->
+    <!-- <script src="../js/custom.js"></script> -->
 </body>
-
-<script>
-    $('#order_def').on('change', function () {
-        if ($(this).prop('checked') === true) {
-            $(this).parent().prev().find('input[type=text]').removeAttr('disabled');
-        } else {
-            $(this).parent().prev().find('input[type=text]').attr('disabled', 'disabled');
-        }
-    })
-</script>
 
 </html>

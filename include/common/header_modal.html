@@ -37,7 +37,7 @@
     <div class="modal-dialog custom-modal" role="document">
         <div class="modal-content px-4 py-lg-5 py-5">
             <div class="modal-header p-0 mb-4 border-0 justify-content-center">
-                <h5 class="modal-title text-center" id="loginModalLabel"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
+                <h5 class="modal-title text-center" id="accountModalLabel"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
             </div>
             <!-- 로그인 폼 -->
             <div class="modal-body p-0 custom-inputs">
@@ -121,7 +121,7 @@
     <div class="modal-dialog custom-modal" role="document">
         <div class="modal-content px-4 py-lg-5 py-5">
             <div class="modal-header p-0 mb-4 border-0 justify-content-center">
-                <h5 class="modal-title text-center" id="loginModalLabel"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
+                <h5 class="modal-title text-center" id="accountEmailResultLabel"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
             </div>
 
             <!-- 결과창 -->
@@ -149,7 +149,7 @@
     <div class="modal-dialog custom-modal" role="document">
         <div class="modal-content px-4 py-lg-5 py-5">
             <div class="modal-header p-0 mb-4 border-0 justify-content-center">
-                <h5 class="modal-title text-center" id="loginModalLabel"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
+                <h5 class="modal-title text-center" id="accountPasswordUpdateLabel"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
             </div>
 
             <!-- 비밀번호 갱신 -->
@@ -189,7 +189,7 @@
     <div class="modal-dialog custom-modal" role="document">
         <div class="modal-content px-4 py-lg-5 py-5">
             <div class="modal-header p-0 mb-4 border-0 justify-content-center">
-                <h5 class="modal-title text-center" id="loginModalLabel"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
+                <h5 class="modal-title text-center" id="accountPasswordResultLabel"><img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x"></h5>
             </div>
 
             <!-- 결과창 -->
@@ -201,6 +201,26 @@
                 <button type="button"
                     class="btn btn-block bg-yellow py-lg-3 py-2 h-auto rounded-0 font-size-s"
                     data-toggle="modal" data-target="#loginModal" data-dismiss="modal">로그인 하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 알림 모달 -->
+<div class="modal fade" id="notifyModal" tabindex="-1" role="dialog" aria-labelledby="notifyModalLabel" aria-hidden="true">
+    <div class="modal-dialog custom-modal" role="document">
+        <div class="modal-content px-lg-10 px-5 py-lg-5 py-5">
+            <div class="modal-header p-0 mb-4 border-0 justify-content-center">
+                <h2 class="modal-title text-center" id="notifyModalLabel">알림</h2>
+            </div>
+
+            <!-- 메세지 -->
+            <div class="modal-body p-0 text-center font-size-s">
+                <div class="mb-lg-5 mb-4">
+                    <p class="text-gray wordbreak-keep-all">알림에 대한 다이얼로그는 최대 세 문장 까지 가능하며 줄간격은 여유롭게 설정해 주시고 버튼은 최대 2개 병렬형식으로 배치해 주세요</p>
+                </div>
+
+                <button type="button" class="btn btn-block bg-yellow py-lg-3 py-2 h-auto rounded-0 font-size-s" data-dismiss="modal">확인</button>
             </div>
         </div>
     </div>
