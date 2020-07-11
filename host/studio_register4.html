@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ART BY US</title>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
     <!-- Bootstrap 4.3.1 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -80,27 +78,27 @@
                         <!-- 요일 -->
                         <div class="host-register-items time-table mr-lg-5 mr-3">
                             <label class="checkbox-items">
-                                <input type="checkbox" value="sun">
+                                <input type="checkbox" name="day" value="sun">
                                 <span>일</span>
                             </label>
                             <label class="checkbox-items">
-                                <input type="checkbox" value="mon">
+                                <input type="checkbox" name="day" value="mon">
                                 <span>월</span>
                             </label>
                             <label class="checkbox-items">
-                                <input type="checkbox" value="tue">
+                                <input type="checkbox" name="day" value="tue">
                                 <span>화</span>
                             </label>
                             <label class="checkbox-items">
-                                <input type="checkbox" value="wed">
+                                <input type="checkbox" name="day" value="wed">
                                 <span>수</span>
                             </label>
                             <label class="checkbox-items">
-                                <input type="checkbox" value="thu">
+                                <input type="checkbox" name="day" value="thu">
                                 <span>목</span>
                             </label>
                             <label class="checkbox-items">
-                                <input type="checkbox" value="fri">
+                                <input type="checkbox" name="day" value="fri">
                                 <span>금</span>
                             </label>
                             <label class="checkbox-items">
@@ -193,7 +191,7 @@
                         <!-- 시간 : 드롭박스로 선택하는 시간은 개발 언어로 출력하는 것이 효율적이므로 함축해둠 -->
                         <div class="host-register-items time-table ml-auto">
                             <!-- 일 -->
-                            <div class="d-flex">
+                            <div class="d-flex time_sun">
                                 <div class="select-items text-center mr-lg-5 mr-3">
                                     <a href="#x" class="d-block text-decoration-none">00:00</a>
                                     <ul class="list-unstyled">
@@ -216,7 +214,7 @@
                                 </div>
                             </div>
                             <!-- 월 -->
-                            <div class="d-flex">
+                            <div class="d-flex time_mon">
                                 <div class="select-items text-center mr-lg-5 mr-3">
                                     <a href="#x" class="d-block text-decoration-none">00:00</a>
                                     <ul class="list-unstyled">
@@ -239,7 +237,7 @@
                                 </div>
                             </div>
                             <!-- 화 -->
-                            <div class="d-flex">
+                            <div class="d-flex time_tue">
                                 <div class="select-items text-center mr-lg-5 mr-3">
                                     <a href="#x" class="d-block text-decoration-none">00:00</a>
                                     <ul class="list-unstyled">
@@ -262,7 +260,7 @@
                                 </div>
                             </div>
                             <!-- 수 : 위로 출력 -->
-                            <div class="d-flex">
+                            <div class="d-flex time_wed">
                                 <div class="select-items text-center mr-lg-5 mr-3">
                                     <a href="#x" class="d-block text-decoration-none">00:00</a>
                                     <ul class="list-unstyled drop-top">
@@ -285,7 +283,7 @@
                                 </div>
                             </div>
                             <!-- 목 : 위로 출력 -->
-                            <div class="d-flex">
+                            <div class="d-flex time_thu">
                                 <div class="select-items text-center mr-lg-5 mr-3">
                                     <a href="#x" class="d-block text-decoration-none">00:00</a>
                                     <ul class="list-unstyled drop-top">
@@ -308,7 +306,7 @@
                                 </div>
                             </div>
                             <!-- 금 : 위로 출력 -->
-                            <div class="d-flex">
+                            <div class="d-flex time_fri">
                                 <div class="select-items text-center mr-lg-5 mr-3">
                                     <a href="#x" class="d-block text-decoration-none">00:00</a>
                                     <ul class="list-unstyled drop-top">
@@ -331,7 +329,7 @@
                                 </div>
                             </div>
                             <!-- 토 : 위로 출력 -->
-                            <div class="d-flex">
+                            <div class="d-flex time_sat">
                                 <div class="select-items text-center mr-lg-5 mr-3">
                                     <a href="#x" class="d-block text-decoration-none">00:00</a>
                                     <ul class="list-unstyled drop-top">
@@ -364,7 +362,7 @@
                             <label>기준금액</label>
                         </div>
                         <div class="d-flex justify-content-end align-items-center form-control">
-                            <input type="text" class="bg-transparent border-0 w-100 h-100 text-right text-gray">
+                            <input type="text" class="bg-transparent border-0 w-100 h-100 text-right text-gray tiem_price">
                             <span class="ml-3 text-light-gray">원</span>
                         </div>
                     </div>
@@ -1073,9 +1071,9 @@
             </div>
         </div>
 
-        <!-- 이전단계(이전페이지에서 입력했던 내용 유지) / 등록완료 -->
+        <!-- 이전단계 / 다음단계 -->
         <div class="overflow-hidden mt-lg-5 mt-3">
-            <a href="studio_register3.html" class="btn bg-gray float-left w-50 rounded-0 py-lg-4 py-3 font-size-m">이전 단계로 이동</a>
+            <a href="#x" class="btn bg-gray float-left w-50 rounded-0 py-lg-4 py-3 font-size-m" onclick="history.back()">이전 단계로 이동</a>
             <a href="studio_list.html" class="btn bg-yellow float-right w-50 rounded-0 py-lg-4 py-3 font-size-m">등록 완료</a>
         </div>
     </main>
@@ -1083,11 +1081,12 @@
     <!-- 서브 푸터 -->
     <footer id="footer"></footer>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script src="../js/include_html_host.js"></script>
-    <script src="../js/custom.js"></script>
+    <!-- <script src="../js/custom.js"></script> -->
 </body>
 
 <script>
@@ -1103,31 +1102,6 @@
             }
             // 추출한 파일명 삽입
             $(this).siblings('.upload-name').val(filename);
-        });
-
-        // number of people
-        $('#decreaseQuantity').click( function(e) {
-            e.preventDefault();
-            var stat = $('#numberUpDown').val();
-            var num = parseInt(stat, 10);
-            num--;
-
-            if (num <= 0) {
-                num = 1;
-            }
-            $('#numberUpDown').val(num);
-        });
-
-        $('#increaseQuantity').click(function(e){
-            e.preventDefault();
-            var stat = $('#numberUpDown').val();
-            var num = parseInt(stat, 10);
-            num++;
-
-            if (num > 100) {
-                num = 100;
-            }
-            $('#numberUpDown').val(num);
         });
 
         // selectbox ul li

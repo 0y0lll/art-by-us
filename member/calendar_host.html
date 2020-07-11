@@ -26,7 +26,7 @@
 
     <main role="main">
         <div class="border-top">
-            <div class="container my-md-5 my-4">
+            <div class="container my-md-5 mt-4">
                 <div class="wrapper view-type custom-calendar overflow-hidden">
                     <div class="main">
                         <div class="toolbar not mb-lg-4 mb-0">
@@ -65,7 +65,7 @@
                             <Mobile>
                             일자 및 이벤트 클릭시 리스트 페이지로 이동(calendar_event_list.html)
                         -->
-                        <div class="float-lg-left pr-lg-5 mb-lg-0 mb-4 left">
+                        <div class="float-lg-left pr-lg-5 mb-lg-0 left">
                             <div class="calendar">
                                 <div class="calendar-header">
                                     <div>SUN</div>
@@ -106,7 +106,7 @@
                                         <div class="day-event bg-red text-white" style="width: 290%; margin-top: 5px;">
                                             <span>사당 ABC 댄스연습실 - G1</span>
                                         </div>
-                                        <div class="day-event bg-purple text-white" style="width: 190%; margin-top: 30px;">
+                                        <div class="day-event bg-purple text-white d-lg-block d-none" style="width: 190%; margin-top: 30px;">
                                             <span>공병각의 캘리그라피...</span>
                                         </div>
 
@@ -114,10 +114,10 @@
                                             클릭시 툴팁 출력 / 모바일에선 calendar_event_list.html로 이동
                                             툴팁은 이벤트 좌표에 따라 class 다름
                                         -->
-                                        <div class="day-event bg-yellow text-dark loc-left-down" style="width: 190%; margin-top: 55px;">
+                                        <div class="day-event bg-yellow text-dark loc-left-down d-lg-block d-none" style="width: 190%; margin-top: 55px;">
                                             <span>JYP 1차 오디션</span>
                                         </div>
-                                        <div class="day-event bg-dark-gray text-white" style="width: 90%; margin-top: 80px;">
+                                        <div class="day-event bg-dark-gray text-white d-lg-none d-block" style="width: 90%; margin-top: 30px;">
                                             <span>+3 ...</span>
                                         </div>
                                     </div>
@@ -492,7 +492,7 @@
     </main>
 
     <!-- 서브 푸터 -->
-    <footer id="footer"></footer>
+    <footer id="footer" class="d-md-block d-none"></footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

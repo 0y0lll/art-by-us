@@ -88,11 +88,6 @@ $(document).ready(function () {
         })
     }
 
-    // test
-    // $('#test').click( function () {
-    //     $('#test-item').load('../include/user/item_list.html #itemListA');
-    // })
-
     // 서브 view 2단 페이지 - 사용자
 
 
@@ -104,6 +99,15 @@ $(document).ready(function () {
 
     // 서브 view 2단 페이지 왼편 후기 및 질문 - 사용자
     $('.tab-content #review').load('../include/user/view_tab_board.html')
+
+    // 예약 페이지 탭 - 사용자/호스트 공통
+    $('#reservTab').load('../include/common/reserv_tab.html')
+
+    // 게시판 게시글 검색바/리스트 - 사용자/호스트 공통
+    $('#boardList').load('../include/common/board_list.html')
+
+    // 게시판 게시글 - 사용자/호스트 공통
+    $('#boardView').load('../include/common/board_view.html')
 
     // include_html을 불러오는 서브페이지 파일에서는 스크립트가 동작하지 않아 getScript 사용
     $.getScript('../js/custom.js');
