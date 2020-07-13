@@ -72,23 +72,39 @@
                 </div>
 
                 <!-- 레슨 일정 선택 : 캘린더에 등록된 레슨 선택 -->
-                <div class="custom-inputs custom-inputs-sub mb-lg-5 mb-3 tag2">
+                <div class="custom-inputs custom-inputs-sub mb-lg-5 mb-3 tag1">
                     <div class="text-gray font-weight-light">
                         <label>레슨 일정 (최대 20개)</label>
                     </div>
-                    <div class="d-md-flex">
-                        <select name="times1" id="" class="form-control mr-md-3 mb-md-0 mb-3">
-                            <option value="">20-01-24 15:00~18:00</option>
-                            <option value="">20-01-25 15:00~18:00</option>
-                            <option value="">20-01-26 15:00~18:00</option>
-                        </select>
+                    <div class="d-lg-flex">
+                        <!-- 일정별 시간 출력 -->
+                        <div class="row mr-lg-3 mb-lg-0 mb-3 w-lg-65">
+                            <div class="col-6">
+                                <!-- 날짜 -->
+                                <select name="date1" class="form-control">
+                                    <option value="">날짜를 선택해 주세요</option>
+                                    <option value="20-01-24" selected="">20-01-24</option>
+                                    <option value="20-01-25">20-01-25</option>
+                                    <option value="20-01-26">20-01-26</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <!-- 시간 -->
+                                <select name="times1" class="form-control">
+                                    <option value="">시간을 선택해 주세요</option>
+                                    <option value="14:00~16:00" selected="">14:00~16:00</option>
+                                    <option value="15:00~18:00">15:00~18:00</option>
+                                    <option value="16:00~18:00">16:00~18:00</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        <div class="d-flex justify-content-end align-items-center form-control mr-md-3 mb-md-0 mb-3">
+                        <div class="d-flex justify-content-end align-items-center form-control mr-lg-3 mb-lg-0 mb-3 w-lg-50">
                             <input type="text" class="bg-transparent border-0 w-100 h-100 text-right text-gray tag-text">
                             <span class="ml-3 text-light-gray">원</span>
                         </div>
 
-                        <button type="button" class="btn bg-yellow fnc-btn" onclick="addTime('tag2')">추가하기</button>
+                        <button type="button" class="btn bg-yellow fnc-btn" onclick="addTime('tag1')">추가하기</button>
                     </div>
 
                     <!-- 태그 -->
@@ -152,23 +168,39 @@
                 </div>
 
                 <!-- 레슨 일정 선택 : 캘린더에 등록된 레슨 선택 -->
-                <div class="custom-inputs custom-inputs-sub mb-lg-5 mb-3 tag1">
+                <div class="custom-inputs custom-inputs-sub mb-lg-5 mb-3 tag2">
                     <div class="text-gray font-weight-light">
                         <label>레슨 일정 (최대 20개)</label>
                     </div>
-                    <div class="d-md-flex">
-                        <select name="times2" id="" class="form-control mr-md-3 mb-md-0 mb-3">
-                            <option value="">20-01-24 15:00~18:00</option>
-                            <option value="">20-01-25 15:00~18:00</option>
-                            <option value="">20-01-26 15:00~18:00</option>
-                        </select>
+                    <div class="d-lg-flex">
+                        <!-- 일정별 시간 출력 -->
+                        <div class="row mr-lg-3 mb-lg-0 mb-3 w-lg-65">
+                            <div class="col-6">
+                                <!-- 날짜 -->
+                                <select name="date2" class="form-control">
+                                    <option value="">날짜를 선택해 주세요</option>
+                                    <option value="20-01-24" selected="">20-01-24</option>
+                                    <option value="20-01-25">20-01-25</option>
+                                    <option value="20-01-26">20-01-26</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <!-- 시간 -->
+                                <select name="times2" class="form-control">
+                                    <option value="">시간을 선택해 주세요</option>
+                                    <option value="14:00~16:00" selected="">14:00~16:00</option>
+                                    <option value="15:00~18:00">15:00~18:00</option>
+                                    <option value="16:00~18:00">16:00~18:00</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        <div class="d-flex justify-content-end align-items-center form-control mr-md-3 mb-md-0 mb-3">
+                        <div class="d-flex justify-content-end align-items-center form-control mr-lg-3 mb-lg-0 mb-3 w-lg-50">
                             <input type="text" class="bg-transparent border-0 w-100 h-100 text-right text-gray tag-text">
                             <span class="ml-3 text-light-gray">원</span>
                         </div>
 
-                        <button type="button" class="btn bg-yellow fnc-btn" onclick="addTime('tag1')">추가하기</button>
+                        <button type="button" class="btn bg-yellow fnc-btn" onclick="addTime('tag2')">추가하기</button>
                     </div>
 
                     <!-- 태그 -->

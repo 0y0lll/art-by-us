@@ -43,7 +43,7 @@ $(function () {
 
     // 검색 영역 날짜 선택 datepicker - 드롭다운
     if ($('#datePickerDrop').length > 0) {
-        $('#datePickerDrop').datepicker({
+        $('#datePickerDrop, #datePickerDrop2, #datePickerDrop3').datepicker({
             language: 'ko',
             // multipleDatesSeparator: ' ~ ',
             range: false,
@@ -55,12 +55,12 @@ $(function () {
             nextHtml: '<i class="fas fa-chevron-right"></i>',
             onShow: function () {
                 // datepicker width를 날짜 input width에 맞춤
-                let box_width = $('#datePickerDrop').outerWidth();
+                let box_width = $('.datepicker-drop:visible').outerWidth();
                 $('.datepicker.-from-bottom-').outerWidth(box_width);
 
-                // studio페이지 시간 설정 영역 추가
+                // studio페이지(user), calendar_host 예약차단 블록 시간 설정 영역 추가
                 let timePicker = '';
-                if ($('#pageNav').hasClass('page-studio')) {
+                if ($('#pageNav').hasClass('page-studio') || $('#datePickerDrop2, #datePickerDrop3').hasClass('page-host')) {
                     timePicker = '<div class="mx-4 py-lg-4 py-3 border-top datepicker-timepicker">' +
                                         '<div class="row">' +
                                             '<div class="col-6 custom-inputs">' +
@@ -288,10 +288,12 @@ function addTime(obj) {
         return;
     }
 
-    let text = $(parent).find('select[name^=times] option:selected').text() + ' ' + tag;
+    let date = $(parent).find('select[name^=date] option:selected').text();
+    let times = $(parent).find('select[name^=times] option:selected').text();
+    let tag_text = date + ' ' + times + ' ' + tag + '원';
 
     let $clone = $(parent).find('div.tag:last').clone(true);
-    $clone.find('span').text(text);
+    $clone.find('span').text(tag_text);
     $(parent).find('.host-search-tags').append($clone);
 }
 

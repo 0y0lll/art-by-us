@@ -8,6 +8,9 @@
     <!-- Bootstrap 4.3.1 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Datepicker : 날짜 선택 기능이 있는 페이지에서만 사용 -->
+    <link rel="stylesheet" href="../css/datepicker.css">
+
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/custom_host.css">
@@ -307,7 +310,7 @@
 
                     <!-- <PC> 일정 추가 modal -->
                     <div class="modal fade" tabindex="-1" role="dialog" id="addEventModal" aria-labelledby="addEventModal" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered custom-modal full-modal" role="document">
+                        <div class="modal-dialog custom-modal full-modal" role="document">
                             <div class="modal-content px-lg-5 px-3 py-lg-5 py-4">
                                 <button type="button" class="close text-right mb-3 d-md-none" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
@@ -344,7 +347,7 @@
                                 </div>
                                 <div class="modal-body p-0 mb-4 custom-inputs">
                                     <p class="font-weight-light mb-2 font-size-sm">예약 날짜 및 시간</p>
-                                    <input type="text" class="form-control mb-3">
+                                    <input type="text" class="form-control mb-3 page-host datepicker-drop" id="datePickerDrop">
                                     <p class="font-weight-light mb-2 font-size-sm">장소</p>
                                     <input type="text" class="form-control" value="서울대입구역">
                                 </div>
@@ -357,7 +360,7 @@
 
                     <!-- <PC> 편집 modal -->
                     <div class="modal fade" tabindex="-1" role="dialog" id="editEventModal" aria-labelledby="editEventModal" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered custom-modal full-modal" role="document">
+                        <div class="modal-dialog custom-modal full-modal" role="document">
                             <div class="modal-content px-lg-5 px-3 py-lg-5 py-4">
                                 <button type="button" class="close text-right mb-3 d-md-none" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
@@ -395,7 +398,7 @@
                                 </div>
                                 <div class="modal-body p-0 mb-4 custom-inputs">
                                     <p class="font-weight-light mb-2 font-size-sm">예약 날짜 및 시간</p>
-                                    <input type="text" class="form-control mb-3" value="2020-01-24 13:30 ~ 2020-01-30 14:00">
+                                    <input type="text" class="form-control mb-3 page-host datepicker-drop" id="datePickerDrop2" value="2020-01-24 13:30 ~ 2020-01-30 14:00">
                                     <p class="font-weight-light mb-2 font-size-sm">추가옵션</p>
                                     <div class="container">
                                         <div class="row border custom-inputs">
@@ -459,7 +462,7 @@
 
                     <!-- <PC> 예약 차단 modal -->
                     <div class="modal fade" tabindex="-1" role="dialog" id="addBlockEventModal" aria-labelledby="addBlockEventModal" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered custom-modal full-modal" role="document">
+                        <div class="modal-dialog custom-modal full-modal" role="document">
                             <div class="modal-content px-lg-5 px-3 py-lg-5 py-4">
                                 <button type="button" class="close text-right mb-3 d-md-none" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
@@ -475,10 +478,8 @@
                                     </select>
 
                                     <p class="font-weight-light mb-2 font-size-sm">일정</p>
-                                    <select class="form-control">
-                                        <option value="">날짜와 시간을 선택해 주세요</option>
-                                        <option value="20.06.04 18:00 - 20.08.09 09:00" selected>20.06.04 18:00 - 20.08.09 09:00</option>
-                                    </select>
+                                    <!-- datepicker 출력 -->
+                                    <input type="text" class="form-control page-host datepicker-drop" id="datePickerDrop3">
                                 </div>
                                 <div class="modal-footer p-0 border-0 custom-inputs">
                                     <button type="button" class="btn btn-block text-white bg-red">예약 차단하기</button>
@@ -497,6 +498,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Datepicker : 날짜 선택 기능이 있는 페이지에서만 사용 -->
+    <script src="../js/datepicker.js"></script>
 
     <script src="../js/include_html_host.js"></script>
     <!-- <script src="../js/custom.js"></script> -->
