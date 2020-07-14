@@ -8,6 +8,9 @@
     <!-- Bootstrap 4.3.1 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Datepicker : 날짜 선택 기능이 있는 페이지에서만 사용 -->
+    <link rel="stylesheet" href="../css/datepicker.css">
+
     <!-- Custom -->
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/custom_host.css">
@@ -71,40 +74,21 @@
                     <p class="mb-1">* 공동 구매식 클래스는 인원이 차지 않으면 수업을 진행할 수 없습니다.</p>
                 </div>
 
-                <!-- 레슨 일정 선택 : 캘린더에 등록된 레슨 선택 -->
+                <!-- 레슨 일정 입력 -->
                 <div class="custom-inputs custom-inputs-sub mb-lg-5 mb-3 tag1">
                     <div class="text-gray font-weight-light">
                         <label>레슨 일정 (최대 20개)</label>
                     </div>
-                    <div class="d-lg-flex">
-                        <!-- 일정별 시간 출력 -->
-                        <div class="row mr-lg-3 mb-lg-0 mb-3 w-lg-65">
-                            <div class="col-6">
-                                <!-- 날짜 -->
-                                <select name="date1" class="form-control">
-                                    <option value="">날짜를 선택해 주세요</option>
-                                    <option value="20-01-24" selected="">20-01-24</option>
-                                    <option value="20-01-25">20-01-25</option>
-                                    <option value="20-01-26">20-01-26</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <!-- 시간 -->
-                                <select name="times1" class="form-control">
-                                    <option value="">시간을 선택해 주세요</option>
-                                    <option value="14:00~16:00" selected="">14:00~16:00</option>
-                                    <option value="15:00~18:00">15:00~18:00</option>
-                                    <option value="16:00~18:00">16:00~18:00</option>
-                                </select>
-                            </div>
-                        </div>
+                    <!-- 입력 -->
+                    <div class="d-md-flex">
+                        <input type="text" class="form-control mr-md-3 mb-md-0 mb-3 page-host datepicker-drop" id="datePickerDrop">
 
-                        <div class="d-flex justify-content-end align-items-center form-control mr-lg-3 mb-lg-0 mb-3 w-lg-50">
+                        <div class="d-flex justify-content-end align-items-center form-control mr-md-3 mb-md-0 mb-3">
                             <input type="text" class="bg-transparent border-0 w-100 h-100 text-right text-gray tag-text">
                             <span class="ml-3 text-light-gray">원</span>
                         </div>
 
-                        <button type="button" class="btn bg-yellow fnc-btn" onclick="addTime('tag1')">추가하기</button>
+                        <button type="button" class="btn bg-yellow fnc-btn">추가하기</button>
                     </div>
 
                     <!-- 태그 -->
@@ -167,40 +151,21 @@
                     <p class="mb-1">* 쉐어 클래스는 인원이 차지 않으면 수업을 진행할 수 없습니다.</p>
                 </div>
 
-                <!-- 레슨 일정 선택 : 캘린더에 등록된 레슨 선택 -->
+                <!-- 레슨 일정 입력 -->
                 <div class="custom-inputs custom-inputs-sub mb-lg-5 mb-3 tag2">
                     <div class="text-gray font-weight-light">
                         <label>레슨 일정 (최대 20개)</label>
                     </div>
-                    <div class="d-lg-flex">
-                        <!-- 일정별 시간 출력 -->
-                        <div class="row mr-lg-3 mb-lg-0 mb-3 w-lg-65">
-                            <div class="col-6">
-                                <!-- 날짜 -->
-                                <select name="date2" class="form-control">
-                                    <option value="">날짜를 선택해 주세요</option>
-                                    <option value="20-01-24" selected="">20-01-24</option>
-                                    <option value="20-01-25">20-01-25</option>
-                                    <option value="20-01-26">20-01-26</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <!-- 시간 -->
-                                <select name="times2" class="form-control">
-                                    <option value="">시간을 선택해 주세요</option>
-                                    <option value="14:00~16:00" selected="">14:00~16:00</option>
-                                    <option value="15:00~18:00">15:00~18:00</option>
-                                    <option value="16:00~18:00">16:00~18:00</option>
-                                </select>
-                            </div>
-                        </div>
+                    <!-- 입력 -->
+                    <div class="d-md-flex">
+                        <input type="text" class="form-control mr-md-3 mb-md-0 mb-3 page-host datepicker-drop" id="datePickerDrop2">
 
-                        <div class="d-flex justify-content-end align-items-center form-control mr-lg-3 mb-lg-0 mb-3 w-lg-50">
+                        <div class="d-flex justify-content-end align-items-center form-control mr-md-3 mb-md-0 mb-3">
                             <input type="text" class="bg-transparent border-0 w-100 h-100 text-right text-gray tag-text">
                             <span class="ml-3 text-light-gray">원</span>
                         </div>
 
-                        <button type="button" class="btn bg-yellow fnc-btn" onclick="addTime('tag2')">추가하기</button>
+                        <button type="button" class="btn bg-yellow fnc-btn">추가하기</button>
                     </div>
 
                     <!-- 태그 -->
@@ -293,25 +258,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <!-- Datepicker : 날짜 선택 기능이 있는 페이지에서만 사용 -->
+    <script src="../js/datepicker.js"></script>
+
     <script src="../js/include_html_host.js"></script>
     <!-- <script src="../js/custom.js"></script> -->
 </body>
-
-<script>
-    $(function () {
-        // file upload
-        var fileTarget = $('.custom-inputs-sub.not .upload-hidden');
-        fileTarget.on('change', function() {
-            // 값이 변경되면
-            if(window.FileReader){ // modern browser
-                var filename = $(this)[0].files[0].name;
-            } else { // old IE
-                var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
-            }
-            // 추출한 파일명 삽입
-            $(this).siblings('.upload-name').val(filename);
-        });
-    })
-</script>
 
 </html>

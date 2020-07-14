@@ -56,11 +56,12 @@ $(function () {
             onShow: function () {
                 // datepicker width를 날짜 input width에 맞춤
                 let box_width = $('.datepicker-drop:visible').outerWidth();
+                console.log($('.datepicker-drop'))
                 $('.datepicker.-from-bottom-').outerWidth(box_width);
 
                 // studio페이지(user), calendar_host 예약차단 블록 시간 설정 영역 추가
                 let timePicker = '';
-                if ($('#pageNav').hasClass('page-studio') || $('#datePickerDrop2, #datePickerDrop3').hasClass('page-host')) {
+                if ($('#pageNav').hasClass('page-studio') || $('#datePickerDrop, #datePickerDrop2, #datePickerDrop3').hasClass('page-host')) {
                     timePicker = '<div class="mx-4 py-lg-4 py-3 border-top datepicker-timepicker">' +
                                         '<div class="row">' +
                                             '<div class="col-6 custom-inputs">' +
@@ -217,6 +218,9 @@ $(function () {
             }
         })
     }
+
+    // 채팅 view 메세지 스크롤 영역 스크롤 맨 아래로
+    $('.custom-chat .chat-msgs').scrollTop($('.custom-chat .chat-msgs')[0].scrollHeight);
 })
 
 // wishlist btn
@@ -278,24 +282,24 @@ function removeTag(obj) {
 }
 
 // 레슨선택 + 금액 추가
-function addTime(obj) {
-    let parent = $('.custom-inputs.' + obj)
-    let tag = $(parent).find('.tag-text').val();
+//  - datepicker로 교체하여 주석처리함
+//  - datepicker의 시간설정부분은 임의로 셀렉트박스를 삽입해 둔 것이므로 input에 입력할 수 없음
+// function addTime(obj) {
+//     let parent = $('.custom-inputs.' + obj)
+//     let tag = $(parent).find('.tag-text').val();
 
-    if (!tag) {
-        alert('금액을 입력하세요.');
-        $(parent).find('.tag-text').focus();
-        return;
-    }
+//     if (!tag) {
+//         alert('금액을 입력하세요.');
+//         $(parent).find('.tag-text').focus();
+//         return;
+//     }
 
-    let date = $(parent).find('select[name^=date] option:selected').text();
-    let times = $(parent).find('select[name^=times] option:selected').text();
-    let tag_text = date + ' ' + times + ' ' + tag + '원';
+//     let text = $(parent).find('select[name^=times] option:selected').text() + ' ' + tag + '원';
 
-    let $clone = $(parent).find('div.tag:last').clone(true);
-    $clone.find('span').text(tag_text);
-    $(parent).find('.host-search-tags').append($clone);
-}
+//     let $clone = $(parent).find('div.tag:last').clone(true);
+//     $clone.find('span').text(text);
+//     $(parent).find('.host-search-tags').append($clone);
+// }
 
 // 공연 좌석별 금액 추가
 function addPrice() {
