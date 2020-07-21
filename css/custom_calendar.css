@@ -110,10 +110,14 @@
 }
 .custom-calendar .function:not(.not) .text-btn {
   min-width: auto;
+  background: #fff;
 }
 
 .custom-calendar .list:not(:first-child) {
   margin-top: 30px;
+}
+.custom-calendar .list {
+  background: #fff;
 }
 .custom-calendar .list .list-item > * {
   position: relative;
@@ -138,6 +142,7 @@
   position: relative;
   padding: .5rem .3rem;
   height: inherit;
+  background: #fff;
 }
 .custom-calendar .calendar-day.next-month {
   color: #d7d7d7;
@@ -284,7 +289,7 @@
     min-width: 160px;
   }
   .custom-calendar .list {
-    margin-top: 50px;
+    margin-top: 50px !important;
   }
   .custom-calendar .event-color-box {
     width: 33px;

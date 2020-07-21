@@ -219,8 +219,39 @@ $(function () {
         })
     }
 
+    // 통합 검색 결과 페이지 카테고리 클릭시 리스트 변경
+    // 임의로 show hide로 작업
+    $('#searchCategory .tab-title').on('click', function () {
+        $(this).addClass('active').siblings('a.tab-title').removeClass('active')
+        let list = $('#list-' + $(this).data('title'))
+        $('#itemList').find(list).parent().show().siblings('div').hide()
+        $(list).prev('h2').remove()
+    })
+
     // 채팅 view 메세지 스크롤 영역 스크롤 맨 아래로
-    $('.custom-chat .chat-msgs').scrollTop($('.custom-chat .chat-msgs')[0].scrollHeight);
+    $('.custom-chat .chat-msgs').scrollTop($(document).height());
+
+    // 어드민 사이드바
+    if ($("#sidebar").length > 0) {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        })
+    }
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    })
+
+    // 어드민 테이블 전체 선택
+    $('#allCheck').on('click', function () {
+        if ($('#allCheck').prop('checked')) {
+            $('td input[type=checkbox]').prop('checked', true)
+        } else {
+            $('td input[type=checkbox]').prop('checked', false)
+        }
+    })
 })
 
 // wishlist btn

@@ -29,7 +29,11 @@ $(document).ready(function () {
 
     // 서브 상단 검색된 키워드 - 사용자
     if ($('#pageNav #searchKeyword').length > 0) {
-        $('#pageNav #searchKeyword').load('../include/user/page_nav_search_keyword.html')
+        if (!$('#searchKeyword').hasClass('search-total')) {
+            $('#pageNav #searchKeyword').load('../include/user/page_nav_search_keyword.html')
+        } else {
+            $('#pageNav #searchKeyword').load('../include/user/page_nav_search_keyword.html #searchTotal')
+        }
     }
 
     // 서브 광고 아이템 리스트 - 사용자
@@ -88,9 +92,6 @@ $(document).ready(function () {
         })
     }
 
-    // 서브 view 2단 페이지 - 사용자
-
-
     // 서브 view 2단 페이지 왼편 상단 슬라이드 - 사용자
     $('#viewTopSlide').load('../include/user/view_top_slide.html')
 
@@ -108,6 +109,30 @@ $(document).ready(function () {
 
     // 게시판 게시글 - 사용자/호스트 공통
     $('#boardView').load('../include/common/board_view.html')
+
+    // 통합 검색 리스트 : 아이디 중복으로 인해 클래스로 load함
+    // 카테고리당 최대 2줄 출력 -> 상단 카테고리 클릭시 전체 출력
+    // 기존 #itemListX는 리스트 상단에 검색결과 타이틀과 정렬 셀렉트박스가 있고,
+    // 검색 결과 리스트는 한정된 리스트를 보여주기 때문에 새로 만듬
+    if ($('#itemList').hasClass('search-total-list')) {
+        $('#itemList').load('../include/user/item_list.html #itemListTotal', function () {
+            // 카테고리별 리스트 출력
+            // category-list-a : 작은 썸네일형              한 줄에 4개, 최대 2줄 출력(스튜디오, 클래스)
+            if ($('#list-studio').length > 0 || $('#list-class').length > 0) {
+                $('#list-studio, #list-class').load('../include/user/item_list.html .category-list-a')
+            }
+
+            // category-list-b : 큰 썸네일형                한 줄에 2개, 최대 1줄 출력(퍼포먼스)
+            if ($('#list-performance').length > 0) {
+                $('#list-performance').load('../include/user/item_list.html .category-list-b')
+            }
+
+            // category-list-c : 금액이 없는 작은 썸네일형  한 줄에 4개, 최대 2줄 출력(오디션, 스토어)
+            if ($('#list-audition').length > 0 || $('#list-store').length > 0) {
+                $('#list-audition, #list-store').load('../include/user/item_list.html .category-list-c')
+            }
+        })
+    }
 
     // include_html을 불러오는 서브페이지 파일에서는 스크립트가 동작하지 않아 getScript 사용
     $.getScript('../js/custom.js');
