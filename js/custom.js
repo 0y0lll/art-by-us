@@ -232,16 +232,9 @@ $(function () {
     $('.custom-chat .chat-msgs').scrollTop($(document).height());
 
     // 어드민 사이드바
-    if ($("#sidebar").length > 0) {
-        $("#sidebar").mCustomScrollbar({
-            theme: "minimal"
-        })
-    }
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar, #content').toggleClass('active');
-        $('.collapse.in').toggleClass('in');
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    $('#menu-toggle').click( function(e) {
+        e.preventDefault();
+        $('#wrapper').toggleClass('toggled');
     })
 
     // 어드민 테이블 전체 선택
@@ -251,6 +244,18 @@ $(function () {
         } else {
             $('td input[type=checkbox]').prop('checked', false)
         }
+    })
+
+    var fileTarget = $('.custom-inputs-sub.not .upload-hidden');
+    fileTarget.on('change', function() {
+        // 값이 변경되면
+        if(window.FileReader){ // modern browser
+            var filename = $(this)[0].files[0].name;
+        } else { // old IE
+            var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+        }
+        // 추출한 파일명 삽입
+        $(this).siblings('.upload-name').val(filename);
     })
 })
 

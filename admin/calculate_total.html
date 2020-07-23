@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART BY US</title>
+
+    <!-- Bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../../css/admin_sidebar.css">
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="../../css/custom.css">
+    <link rel="stylesheet" href="../../css/custom_host.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../../css/fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- 사이드바 -->
+        <div id="sideBar"></div>
+
+        <!-- 내용 영역 -->
+        <div id="page-content-wrapper">
+            <!-- 상단 -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn" id="menu-toggle"><i class="fas fa-align-left"></i></button>
+                <h3 class="ml-2 mr-auto mb-0">정산관리<span class="font-weight-light font-size-s ml-lg-2 ml-1">전체 정산관리</span></h3>
+            </nav>
+
+            <!-- 내용 : table(include/admin/table_list.html) -->
+            <div class="container-fluid py-md-4 py-3">
+                <!-- 날짜 표시 -->
+                <div class="wrapper view-type custom-calendar overflow-hidden">
+                    <div class="main">
+                        <div class="toolbar mb-lg-4 mb-2 whitespace-nowrap">
+                            <!-- date -->
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn px-md-2 px-1 font-size-md text-light-gray-more" aria-label="prev"><i class="fas fa-chevron-left"></i></button>
+                                <h2 class="mx-lg-4 mx-md-3 mx-2 mb-0">2020년 7월</h2>
+                                <button type="button" class="btn px-md-2 px-1 font-size-md text-light-gray-more" aria-label="next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 정산금액 -->
+                <div class="row custom-admin-card large">
+                    <div class="col-md-4 mb-md-0 mb-3">
+                        <div class="card shadow-sm rounded-m">
+                            <div class="card-body text-md-center py-md-5 py-4">
+                                <p class="card-title text-gray font-size-sm">이번달 전체 매출</p>
+                                <h2 class="card-text">120,000</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-md-0 mb-3">
+                        <div class="card shadow-sm rounded-m">
+                            <div class="card-body text-md-center py-md-5 py-4">
+                                <p class="card-title text-gray font-size-sm">이번달 수익</p>
+                                <h2 class="card-text">120,000</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm rounded-m">
+                            <div class="card-body text-md-center py-md-5 py-4">
+                                <p class="card-title text-gray font-size-sm">이번달 수익</p>
+                                <h2 class="card-text">120,000</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사업자 정산관리 -->
+                <div class="d-flex">
+                    <a href="calculate_host_n.html" class="btn w-md-auto w-100 mr-2 btn-info">비사업자 정산관리</a>
+                    <a href="calculate_host_b.html" class="btn w-md-auto w-100 ml-2 btn-info">사업자 정산관리</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <script src="../../js/include_html_admin.js"></script>
+    <!-- <script src="../../js/custom.js"></script> -->
+</body>
+
+</html>

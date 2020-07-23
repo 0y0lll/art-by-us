@@ -972,6 +972,22 @@ footer .text-divider {
     height: 50px;
 }
 
+/* admin */
+
+.custom-admin-table {
+    color: #5d5d5d;
+}
+.custom-admin-table th {
+    border-bottom: 0 !important;
+    background: #4c4c4c;
+    font-weight: 300;
+    color: #fff;
+}
+
+.custom-admin-card.large .card-text {
+    font-size: 1.5rem !important;
+}
+
 @media (min-width: 1200px) {
     /* layout */
     .custom-chat .user-msg {
@@ -1065,21 +1081,6 @@ footer .text-divider {
     .form-control.datetimepicker-input {
         background-position: calc(100% - 15px);
         background-size: auto;
-    }
-
-    .list-card .card {
-        max-height: 600px;
-        min-height: 600px;
-    }
-    .list-card .list-card-img-wrapper {
-        max-height: 210px;
-    }
-    .list-card .list-card-content {
-        max-height: 150px;
-    }
-    .list-card .list-card-divider {
-        width: 40px;
-        height: 8px;
     }
 
     .custom-other-nav {
@@ -1326,6 +1327,25 @@ footer .text-divider {
     .custom-nav-tabs.button .nav-link {
         font-size: 1.4rem;
         padding: .85rem .1rem;
+    }
+
+    .list-card .card {
+        max-height: 600px;
+        min-height: 600px;
+    }
+    .list-card .list-card-img-wrapper {
+        max-height: 210px;
+    }
+    .list-card .list-card-content {
+        max-height: 150px;
+    }
+    .list-card .list-card-divider {
+        width: 40px;
+        height: 8px;
+    }
+
+    .custom-admin-card.large .card-text {
+        font-size: 2.2rem !important;
     }
 }
 
